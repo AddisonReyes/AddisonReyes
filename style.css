@@ -1,0 +1,25 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 0px 60px;
+}
+
+nav {
+    text-decoration: none;
+}
+
+.company_card {
+    padding: 0px 30px 10px;
+}
+
+.responsabilities_list li {
+    text-align: left;
+}
+
+.ul_list  {
+    padding: 0% 20%;
+}
+
+.ul_list li{
+    list-style: none;
+}
