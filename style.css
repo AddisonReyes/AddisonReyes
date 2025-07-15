@@ -24,20 +24,29 @@ body {
     color: #151515;
 }
 
-nav {
-    text-decoration: none;
-    margin-top: 10px;
+main {
+    flex: 2;
+
 }
 
-footer p{
+aside {
+    flex: 1;
+}
+
+nav {
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 10px;
+    padding: 0 10px;
 }
 
 nav a, footer a {
     border: 1px solid #EAEAEA;
     text-decoration: none;
     padding: 4px 8px;
-    margin: 0px 4px;
+    margin: 4px;
 }
 
 nav a:hover, footer a:hover{
@@ -48,20 +57,32 @@ section {
     background-color: #eaeaead6;
     border: 1px solid #ADB6C4;
     border-radius: 16px;
-    margin: 30px 20%;
+    margin: 30px 0px;
     padding: 10px;
+}
+
+section:hover {
+    background-color: #eaeaead9;
 }
 
 article p {
     padding: 0px 10%;
 }
 
-
-.text_color, section h2 {
-    color: #995ECD;
+footer p {
+    margin-top: 10px;
 }
 
+.principal-container {
+    justify-content: space-between;
+    margin: 0% 10%;
+    display: flex;
+    gap: 30px;
+}
 
+.text-color, section h2 {
+    color: #995ECD;
+}
 
 .contrast {
     background-color: #151515;
@@ -77,7 +98,7 @@ article p {
     color: #995ECD;
 }
 
-.company_card {
+.company-card {
     border: 1px dashed #151515;
     padding: 6px 66px 20px;
     border-radius: 16px;
@@ -85,15 +106,80 @@ article p {
     
 }
 
-.responsabilities_list li {
+.responsabilities-list li {
     text-align: left;
-    
 }
 
-.ul_list  {
-    padding: 0% 20%;
-}
-
-.ul_list li{
+.ul-list  {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
     list-style: none;
+    display: grid;
+    padding: 0;
+    margin: 0;
+    gap: 2px;
+}
+
+.ul-list li{
+    border: 1px dashed #151515;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 10px 5px;
+    text-align: center;
+}
+
+.ul-list li:hover {
+    border: 1px dashed #995ECD;
+    color: #995ECD;
+}
+
+.content-wrapper {
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+}
+
+.content-wrapper img {
+    border-radius: 16px;
+    max-width: 300px;
+    height: auto;
+}
+
+.content-wrapper p {
+    border-radius: 16px;
+    border: 1px dashed;
+    max-height: 300px;
+    text-align: left;
+    margin: 0px 0%;
+    padding: 10px;
+    flex: 1;
+}
+
+
+
+@media (max-width: 868px) {
+    .ul-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-wrapper p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 680px) {
+    .ul-list {
+        grid-template-columns: 1fr;
+    }
+
+    .principal-container {
+        display: block;
+    }
 }
