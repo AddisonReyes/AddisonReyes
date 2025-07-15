@@ -1,19 +1,93 @@
-body {
+/* 
+    #151515 Night
+    #995ECD Amethyst
+    #ADB6C4 French gray
+    #EAEAEA Platinum
+*/
+
+* {
     font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
     text-align: center;
-    padding: 0px 60px;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("img/bkg.jpg");
+    background-position: center bottom;
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+    background-color: #995ECD;
+    background-size: 2000px;
+    color: #151515;
 }
 
 nav {
     text-decoration: none;
+    margin-top: 10px;
+}
+
+footer p{
+    margin-top: 10px;
+}
+
+nav a, footer a {
+    border: 1px solid #EAEAEA;
+    text-decoration: none;
+    padding: 4px 8px;
+    margin: 0px 4px;
+}
+
+nav a:hover, footer a:hover{
+    border-color: #995ECD;
+}
+
+section {
+    background-color: #eaeaead6;
+    border: 1px solid #ADB6C4;
+    border-radius: 16px;
+    margin: 30px 20%;
+    padding: 10px;
+}
+
+article p {
+    padding: 0px 10%;
+}
+
+
+.text_color, section h2 {
+    color: #995ECD;
+}
+
+
+
+.contrast {
+    background-color: #151515;
+    color: #EAEAEA;
+    padding: 30px;
+}
+
+.contrast a{
+    color:#EAEAEA;
+}
+
+.contrast a:hover {
+    color: #995ECD;
 }
 
 .company_card {
-    padding: 0px 30px 10px;
+    border: 1px dashed #151515;
+    padding: 6px 66px 20px;
+    border-radius: 16px;
+    margin: 20px 10px;
+    
 }
 
 .responsabilities_list li {
     text-align: left;
+    
 }
 
 .ul_list  {
