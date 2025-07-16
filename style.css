@@ -20,7 +20,7 @@ body {
     /* background-repeat: no-repeat; */
     background-attachment: fixed;
     background-color: #995ECD;
-    background-size: 2000px;
+    background-size: cover;
     color: #151515;
 }
 
