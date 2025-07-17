@@ -29,10 +29,6 @@ main {
 
 }
 
-aside {
-    flex: 1;
-}
-
 nav {
     text-decoration: none;
     display: flex;
@@ -54,6 +50,7 @@ nav a:hover, footer a:hover{
 }
 
 section {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     background-color: #eaeaead6;
     border: 1px solid #ADB6C4;
     border-radius: 16px;
@@ -66,6 +63,7 @@ section:hover {
 }
 
 article p {
+    
     padding: 0px 10%;
 }
 
@@ -80,7 +78,15 @@ footer p {
     gap: 30px;
 }
 
+.sticky-aside {
+    height: fit-content;
+    position: sticky;
+    top: 10px;
+    flex: 1;
+}
+
 .text-color, section h2 {
+    text-shadow: 1px 1px #151515;
     color: #995ECD;
 }
 
@@ -103,6 +109,7 @@ footer p {
     padding: 6px 66px 20px;
     border-radius: 16px;
     margin: 20px 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     
 }
 
@@ -126,6 +133,7 @@ footer p {
     border-radius: 10px;
     margin: 10px 5px;
     text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .ul-list li:hover {
@@ -142,12 +150,14 @@ footer p {
 }
 
 .content-wrapper img {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 16px;
-    max-width: 300px;
+    max-height: 300px;
     height: auto;
 }
 
 .content-wrapper p {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 16px;
     border: 1px dashed;
     max-height: 300px;
