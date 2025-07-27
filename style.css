@@ -10,12 +10,14 @@
     box-sizing: border-box;
     text-align: center;
     line-height: 1.6;
+    font-size: 1rem;
     padding: 0;
     margin: 0;
 }
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 main {
@@ -26,8 +28,10 @@ body {
     background-image: url("img/bkg.jpg");
     background-position: center bottom;
     background-attachment: fixed;
+    background-repeat: repeat;
     background-color: white;
     background-size: cover;
+    /* background-size: 60%; */
     color: #151515;
 }
 
@@ -53,7 +57,7 @@ nav a:hover, footer a:hover{
 
 section {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    background-color: #eaeaead6;
+    background-color: #eaeaeae0;
     border: 1px solid #ADB6C4;
     border-radius: 16px;
     margin: 30px 0px;
@@ -173,8 +177,8 @@ footer p {
     display: flex;
     z-index: 1000;
     bottom: 20px;
-    height: 50px;
     right: 20px;
+    height: 50px;
     width: 50px;
 }
 
@@ -209,11 +213,33 @@ footer p {
 }
 
 @media (max-width: 680px) {
+    main {
+        margin: 0% 0%;
+    }
+    
+    .back-to-top {
+        height: 30px;
+        width: 30px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .back-to-top svg {
+        height: 20px;
+        width: 20px;
+    }
+
     .ul-list {
         grid-template-columns: 1fr;
     }
 
     .principal-container {
         display: block;
+    }
+}
+
+@media (min-width: 1023px) {
+    * {
+        font-size: 1.2rem;
     }
 }
