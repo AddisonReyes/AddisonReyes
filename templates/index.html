@@ -85,15 +85,21 @@
     <h2>Projects</h2>
     <br />
     <div id="project-list">
-      <article class="project">
-        <div class="project-media">
-          <img src="{{ url_for('static', filename='img/placeholder.webp') }}" />
-          <h3>Project name</h3>
-        </div>
-        <div class="project-description">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique quis nunc eu dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut fermentum libero, quis maximus nisi.</p>
-        </div>
-      </article>
+      {% for project in projects %}
+        <article class="project">
+          <div class="project-media">
+            {% if project.image %}
+              <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }}" />
+            {% else %}
+              <img src="{{ url_for('static', filename='img/placeholder.webp') }}" alt="{{ project.title }}" />
+            {% endif %}
+            <h3>{{ project.title }}</h3>
+          </div>
+          <div class="project-description">
+            <p>{{ project.description }}</p>
+          </div>
+        </article>
+      {% endfor %}
     </div>
   </section>
 
