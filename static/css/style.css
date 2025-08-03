@@ -45,8 +45,8 @@ main {
     border-right: 2px solid var(--black);
     border-left: 2px solid var(--black);
     background-color: var(--snow);
-    padding: 0% 6%;
-    margin: 0% 6%;
+    padding: 0% 20%;
+    margin: 0% 4%;
     opacity: .9;
 }
 
