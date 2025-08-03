@@ -12,8 +12,12 @@
 
 body {
     font-family: 'Times New Roman', Times, serif;
-    background-color: var(--snow);
+    background-image: url("assets/img/bkg.jpg");
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-repeat: repeat;
     justify-content: center;
+    background-size: cover;
     flex-direction: column;
     text-align: center;
     display: flex;
@@ -25,13 +29,25 @@ header a {
     padding: 0% 1%;
 }
 
+.nav-sticky {
+    position: sticky;
+    z-index: 1000;
+    margin: 0px;
+    top: 0px;
+}
+
 header a:hover {
     text-shadow: 1px 1px var(--violet);
     color: var(--purple);
 }
 
 main {
-    padding: 0% 15%;
+    border-right: 2px solid var(--black);
+    border-left: 2px solid var(--black);
+    background-color: var(--snow);
+    padding: 0% 6%;
+    margin: 0% 6%;
+    opacity: .9;
 }
 
 #home {
@@ -61,13 +77,14 @@ main section {
 
 
 .project {
-    max-width: 260px;
-    /* height: 350px; */
     border: 2px solid var(--black) ;
     background-color: var(--violet);
     color: var(--snow);
     position: relative;
     overflow: hidden;    
+    max-width: 260px;
+    height: 350px;
+    opacity: .9;
 }
 
 .project img {
