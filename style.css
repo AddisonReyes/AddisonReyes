@@ -1,80 +1,32 @@
-/* 
-    #151515 Night
-    #995ECD Amethyst
-    #ADB6C4 French gray
-    #EAEAEA Platinum
-*/
+:root {
+    --black: #181618;
+    --violet: #4C3B4D;
+    --purple: #6A116A;
+    --snow: #FBF5F3;
+}
 
 * {
-    font-family: 'Times New Roman', Times, serif;
-    box-sizing: border-box;
-    text-align: center;
-    line-height: 1.6;
-    font-size: 1rem;
-    padding: 0;
-    margin: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-}
-
-main {
-    margin: 0% 10%;
+    padding: 0px;
+    margin: 0px;
 }
 
 body {
-    background-image: url("img/bkg.jpg");
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url("assets/img/bkg.jpg");
     background-position: center bottom;
     background-attachment: fixed;
     background-repeat: repeat;
-    background-color: white;
-    background-size: cover;
-    /* background-size: 60%; */
-    color: #151515;
-}
-
-nav {
-    text-decoration: none;
     justify-content: center;
-    padding: 0px 10px;
-    margin-top: 10px;
-    flex-wrap: wrap;
+    background-size: cover;
+    flex-direction: column;
+    text-align: center;
     display: flex;
 }
 
-nav a, footer a {
-    border: 1px solid #EAEAEA;
+header a {
+    color: var(--snow);
     text-decoration: none;
-    padding: 4px 8px;
-    margin: 4px;
-}
-
-nav a:hover, footer a:hover{
-    border-color: #995ECD;
-}
-
-section {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    background-color: #eaeaeae0;
-    border: 1px solid #ADB6C4;
-    border-radius: 16px;
-    margin: 30px 0px;
-    padding: 10px;
-}
-
-section:hover {
-    background-color: #eaeaead9;
-}
-
-
-article p {
-    padding: 0px 10%;
-}
-
-footer p {
-    margin-top: 10px;
+    padding: 0% 1%;
 }
 
 .nav-sticky {
@@ -84,162 +36,107 @@ footer p {
     top: 0px;
 }
 
-.text-color, section h2 {
-    text-shadow: 1px 1px #151515;
-    color: #995ECD;
+header a:hover {
+    text-shadow: 1px 1px var(--violet);
+    color: var(--purple);
 }
 
-.contrast {
-    background-color: #151515;
-    color: #EAEAEA;
-    padding: 6px;
+main {
+    border-right: 2px solid var(--black);
+    border-left: 2px solid var(--black);
+    background-color: var(--snow);
+    padding: 0% 6%;
+    margin: 0% 6%;
+    opacity: .9;
 }
 
-.contrast a{
-    color:#EAEAEA;
+#home {
+    margin-top: 50px;
+    padding: 0% 15%;
 }
 
-.contrast a:hover {
-    color: #995ECD;
+#role {
+    color: var(--purple);
 }
 
-.company-card {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    border: 1px dashed #151515;
-    padding: 6px 66px 20px;
-    border-radius: 16px;
-    margin: 20px 10px;
+#about {
+    margin-right: 2%;
 }
 
-.responsabilities-list li {
-    text-align: left;
+main section {
+    margin: 64px 0px;
 }
 
-.ul-list  {
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    list-style: none;
-    display: grid;
-    padding: 0;
-    margin: 0;
-    gap: 2px;
-}
-
-.ul-list li{
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    border: 1px dashed #151515;
-    border-radius: 10px;
-    text-align: center;
-    padding: 10px 15px;
-    margin: 10px 5px;
-}
-
-.ul-list li:hover {
-    border: 1px dashed #995ECD;
-    color: #995ECD;
-}
-
-.content-wrapper {
+#project-list {
     justify-content: center;
-    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
     display: flex;
-    padding: 10px;
     gap: 20px;
 }
 
-.content-wrapper img {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 16px;
-    max-height: 300px;
-    height: auto;
+
+.project {
+    border: 2px solid var(--black) ;
+    background-color: var(--violet);
+    color: var(--snow);
+    position: relative;
+    overflow: hidden;    
+    max-width: 260px;
+    height: 350px;
+    opacity: .9;
 }
 
-.content-wrapper p {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 16px;
-    border: 1px dashed;
-    max-height: 300px;
+.project img {
+    display: block;
+    height: 200px;
+    width: 260px;
+}
+
+.project .project-media {
+    position: relative;
+}
+
+.project h3 {
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px var(--snow);
+    position: absolute;
+    color: var(--snow);
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+}
+
+.project .project-description {
+    padding: 2% 2%;
     text-align: left;
-    margin: 0px 0%;
-    padding: 10px;
-    flex: 1;
 }
 
-.back-to-top {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-    background-color: #eaeaead9;
-    justify-content: center;
-    text-decoration: none;
-    align-items: center;
-    border-radius: 50%;
-    position: fixed;
+#stack div {
     display: flex;
-    z-index: 1000;
-    bottom: 20px;
-    right: 20px;
-    height: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    /* gap: 20px; */
+}
+
+#stack img {
     width: 50px;
 }
 
-.back-to-top svg {
-    color: #ffffff;
-    height: 30px;
-    width: 30px;
+#stack article {
+    margin: 1% 2%;
 }
 
-.back-to-top:hover {
-    background-color: #995ECD;
+#contact a {
+    text-decoration: none;
 }
 
-.back-to-top.show {
-    pointer-events: auto;
-    opacity: 1;
-}
-
-@media (max-width: 868px) {
-    .ul-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .content-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .content-wrapper p {
-        text-align: center;
-    }
-}
-
-@media (max-width: 680px) {
-    main {
-        margin: 0% 0%;
-    }
-    
-    .back-to-top {
-        height: 30px;
-        width: 30px;
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .back-to-top svg {
-        height: 20px;
-        width: 20px;
-    }
-
-    .ul-list {
-        grid-template-columns: 1fr;
-    }
-
-    .principal-container {
-        display: block;
-    }
-}
-
-@media (min-width: 1023px) {
-    * {
-        font-size: 1.2rem;
-    }
+.contrast {
+    background-color: var(--black);
+    color: var(--snow);
+    padding: 16px 0px;
 }
