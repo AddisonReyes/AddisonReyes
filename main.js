@@ -5,7 +5,7 @@ function createProjectHTML(project) {
   return `
     <article class="project">
       <div class="project-media">
-        <img src="${project.image}" alt="${project.alt}" />
+        <img src="${project.image}" alt="${project.title}" />
         <h3>${project.title}</h3>
       </div>
       <div class="project-description">

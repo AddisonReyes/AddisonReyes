@@ -1,15 +1,8 @@
 [
   {
     "image": "img/placeholder.webp",
-    "alt": "Sitio Web de E-commerce",
-    "title": "Sitio Web de E-commerce",
+    "title": "My web portfolio",
     "description":
-      "Una tienda en línea completa con carrito de compras, sistema de pago y panel de administración."
-  },
-  {
-    "image": "img/placeholder.webp",
-    "alt": "Aplicación de Lista de Tareas",
-    "title": "Aplicación de Lista de Tareas",
-    "description": "Una aplicación web simple para gestionar tus tareas diarias."
+      "This is my very first web portfolio, a project designed to showcase my skills and completed work. Built with HTML, CSS, and JavaScript, it serves as a central hub where visitors can learn more about me, see a curated list of my projects, and find a way to get in touch."
   }
 ]
