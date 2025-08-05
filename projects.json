@@ -1,0 +1,15 @@
+[
+  {
+    "image": "img/placeholder.webp",
+    "alt": "Sitio Web de E-commerce",
+    "title": "Sitio Web de E-commerce",
+    "description":
+      "Una tienda en línea completa con carrito de compras, sistema de pago y panel de administración."
+  },
+  {
+    "image": "img/placeholder.webp",
+    "alt": "Aplicación de Lista de Tareas",
+    "title": "Aplicación de Lista de Tareas",
+    "description": "Una aplicación web simple para gestionar tus tareas diarias."
+  }
+]
