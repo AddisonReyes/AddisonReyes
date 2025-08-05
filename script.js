@@ -1,16 +1,18 @@
-const projectListElement = document.getElementById("project-list");
+const projectListElement = document.getElementById("project-carousel");
 const urlProjects = "projects.json";
 
 function createProjectHTML(project) {
   return `
     <article class="project">
-      <div class="project-media">
+      <a href="${project.url}">
+        <div class="project-media">
         <img src="${project.image}" alt="${project.title}" />
         <h3>${project.title}</h3>
-      </div>
-      <div class="project-description">
+        </div>
+        <div class="project-description">
         <p>${project.description}</p>
-      </div>
+        </div>
+      </a>
     </article>
   `;
 }
@@ -23,6 +25,11 @@ fetch(urlProjects)
     return response.json();
   })
   .then((projects) => {
+    for (project of projects) {
+      const projectHTML = createProjectHTML(project);
+      projectListElement.innerHTML += projectHTML;
+    }
+
     for (project of projects) {
       const projectHTML = createProjectHTML(project);
       projectListElement.innerHTML += projectHTML;

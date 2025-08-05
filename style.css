@@ -49,7 +49,7 @@ header a:hover {
 main {
     box-shadow: inset 0 0px 8px var(--violet);
     background-color: var(--snow);
-    padding: 0% 12%;
+    padding: 0% 6%;
     margin: 0% 4%;
     opacity: .9;
     min-height: 960px;
@@ -70,39 +70,56 @@ main {
 }
 
 main section {
-    margin: 64px 0px;
+    margin: 3% 4%;
 }
 
 #project-list {
-    justify-content: center;
-    align-content: center;
+    box-shadow: inset 0 0px 8px var(--violet);
     flex-direction: row;
-    flex-wrap: wrap;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 3% 0%;
+}
+
+#project-carousel {
+    animation: scroll 30s linear infinite;
+    flex-direction: row;
     display: flex;
-    gap: 20px;
+    gap: 2rem;
 }
 
-#project-list article {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+#project-carousel:hover {
+    animation-play-state: paused;
 }
-
 
 .project {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     border: 2px solid var(--black) ;
     background-color: var(--violet);
+    border-radius: 6px;
     color: var(--snow);
     position: relative;
     overflow: hidden;    
-    max-width: 260px;
-    /* height: 350px; */
-    opacity: .9;
+    /* min-width: 260px; */
+    flex: 0 0 33.33%;
+    height: 100%;
+    opacity: .8;
+}
+
+.project a {
+    text-decoration: none;
+    color: var(--snow);
+}
+
+.project:hover {
+    background-color: var(--purple);
+    opacity: 1;
 }
 
 .project img {
     text-shadow: 1px 1px var(--violet);
     display: block;
-    height: 200px;
-    width: 260px;
+    width: 100%;
 }
 
 .project .project-media {
@@ -140,6 +157,8 @@ main section {
 }
 
 #stack article {
+    border-radius: 6px;
+    padding: 1.2%;
     margin: 1% 2%;
 }
 
@@ -148,7 +167,7 @@ main section {
     border-radius: 6px;
     text-align: left;
     padding: 3% 4%;
-    margin: 3% 4%;
+    margin: 3% 0%;
 }
 
 .company-card article{
@@ -172,4 +191,42 @@ ul {
     background-color: var(--black);
     color: var(--snow);
     padding: 16px 0px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-110%);
+    }
+}
+
+@media (max-width: 600px)  {
+    main section {
+        margin: 16% 4%;
+    }
+        
+    #project-list {
+        padding: 6% 0%;
+    }
+
+    .company-card {
+        margin: 6% 0%;
+    }
+
+    .project {
+        flex: 0 0 100%;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-340%);
+        }
+    }
 }
