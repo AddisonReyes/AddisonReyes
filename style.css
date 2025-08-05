@@ -24,9 +24,15 @@ body {
 }
 
 header a {
-    color: var(--snow);
+    text-shadow: 0.6px 0.6px var(--purple);
     text-decoration: none;
-    padding: 0% 1%;
+    color: var(--snow);
+    padding: 0% 0.5%;
+}
+
+header a:hover {
+    text-shadow: 1px 1px var(--violet);
+    color: var(--purple);
 }
 
 .nav-sticky {
@@ -36,23 +42,19 @@ header a {
     top: 0px;
 }
 
-header a:hover {
-    text-shadow: 1px 1px var(--violet);
-    color: var(--purple);
-}
-
 main {
     border-right: 2px solid var(--black);
     border-left: 2px solid var(--black);
     background-color: var(--snow);
-    padding: 0% 20%;
+    padding: 0% 16%;
     margin: 0% 4%;
     opacity: .9;
+    min-height: 960px;
 }
 
 #home {
     margin-top: 50px;
-    padding: 0% 15%;
+    padding: 0% 6%;
 }
 
 #role {
@@ -71,8 +73,13 @@ main section {
     justify-content: center;
     align-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
     display: flex;
     gap: 20px;
+}
+
+#project-list article {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -83,7 +90,7 @@ main section {
     position: relative;
     overflow: hidden;    
     max-width: 260px;
-    height: 350px;
+    /* height: 350px; */
     opacity: .9;
 }
 
@@ -115,12 +122,12 @@ main section {
 }
 
 #stack div {
-    display: flex;
+    justify-content: center;
+    align-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    /* gap: 20px; */
+    padding: 0% 4%;
+    display: flex;
 }
 
 #stack img {
