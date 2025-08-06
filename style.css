@@ -52,7 +52,6 @@ main {
     padding: 0% 12%;
     margin: 0% 4%;
     opacity: .9;
-    min-height: 960px;
 }
 
 #home {
@@ -70,7 +69,7 @@ main {
 }
 
 main section {
-    margin: 64px 0px;
+    margin: 10% 4%;
 }
 
 #project-list {
@@ -79,18 +78,18 @@ main section {
     flex-direction: row;
     flex-wrap: wrap;
     display: flex;
-    gap: 20px;
+    gap: 16px;
 }
 
 #project-list article {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
 .project {
     border: 2px solid var(--black) ;
     background-color: var(--violet);
     color: var(--snow);
+    border-radius: 6px;
     position: relative;
     overflow: hidden;    
     max-width: 260px;
@@ -98,11 +97,20 @@ main section {
     opacity: .9;
 }
 
+.project a {
+    text-decoration: none;
+    color: var(--snow);
+}
+
+.project:hover {
+    background-color: var(--purple);
+    opacity: 1;
+}
+
 .project img {
     text-shadow: 1px 1px var(--violet);
     display: block;
-    height: 200px;
-    width: 260px;
+    width: 100%;
 }
 
 .project .project-media {
@@ -172,4 +180,18 @@ ul {
     background-color: var(--black);
     color: var(--snow);
     padding: 16px 0px;
+}
+
+@media (max-width: 600px) {
+    main section {
+        margin: 16% 4%;
+    }
+
+    #project-list {
+        padding: 6% 0%;
+    }
+
+    .company-card {
+        margin: 6% 0%;
+    }
 }
