@@ -2,22 +2,7 @@
   {
     "image": "img/placeholder.webp",
     "title": "My web portfolio",
-    "url": "#projects",
     "description":
-      "This is my very first web portfolio, a project designed to showcase my skills and completed work. It serves as a central hub where visitors can learn more about me, see a curated list of my projects, and find a way to get in touch."
-  }, 
-   {
-    "image": "img/placeholder.webp",
-    "title": "Vestibulum metus tellus",
-    "url": "#projects",
-    "description":
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec quam et erat gravida porta et ac massa. Mauris sagittis arcu non lobortis bibendum. Curabitur rhoncus eros eu ante volutpat varius. Cras consectetur nec nisl eget maximus. Praesent et diam lacus. Etiam semper dignissim sapien, sit amet vestibulum odio consequat consequat. Fusce scelerisque libero et velit pretium, nec sodales velit interdum. Ut fringilla a risus non tincidunt. Nam vestibulum tellus id massa iaculis blandit."
-  },
-   {
-    "image": "img/placeholder.webp",
-    "title": "Nam elementum sapien ac",
-    "url": "#projects",
-    "description":
-      "Aliquam erat volutpat. Aliquam quis mattis nisl, at blandit elit. Donec nec luctus eros. Vestibulum at arcu ut justo interdum ultricies. Suspendisse cursus erat vitae arcu tempor dignissim. Vestibulum a libero pretium, malesuada lacus id, malesuada velit. Aliquam massa dolor, dictum eu nisi a, maximus hendrerit risus."
+      "This is my very first web portfolio, a project designed to showcase my skills and completed work. Built with HTML, CSS, and JavaScript, it serves as a central hub where visitors can learn more about me, see a curated list of my projects, and find a way to get in touch."
   }
 ]
