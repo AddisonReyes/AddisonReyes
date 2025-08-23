@@ -109,7 +109,9 @@ main section {
 
 .project img {
     text-shadow: 1px 1px var(--violet);
+    filter: blur(1px);
     display: block;
+    height: 160px;
     width: 100%;
 }
 
@@ -119,10 +121,12 @@ main section {
 
 .project h3 {
     transform: translate(-50%, -50%);
-    text-shadow: 1px 1px var(--snow);
+    text-shadow: 2px 2px var(--black);
+    background-color: #4c3b4d8f;
     position: absolute;
     color: var(--snow);
     text-align: center;
+    padding: 6px;
     width: 100%;
     z-index: 1;
     left: 50%;
@@ -130,7 +134,7 @@ main section {
 }
 
 .project .project-description {
-    text-align: justify;
+    text-align: center;
     padding: 3% 3%;
 }
 

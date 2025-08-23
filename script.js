@@ -4,7 +4,7 @@ const urlProjects = "projects.json";
 function createProjectHTML(project) {
   return `
     <article class="project">
-      <a href="${project.url}">
+      <a href="${project.url}" target="_blank">
         <div class="project-media">
         <img src="${project.image}" alt="${project.title}" />
         <h3>${project.title}</h3>
