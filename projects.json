@@ -1,14 +1,14 @@
 [
   {
-    "image": "img/placeholder.webp",
-    "title": "My web portfolio",
-    "url": "#projects",
-    "description": "This is my very first web portfolio, a project designed to showcase my skills and completed work. It serves as a central hub where visitors can learn more about me, see a curated list of my projects, and find a way to get in touch."
-  },
-  {
     "image": "img/projects/oxsis-website.webp",
     "title": "Oxsis website",
     "url": "https://oxsis-website-production.up.railway.app/",
     "description": "I developed a complete corporate website for Oxsis SRL, a Dominican company specialized in customs services, transportation, and international logistics."
+  },
+  {
+    "image": "img/placeholder.webp",
+    "title": "My web portfolio",
+    "url": "#projects",
+    "description": "This is my very first web portfolio, a project designed to showcase my skills and completed work. It serves as a central hub where visitors can learn more about me, see a curated list of my projects, and find a way to get in touch."
   }
 ]
