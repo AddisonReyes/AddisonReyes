@@ -147,8 +147,9 @@ main section {
     display: flex;
 }
 
-#stack img, #contact img {
+.icon {
     height: 50px;
+    margin: 2px;
 }
 
 #stack article {
