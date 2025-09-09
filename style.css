@@ -147,7 +147,7 @@ main section {
     display: flex;
 }
 
-#stack img {
+#stack img, #contact img {
     height: 50px;
 }
 
