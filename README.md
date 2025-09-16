@@ -1,7 +1,6 @@
 ## Hi there 👋
 
-- 🔭 I’m currently working on SEMS, SRL
-- 🌱 I’m currently learning JavaScript and full-stack development!
+- 🌱 I’m currently learning JavaScript, TypeScript and full-stack development!
 - 📫 How to reach me: addison.amin@gmail.com
 - ⚡ Fun fact: I like foxes
 
