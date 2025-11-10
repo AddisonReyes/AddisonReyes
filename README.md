@@ -8,8 +8,6 @@ Data engineer focused on building reliable and scalable data pipelines. I design
 
 #### Languages
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![NoSQL](https://img.shields.io/badge/NoSQL-005571?style=for-the-badge&logo=amazondynamodb&logoColor=white)
 
 #### Databases & Storage
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
