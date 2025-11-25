@@ -31,29 +31,22 @@ window.addEventListener('scroll', updateActiveNavLink);
 // ===================================
 // Edit this array to add, remove, or modify your projects
 const projectsData = [
-    // {
-    //     "title": "Example Project 1",
-    //     "description": "A scalable backend system built with modern technologies. This project demonstrates best practices in API design and data management.",
-    //     "technologies": ["Python", "FastAPI", "PostgreSQL", "Docker"],
-    //     "image": "",
-    //     "github": "https://github.com/yourusername/project1",
-    //     "demo": "https://project1-demo.com"
-    // },
-    // {
-    //     "title": "Example Project 2",
-    //     "description": "Data pipeline for processing large-scale datasets with efficient ETL operations and real-time analytics.",
-    //     "technologies": ["Python", "Apache Spark", "Kafka", "AWS"],
-    //     "image": "",
-    //     "github": "https://github.com/yourusername/project2",
-    //     "link": "https://project2.com"
-    // },
-    // {
-    //     "title": "Example Project 3",
-    //     "description": "Microservices architecture implementing clean code principles and comprehensive testing strategies.",
-    //     "technologies": ["Node.js", "Express", "MongoDB", "Redis"],
-    //     "image": "",
-    //     "github": "https://github.com/yourusername/project3"
-    // },
+    {
+        "title": "Library API",
+        "description": "A RESTful API built with TypeScript, Express, and MongoDB for managing a library system with books, authors, and loan operations.",
+        "technologies": ["TypeScript", "Node.js", "Express.js", "MongoDB", "Docker"],
+        "image": "./img/library-api.png",
+        "github": "https://github.com/AddisonReyes/library-api",
+        "demo": ""
+    },
+    {
+        "title": "ToDo App",
+        "description": "To do list app with HTML, CSS, Node.js, TypeScript, Docker and MongoDB.",
+        "technologies": ["HTML", "CSS", "Node.js", "TypeScript", "Express.js", "Docker", "MongoDB"],
+        "image": "./img/todo-app.png",
+        "github": "https://github.com/AddisonReyes/ToDo-App",
+        "demo": ""
+    },
 ];
 
 // ===================================

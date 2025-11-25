@@ -682,6 +682,102 @@ body {
 }
 
 /* ===================================
+   Itch.io Section
+   =================================== */
+.itch-section {
+    padding: var(--spacing-3xl) 0;
+    background: var(--color-bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.itch-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, hsla(320, 85%, 55%, 0.15), transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.itch-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--spacing-2xl);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-xl);
+    transition: var(--transition-base);
+}
+
+.itch-content:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+.itch-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.itch-logo {
+    width: 80px;
+    height: 80px;
+    color: var(--color-secondary);
+    transition: var(--transition-base);
+    filter: drop-shadow(0 4px 16px rgba(237, 33, 124, 0.3));
+}
+
+.itch-content:hover .itch-logo {
+    transform: scale(1.1) rotate(5deg);
+    color: var(--color-primary-light);
+}
+
+.itch-content h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: var(--spacing-sm);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.itch-content p {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-xl);
+}
+
+.itch-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    transition: var(--transition-fast);
+}
+
+.itch-btn:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+/* ===================================
    Contact Section
    =================================== */
 .contact {
