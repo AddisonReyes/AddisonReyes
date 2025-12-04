@@ -28,9 +28,3 @@ Backend Software Engineer passionate about building scalable and maintainable sy
 ### DevOps & Tools
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
----
-
-### Contact
-- **Email:** addison.amin@gmail.com 
-- **Fun fact:** I like foxes 🦊
