@@ -15,6 +15,7 @@ Backend Software Engineer specialized in Python, focused on building scalable an
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
 
@@ -28,13 +29,8 @@ Backend Software Engineer specialized in Python, focused on building scalable an
 
 #### Game Development
 ![Godot 4](https://img.shields.io/badge/Godot_4-478CBF?style=for-the-badge&logo=godotengine&logoColor=white)
-![Pygame](https://img.shields.io/badge/Pygame-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pygame](https://img.shields.io/badge/Pygame-e1cd62?style=for-the-badge&logo=python&logoColor=black)
+
 ![Aseprite](https://img.shields.io/badge/Aseprite-7D929E?style=for-the-badge&logo=aseprite&logoColor=white)
 ![Blender](https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white)
 
----
-
-### Contact
-- **Email:** addison.amin@gmail.com  
-- **LinkedIn:** [linkedin.com/in/addisonreyes](https://linkedin.com/in/addisonreyes)
-- **Fun fact:** I like foxes 🦊
