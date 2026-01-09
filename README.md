@@ -21,5 +21,3 @@ Software Engineer focused on building scalable and maintainable systems. Experie
 #### Game Development
 ![Godot 4](https://img.shields.io/badge/Godot_4-478CBF?style=for-the-badge&logo=godotengine&logoColor=white)
 ![Aseprite](https://img.shields.io/badge/Aseprite-7D929E?style=for-the-badge&logo=aseprite&logoColor=white)
-![Pygame](https://img.shields.io/badge/Pygame-e1cd62?style=for-the-badge&logo=python&logoColor=black)
-
