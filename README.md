@@ -70,3 +70,7 @@
 </div>
 
 ###
+
+<br clear="both">
+
+<img src="https://raw.githubusercontent.com/AddisonReyes/AddisonReyes/output/snake.svg" alt="Snake animation" />
