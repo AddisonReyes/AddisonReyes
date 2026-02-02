@@ -6,7 +6,7 @@
 
 ###
 
-<p align="left">I'm a FullStack Developer and Game Developer, from Dominican Republic</p>
+<p align="left">I'm a FullStack Developer and Indie Game Developer, from Dominican Republic</p>
 
 ###
 
