@@ -33,7 +33,7 @@
 <p align="left">
     ✨ Creating bugs since 2021
     <br>
-    📚 I'm currently learning Phaser.js and Astro
+    📚 I'm currently learning Kaplay and Astro
     <br>
     🎯 Goals: Create my own portal for free online games
     <br>
