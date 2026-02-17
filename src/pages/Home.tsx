@@ -62,7 +62,18 @@ function Home() {
         <p>
           I am a software engineer specialized in full stack development, I
           write code since 2021, my favorite programming languajes are
-          TypeScript and Python
+          TypeScript and Python. Passionate about writing robust and efficient
+          code, constantly applying best practices and learning new things.
+        </p>
+
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta unde
+          ad eveniet porro iure, ipsum, tempora reiciendis beatae ratione
+          voluptatum, dignissimos praesentium vero temporibus pariatur modi
+          deleniti repellat corporis eius. Lorem, ipsum dolor sit amet
+          consectetur adipisicing elit. Dicta unde ad eveniet porro iure, ipsum,
+          tempora reiciendis beatae ratione voluptatum, dignissimos praesentium
+          vero temporibus pariatur modi deleniti repellat corporis eius.
         </p>
       </section>
 

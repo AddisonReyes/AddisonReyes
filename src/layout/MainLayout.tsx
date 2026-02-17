@@ -16,9 +16,7 @@ function MainLayout({ title = "title", children }: MainLayoutProps) {
         <NavBar />
       </header>
       <main>{children}</main>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </>
   );
 }

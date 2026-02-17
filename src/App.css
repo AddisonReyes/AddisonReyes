@@ -4,5 +4,14 @@
 }
 
 body {
+  /* Background */
+  background-color: white;
+  color: white;
+
+  /* Text */
   font-family: Georgia, "Times New Roman", Times, serif;
+
+  /* Display */
+  flex-direction: column;
+  display: flex;
 }
