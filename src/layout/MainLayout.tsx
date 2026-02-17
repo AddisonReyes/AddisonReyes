@@ -1,6 +1,9 @@
 import { ReactNode } from "react";
 import "./MainLayout.css";
 
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+
 interface MainLayoutProps {
   title: string;
   children?: ReactNode;
@@ -9,11 +12,13 @@ interface MainLayoutProps {
 function MainLayout({ title = "title", children }: MainLayoutProps) {
   return (
     <>
-      <head>
-        <h1>{title}</h1>
-      </head>
+      <header>
+        <NavBar />
+      </header>
       <main>{children}</main>
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
