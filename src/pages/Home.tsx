@@ -1,7 +1,10 @@
+import { ReactNode } from "react";
+import "./Home.css";
+
 import MainLayout from "../layout/MainLayout";
 
 import SkillContainer from "../components/ui/SkillContainer";
-import { ReactNode } from "react";
+import Button from "../components/ui/Button";
 
 type skill = { title: string; skills: string[] };
 const skillSet: skill[] = [
@@ -22,8 +25,8 @@ function Home() {
   return (
     <MainLayout title="Home">
       <section id="hero">
-        <h1>Full Stack Developer</h1>
-        <h3>Addison Amin Reyes Cedano</h3>
+        <h1>Addison Amin Reyes Cedano</h1>
+        <h2 id="role">Full Stack Developer</h2>
         <p>
           Full Stack Developer specializing in TypeScript, React.js, Express.js,
           Node.js, and MongoDB. I build end-to-end web applications with a focus
@@ -32,29 +35,13 @@ function Home() {
           and web-based games, where performance optimization and complex logic
           meet engaging user experiences.
         </p>
-        <ul>
-          <li>
-            <a
-              href="https://github.com/AddisonReyes"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Github
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/addison-reyes-9aa017208/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="/">Resume</a>
-          </li>
-        </ul>
+        <div id="HeroButtons">
+          <Button label="Github" url="https://github.com/AddisonReyes" />
+          <Button
+            label="LinkedIn"
+            url="https://www.linkedin.com/in/addison-reyes-9aa017208/"
+          />
+        </div>
       </section>
 
       <section id="about">
