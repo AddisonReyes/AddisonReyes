@@ -33,9 +33,7 @@
 <p align="left">
     ✨ Creating bugs since 2021
     <br>
-    📚 I'm currently learning Kaplay and Astro
-    <br>
-    🎯 Goals: Create my own portal for free online games
+    📚 I'm currently learning React.js and Kaplay.js
     <br>
     🎲 Fun fact: I like foxes 🦊
 </p>
