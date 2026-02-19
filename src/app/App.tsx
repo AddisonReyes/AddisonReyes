@@ -1,10 +1,5 @@
+import { HashRouter as Router, Routes, Route, useLocation } from "react-router";
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router";
 
 import { FeaturedProjects } from "./components/FeaturedProjects.js";
 import { ProjectsPage } from "./components/ProjectsPage.js";
