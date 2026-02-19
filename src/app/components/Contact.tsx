@@ -1,13 +1,33 @@
+import emailjs from "@emailjs/browser";
 import React from "react";
 import { motion } from "motion/react";
 import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { toast } from "sonner";
+import { useRef, useState } from "react";
 
 export const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent successfully!");
-    (e.target as HTMLFormElement).reset();
+    setLoading(true);
+
+    try {
+      await emailjs.sendForm(
+        "service_qvau6u1",
+        "template_5dq69oy",
+        formRef.current!,
+        "iM1w4zGIgdSjeeCCS",
+      );
+      toast.success("Message sent successfully!");
+      formRef.current?.reset();
+    } catch (error) {
+      toast.error("Something went wrong. Please try again.");
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -78,6 +98,7 @@ export const Contact = () => {
           </motion.div>
 
           <motion.form
+            ref={formRef}
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -94,8 +115,10 @@ export const Contact = () => {
               <input
                 type="text"
                 id="name"
+                name="user_name"
                 required
-                className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-fuchsia-500/50 transition-colors"
+                disabled={loading}
+                className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-fuchsia-500/50 transition-colors disabled:opacity-50"
                 placeholder="Your Name"
               />
             </div>
@@ -109,8 +132,10 @@ export const Contact = () => {
               <input
                 type="email"
                 id="email"
+                name="user_email"
                 required
-                className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-fuchsia-500/50 transition-colors"
+                disabled={loading}
+                className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-fuchsia-500/50 transition-colors disabled:opacity-50"
                 placeholder="Your Email"
               />
             </div>
@@ -123,17 +148,47 @@ export const Contact = () => {
               </label>
               <textarea
                 id="message"
+                name="message"
                 required
                 rows={4}
-                className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-fuchsia-500/50 transition-colors resize-none"
+                disabled={loading}
+                className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-fuchsia-500/50 transition-colors resize-none disabled:opacity-50"
                 placeholder="How can I help you?"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-['Libre_Baskerville'] font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-colors uppercase tracking-widest"
+              disabled={loading}
+              className="w-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-['Libre_Baskerville'] font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-colors uppercase tracking-widest disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              <Send size={18} /> Send Message
+              {loading ? (
+                <>
+                  <svg
+                    className="animate-spin h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    />
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                    />
+                  </svg>
+                  Sending...
+                </>
+              ) : (
+                <>
+                  <Send size={18} /> Send Message
+                </>
+              )}
             </button>
           </motion.form>
         </div>
