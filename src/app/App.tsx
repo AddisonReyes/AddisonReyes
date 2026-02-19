@@ -75,7 +75,7 @@ const ContactPage = () => (
 
 export default function App() {
   return (
-    <Router basename="/AddisonReyes/">
+    <Router basename="/">
       <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-[#121212]">
         <Navbar />
