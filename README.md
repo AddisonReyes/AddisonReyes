@@ -33,9 +33,7 @@
 <p align="left">
     ✨ Creating bugs since 2021
     <br>
-    📚 I'm currently learning Kaplay and Next.js
-    <br>
-    🎯 Goals: Create my own portal for free online games
+    📚 I'm currently learning React.js and Kaplay.js
     <br>
     🎲 Fun fact: I like foxes 🦊
 </p>
@@ -54,6 +52,8 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="reactjs logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" height="40" alt="tailwind logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height="40" alt="express logo"  />
   <img width="12" />

@@ -1,0 +1,69 @@
+import React from "react";
+import { motion } from "motion/react";
+import { Github, Linkedin } from "lucide-react";
+
+export const Hero = () => {
+  return (
+    <section className="bg-[#121212] pt-32 pb-20 px-6 min-h-[60vh] flex flex-col items-center justify-center">
+      <div className="max-w-4xl mx-auto text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="font-['Libre_Baskerville'] text-fuchsia-500 mb-2 md:text-5xl text-3xl font-bold"
+        >
+          Addison Amin Reyes Cedano
+        </motion.h1>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="font-['Libre_Baskerville'] text-fuchsia-400 mb-8 md:text-3xl text-xl"
+        >
+          Full Stack Developer
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-white/80 max-w-3xl mx-auto mb-10 text-lg leading-relaxed font-['Libre_Baskerville'] italic"
+        >
+          Full Stack Developer specializing in TypeScript, React.js, Express.js,
+          Node.js, and MongoDB. I build end-to-end web applications with a focus
+          on robust APIs, efficient data architecture, and seamless
+          integrations. Particularly interested in interactive web experiences
+          and web-based games, where performance optimization and complex logic
+          meet engaging user experiences.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex justify-center gap-4"
+        >
+          <a
+            href="https://github.com/AddisonReyes"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-8 py-2 border border-white/40 rounded-full text-white hover:bg-white/10 transition-all font-['Libre_Baskerville']"
+          >
+            <Github size={18} />
+            Github
+          </a>
+          <a
+            href="https://www.linkedin.com/in/addison-reyes-9aa017208/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-8 py-2 border border-white/40 rounded-full text-white hover:bg-white/10 transition-all font-['Libre_Baskerville']"
+          >
+            <Linkedin size={18} />
+            LinkedIn
+          </a>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
