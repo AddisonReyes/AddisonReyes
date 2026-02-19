@@ -14,7 +14,6 @@
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
-    "emitDeclarationOnly": true,
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
@@ -24,9 +23,7 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "allowImportingTsExtensions": true,
-
+    "verbatimModuleSyntax": false,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",

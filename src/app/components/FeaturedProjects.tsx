@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Dock, ExternalLink, Github } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { ImageWithFallback } from "./figma/ImageWithFallback.js";
 
 type Project = {
   title: string;

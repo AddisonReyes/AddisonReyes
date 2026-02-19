@@ -23,3 +23,4 @@ yarn-error.log*
 # obsidian
 .obsidian
 /vault
+/dist

@@ -3,7 +3,7 @@
 import * as React from "react";
 import * as SliderPrimitive from "@radix-ui/react-slider";
 
-import { cn } from "./utils";
+import { cn } from "./utils.js";
 
 function Slider({
   className,
@@ -26,8 +26,8 @@ function Slider({
   return (
     <SliderPrimitive.Root
       data-slot="slider"
-      defaultValue={defaultValue}
-      value={value}
+      {...(defaultValue !== undefined && { defaultValue })}
+      {...(value !== undefined && { value })}
       min={min}
       max={max}
       className={cn(

@@ -1,8 +1,16 @@
-import React from 'react';
-import { motion } from 'motion/react';
+import React from "react";
+import { motion } from "motion/react";
 
-const SkillCategory = ({ title, skills, index }: { title: string, skills: string[], index: number }) => (
-  <motion.div 
+const SkillCategory = ({
+  title,
+  skills,
+  index,
+}: {
+  title: string;
+  skills: string[];
+  index: number;
+}) => (
+  <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
@@ -27,26 +35,29 @@ export const Skills = () => {
   const skillData = [
     {
       title: "Programing",
-      skills: ["TypeScript", "JavaScript", "Python"]
+      skills: ["TypeScript", "JavaScript", "Python"],
     },
     {
       title: "Frontend",
-      skills: ["React.js", "HTML", "CSS"]
+      skills: ["React.js", "HTML", "CSS"],
     },
     {
       title: "Backend",
-      skills: ["Node.js", "Express.js", "FastAPI"]
+      skills: ["Node.js", "Express.js", "FastAPI"],
     },
     {
       title: "Database",
-      skills: ["PostgreSQL", "MongoDB"]
-    }
+      skills: ["PostgreSQL", "MongoDB"],
+    },
   ];
 
   return (
-    <section id="skills" className="bg-[#121212] py-20 px-6 border-t border-white/5">
+    <section
+      id="skills"
+      className="bg-[#121212] py-20 px-6 border-t border-white/5"
+    >
       <div className="max-w-4xl mx-auto">
-        <motion.h3 
+        <motion.h3
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -54,7 +65,7 @@ export const Skills = () => {
         >
           Skills
         </motion.h3>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillData.map((category, index) => (
             <SkillCategory key={index} {...category} index={index} />

@@ -1,7 +1,0 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import React from 'react';
-import { NavLink } from 'react-router';
-export const Navbar = () => {
-    return (_jsx("nav", { className: "bg-black text-white py-6 px-6 fixed top-0 w-full z-50 border-b border-white/5", children: _jsxs("div", { className: "max-w-6xl mx-auto flex justify-center gap-12 md:gap-24 font-['Libre_Baskerville'] text-sm uppercase tracking-widest font-bold", children: [_jsx(NavLink, { to: "/", className: ({ isActive }) => isActive ? "opacity-100" : "opacity-60 hover:opacity-100 transition-opacity", children: "Home" }), _jsx(NavLink, { to: "/projects", className: ({ isActive }) => isActive ? "opacity-100" : "opacity-60 hover:opacity-100 transition-opacity", children: "Projects" }), _jsx(NavLink, { to: "/about", className: ({ isActive }) => isActive ? "opacity-100" : "opacity-60 hover:opacity-100 transition-opacity", children: "About" }), _jsx(NavLink, { to: "/contact", className: ({ isActive }) => isActive ? "opacity-100" : "opacity-60 hover:opacity-100 transition-opacity", children: "Contact" })] }) }));
-};
-//# sourceMappingURL=Navbar.js.map

@@ -6,14 +6,14 @@ import {
   useLocation,
 } from "react-router";
 
-import { FeaturedProjects } from "./components/FeaturedProjects.tsx";
-import { ProjectsPage } from "./components/ProjectsPage.tsx";
-import { Contact } from "./components/Contact.tsx";
-import { Navbar } from "./components/Navbar.tsx";
-import { Skills } from "./components/Skills.tsx";
-import { Footer } from "./components/Footer.tsx";
-import { About } from "./components/About.tsx";
-import { Hero } from "./components/Hero.tsx";
+import { FeaturedProjects } from "./components/FeaturedProjects.js";
+import { ProjectsPage } from "./components/ProjectsPage.js";
+import { Contact } from "./components/Contact.js";
+import { Navbar } from "./components/Navbar.js";
+import { Skills } from "./components/Skills.js";
+import { Footer } from "./components/Footer.js";
+import { About } from "./components/About.js";
+import { Hero } from "./components/Hero.js";
 import { useEffect } from "react";
 import { Toaster } from "sonner";
 
@@ -44,21 +44,23 @@ const AboutPage = () => (
       </h3>
       <div className="space-y-6 text-white/90 text-lg font-['Libre_Baskerville'] leading-relaxed italic">
         <p>
-          I started my journey into software development with a passion for
-          building interactive digital experiences. Over the years, I've honed
-          my skills in the JavaScript ecosystem, moving from basic frontend
-          development to architecting complex full-stack applications.
+          I began my software development journey in 2021, learning through
+          books and online courses. My first programming language was C++,
+          guided by Deitel & Deitel's "C++ How to Program" and YouTube channels
+          like "Programación ATS". After grasping the fundamentals, I moved on
+          to Python for data science and machine learning when I enrolled at
+          ITLA to study Artificial Intelligence — though I soon discovered that
+          my true passion lay in game development and full-stack development.
         </p>
         <p>
-          My focus on performance optimization and robust data structures comes
-          from my interest in web gaming. I believe that a great user experience
-          starts with a solid foundation, which is why I spend considerable time
-          on API design and database efficiency.
-        </p>
-        <p>
-          When I'm not coding, I'm usually exploring new web technologies or
-          experimenting with different design patterns. I value clean code,
-          documentation, and the power of collaborative problem-solving.
+          Today, I am pursuing a Software Engineering degree at UNICARIBE
+          (Universidad del Caribe, Dominican Republic), and I specialize in
+          full-stack development, with a strong focus on TypeScript, React,
+          Node.js, and Express. I am passionate about writing clean, efficient
+          code and am always eager to learn new technologies and best practices.
+          I also have a deep interest in game development — currently exploring
+          the Kaplay.js library for HTML5 games — and plan to contribute to open
+          source game projects in the future.
         </p>
       </div>
     </div>
