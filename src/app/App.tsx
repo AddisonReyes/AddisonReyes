@@ -51,11 +51,11 @@ const AboutPage = () => (
           Today, I am pursuing a Software Engineering degree at UNICARIBE
           (Universidad del Caribe, Dominican Republic), and I specialize in
           full-stack development, with a strong focus on TypeScript, React,
-          Node.js, and Express. I am passionate about writing clean, efficient
+          Python, and Django. I am passionate about writing clean, efficient
           code and am always eager to learn new technologies and best practices.
           I also have a deep interest in game development — currently exploring
           the Kaplay.js library for HTML5 games — and plan to contribute to open
-          source game projects in the future.
+          source projects in the future.
         </p>
       </div>
     </div>

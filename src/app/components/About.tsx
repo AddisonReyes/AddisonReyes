@@ -31,7 +31,7 @@ export const About = () => {
           </p>
           <p>
             I have experience working with a variety of technologies and
-            frameworks, including React, Node.js, Express, and MongoDB. I am
+            frameworks, including React, Django, FastAPI, and PostgreSQL. I am
             always eager to take on new challenges and collaborate with other
             developers to create innovative solutions.
           </p>

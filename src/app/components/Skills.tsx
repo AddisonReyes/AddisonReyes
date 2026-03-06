@@ -43,7 +43,7 @@ export const Skills = () => {
     },
     {
       title: "Backend",
-      skills: ["Node.js", "Express.js", "Django"],
+      skills: ["Django", "FastAPI", "Node.js", "Express"],
     },
     {
       title: "Database",
