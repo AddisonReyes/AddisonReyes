@@ -43,7 +43,7 @@ export const Skills = () => {
     },
     {
       title: "Backend",
-      skills: ["Django", "FastAPI", "Node.js", "Express"],
+      skills: ["Django", "FastAPI", "Flask"],
     },
     {
       title: "Database",

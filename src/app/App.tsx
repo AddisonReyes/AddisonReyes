@@ -53,9 +53,16 @@ const AboutPage = () => (
           full-stack development, with a strong focus on TypeScript, React,
           Python, and Django. I am passionate about writing clean, efficient
           code and am always eager to learn new technologies and best practices.
-          I also have a deep interest in game development — currently exploring
-          the Kaplay.js library for HTML5 games — and plan to contribute to open
-          source projects in the future.
+          I also have a deep interest in{" "}
+          <a
+            href="https://dakotitah.itch.io/"
+            className="text-fuchsia-400"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            game development
+          </a>{" "}
+          and plan to contribute to open source projects in the future.
         </p>
       </div>
     </div>
