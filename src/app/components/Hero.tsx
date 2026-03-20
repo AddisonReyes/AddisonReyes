@@ -30,12 +30,11 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-white/80 max-w-3xl mx-auto mb-10 text-lg leading-relaxed font-['Libre_Baskerville'] italic"
         >
-          Full Stack Developer specializing in React, TypeScript, Python, Django
-          and PostgreSQL. I build end-to-end web applications with a focus on
-          robust APIs, scalable backends, and clean frontend architecture.
-          Particularly interested in interactive web experiences and web-based
-          games, AI integration and building intelligent features on top of
-          modern Python backends.
+          I build end-to-end web applications with a focus on robust APIs,
+          scalable backends, and clean frontend architecture. Particularly
+          interested in interactive web experiences and web-based games, AI
+          integration and building intelligent features on top of modern Python
+          backends.
         </motion.p>
 
         <motion.div

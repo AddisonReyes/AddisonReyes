@@ -25,7 +25,7 @@ const HomePage = () => (
     <Hero />
     <About />
     <Skills />
-    <FeaturedProjects />
+    {/* <FeaturedProjects /> */}
     <Contact />
   </main>
 );
@@ -49,11 +49,10 @@ const AboutPage = () => (
         </p>
         <p>
           Today, I am pursuing a Software Engineering degree at UNICARIBE
-          (Universidad del Caribe, Dominican Republic), and I specialize in
-          full-stack development, with a strong focus on TypeScript, React,
-          Python, and Django. I am passionate about writing clean, efficient
-          code and am always eager to learn new technologies and best practices.
-          I also have a deep interest in{" "}
+          (Universidad del Caribe, Dominican Republic). I am passionate about
+          full stack development, writing clean, efficient code and always eager
+          to learn new technologies and best practices. I also have a deep
+          interest in{" "}
           <a
             href="https://dakotitah.itch.io/"
             className="text-fuchsia-400"

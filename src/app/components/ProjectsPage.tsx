@@ -11,7 +11,17 @@ type Project = {
   live?: string;
 };
 
-const productionProjects: Project[] = [];
+const productionProjects: Project[] = [
+  {
+    title: "MiniFT",
+    description:
+      "Minimalist finance tracker app focused on helping you with your personal finances. ",
+    image:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80", // backend / code / server
+    github: "https://github.com/AddisonReyes/MiniFT",
+    live: "https://minift.up.railway.app/",
+  },
+];
 
 const personalProjects: Project[] = [
   {
@@ -21,6 +31,46 @@ const personalProjects: Project[] = [
     image:
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80", // backend / code / server
     github: "https://github.com/AddisonReyes/library-api",
+  },
+  {
+    title: "Store Sales Data Pipeline",
+    description:
+      "A basic ETL pipeline for processing and analyzing online store sales data. This project demonstrates data engineering fundamentals: extracting, transforming, loading, and analyzing data.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80", // data analytics dashboard
+    github: "https://github.com/AddisonReyes/store_sales_data_pipeline",
+  },
+  {
+    title: "ToDo App",
+    description:
+      "To-do list application built with HTML, CSS, Node.js, TypeScript, Docker, and MongoDB.",
+    image:
+      "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=800&q=80", // task planning / notebook
+    github: "https://github.com/AddisonReyes/ToDo-App",
+  },
+  {
+    title: "Anime Recommendation System",
+    description:
+      "A content-based anime recommendation system that suggests titles based on user viewing history and preferences. It applies NLP techniques to analyze anime descriptions and user reviews to identify similar content.",
+    image:
+      "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80", // streaming / media consumption / recommendation vibe
+    github: "https://github.com/AddisonReyes/Anime-System-Recomendations/",
+  },
+  {
+    title: "Intent Recognition Project",
+    description:
+      "NLP intent recognition project involving web scraping of approximately 1000 reviews, followed by data preprocessing and model training to classify reviews as positive or negative.",
+    image:
+      "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=800&q=80", // NLP / text processing
+    github: "https://github.com/AddisonReyes/Proyect-Intent-recognition",
+  },
+  {
+    title: "Patient Classification Project",
+    description:
+      "A machine learning model that predicts whether a patient is a smoker based on provided clinical and demographic information.",
+    image:
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80", // healthcare analytics / medical data context
+    github: "https://github.com/AddisonReyes/Proyecto-de-clasificacion/",
   },
 ];
 
@@ -67,6 +117,8 @@ const ProjectSection = ({
             <a
               href={project.github}
               className="text-white/40 hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-xs uppercase tracking-widest font-bold"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Github size={14} /> GitHub
             </a>
@@ -74,6 +126,8 @@ const ProjectSection = ({
               <a
                 href={project.live}
                 className="text-white/40 hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-xs uppercase tracking-widest font-bold"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <ExternalLink size={14} /> Live Demo
               </a>
