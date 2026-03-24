@@ -35,19 +35,19 @@ export const Skills = () => {
   const skillData = [
     {
       title: "Programing",
-      skills: ["TypeScript", "JavaScript", "Python"],
+      skills: ["TypeScript", "JavaScript", "Python", "Rust"],
     },
     {
       title: "Frontend",
-      skills: ["React.js", "HTML", "CSS"],
+      skills: ["React.js", "Tailwind CSS", "HTML", "CSS"],
     },
     {
       title: "Backend",
-      skills: ["Django", "FastAPI", "Flask"],
+      skills: ["Nest.js", "Node.js", "Express", "FastAPI"],
     },
     {
       title: "Database",
-      skills: ["PostgreSQL", "MongoDB"],
+      skills: ["PostgreSQL", "MongoDB", "MySQL", "Oracle"],
     },
   ];
 

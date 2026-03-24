@@ -24,22 +24,24 @@ export const About = () => {
           className="space-y-6 text-white/90 text-lg font-['Libre_Baskerville'] leading-relaxed"
         >
           <p>
-            I am a software engineer specialized in full stack development, I
-            write code since 2021, my favorite programming languages are
-            TypeScript and Python. Passionate about writing robust and efficient
-            code, constantly applying best practices and learning new things.
+            I am a software engineer specialized in backend development. I have
+            been writing code since 2021, my primary programming languages are
+            TypeScript, Rust, and Python. I am passionate about building robust
+            and efficient systems, consistently applying best practices and
+            continuously learning new technologies.
           </p>
           <p>
-            I have experience working with a variety of technologies and
-            frameworks, including React, Django, FastAPI, and PostgreSQL. I am
-            always eager to take on new challenges and collaborate with other
-            developers to create innovative solutions.
+            I have experience working with a wide range of technologies and
+            frameworks. Although I am capable of full-stack development, I
+            primarily focus on backend engineering. You can see examples of my
+            frontend work on this website. I am always eager to take on new
+            challenges and collaborate with other developers to create
+            innovative solutions.
           </p>
           <p>
-            Aside full stack development, I have a strong interest in game
-            development and art, I have experience working with Godot Engine,
-            Pygame and Kaplay.js, and I am always looking for ways to combine my
-            passion for coding with my love for creativity.
+            In addition to backend development, I have a strong interest in game
+            development and art. I am always looking for ways to combine my
+            passion for coding with my creativity.
           </p>
         </motion.div>
       </div>

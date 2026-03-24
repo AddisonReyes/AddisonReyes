@@ -25,7 +25,7 @@ const HomePage = () => (
     <Hero />
     <About />
     <Skills />
-    {/* <FeaturedProjects /> */}
+    <FeaturedProjects />
     <Contact />
   </main>
 );
@@ -42,17 +42,18 @@ const AboutPage = () => (
           I began my software development journey in 2021, learning through
           books and online courses. My first programming language was C++,
           guided by Deitel & Deitel's "C++ How to Program" and YouTube channels
-          like "Programación ATS". After grasping the fundamentals, I moved on
-          to Python for data science and machine learning when I enrolled at
-          ITLA to study Artificial Intelligence — though I soon discovered that
-          my true passion lay in game development and full-stack development.
+          like "Programación ATS". After building a strong foundation, I
+          transitioned to Python for data science and machine learning when I
+          enrolled at ITLA to study Artificial Intelligence. However, I soon
+          realized that my true passion lies in game development and backend
+          engineering.
         </p>
         <p>
-          Today, I am pursuing a Software Engineering degree at UNICARIBE
+          Currently, I am pursuing a Software Engineering degree at UNICARIBE
           (Universidad del Caribe, Dominican Republic). I am passionate about
-          full stack development, writing clean, efficient code and always eager
-          to learn new technologies and best practices. I also have a deep
-          interest in{" "}
+          backend development and focus on writing clean, efficient, and
+          maintainable code, while continuously learning new technologies and
+          best practices. I also have a strong interest in{" "}
           <a
             href="https://dakotitah.itch.io/"
             className="text-fuchsia-400"
@@ -61,7 +62,7 @@ const AboutPage = () => (
           >
             game development
           </a>{" "}
-          and plan to contribute to open source projects in the future.
+          and plan to contribute to open-source projects in the future.
         </p>
       </div>
     </div>

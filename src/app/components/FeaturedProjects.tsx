@@ -14,6 +14,16 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "MiniFT",
+    description:
+      "Minimalist finance tracker app focused on helping you with your personal finances. ",
+    image:
+      "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=800&q=80",
+    tech: ["Python", "Django", "TailwindCSS", "PostgreSQL", "Docker"],
+    github: "https://github.com/AddisonReyes/MiniFT",
+    live: "https://minift.up.railway.app/",
+  },
+  {
     title: "Library API",
     description:
       "A RESTful API built with TypeScript, Express, and MongoDB for managing a library system with books, authors, and loan operations.",
@@ -80,6 +90,8 @@ export const FeaturedProjects = () => {
                     <a
                       href={project.github}
                       className="text-white hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-['Libre_Baskerville'] font-bold"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <Github size={16} /> Code
                     </a>
@@ -87,6 +99,8 @@ export const FeaturedProjects = () => {
                       <a
                         href={project.live}
                         className="text-white hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-['Libre_Baskerville'] font-bold"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <ExternalLink size={16} /> Live
                       </a>

@@ -21,7 +21,7 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-['Libre_Baskerville'] text-fuchsia-400 mb-8 md:text-3xl text-xl"
         >
-          Full Stack Developer
+          Backend Developer
         </motion.h2>
 
         <motion.p
@@ -30,11 +30,9 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-white/80 max-w-3xl mx-auto mb-10 text-lg leading-relaxed font-['Libre_Baskerville'] italic"
         >
-          I build end-to-end web applications with a focus on robust APIs,
-          scalable backends, and clean frontend architecture. Particularly
-          interested in interactive web experiences and web-based games, AI
-          integration and building intelligent features on top of modern Python
-          backends.
+          I design and build scalable backend systems, automation pipelines, and
+          AI-driven solutions. My work focuses on delivering clean, efficient,
+          and reliable systems that solve complex engineering challenges.
         </motion.p>
 
         <motion.div
