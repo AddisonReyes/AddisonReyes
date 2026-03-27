@@ -7,7 +7,7 @@ export const About = () => {
       id="about"
       className="bg-[#121212] py-20 px-6 border-t border-white/5"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto ">
         <motion.h3
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -21,14 +21,15 @@ export const About = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="space-y-6 text-white/90 text-lg font-['Libre_Baskerville'] leading-relaxed"
+          className="space-y-6 text-white/90 text-lg font-['Libre_Baskerville'] leading-relaxed "
         >
           <p>
             I am a software engineer specialized in backend development. I have
             been writing code since 2021, my primary programming languages are
-            TypeScript, Rust, and Python. I am passionate about building robust
-            and efficient systems, consistently applying best practices and
-            continuously learning new technologies.
+            Rust and Python, but I also have experience with TypeScript,
+            JavaScript, C / C++, C#, Go, Java and Dart. I am passionate about
+            building robust and efficient systems, consistently applying best
+            practices and continuously learning new technologies.
           </p>
           <p>
             I have experience working with a wide range of technologies and
@@ -40,8 +41,9 @@ export const About = () => {
           </p>
           <p>
             In addition to backend development, I have a strong interest in game
-            development and art. I am always looking for ways to combine my
-            passion for coding with my creativity.
+            development, graphics programming, engine development and art. I am
+            always looking for ways to combine my passion for coding with my
+            creativity.
           </p>
         </motion.div>
       </div>

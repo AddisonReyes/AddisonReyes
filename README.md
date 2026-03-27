@@ -6,7 +6,7 @@ I design and build scalable backend systems, automation pipelines, and
 AI-driven solutions. My work focuses on delivering clean, efficient,
 and reliable systems that solve complex engineering challenges.
 
-My favorite technologies are **TypeScript**, **Rust** and **Python**. Beyond backend development, I have a strong interest in **game development**, **graphics programming**, **engine development**, and **art**.
+My primary programming languages are **Rust** and **Python**. Beyond backend development, I have a strong interest in **game development**, **graphics programming**, **engine development**, and **art**.
 
 ## Connect with Me
 

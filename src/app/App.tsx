@@ -24,7 +24,7 @@ const HomePage = () => (
   <main className="bg-[#121212] flex-grow">
     <Hero />
     <About />
-    <Skills />
+    {/* <Skills /> */}
     <FeaturedProjects />
     <Contact />
   </main>
