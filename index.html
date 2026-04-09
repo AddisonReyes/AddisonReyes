@@ -4,31 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Addison Reyes | Back-end Developer</title>
-    <meta
-      name="description"
-      content="Backend developer building scalable systems, automation pipelines, and AI-driven solutions."
-    />
-    <meta name="theme-color" content="#121212" />
-
-    <meta property="og:title" content="Addison Reyes | Back-end Developer" />
-    <meta
-      property="og:description"
-      content="Backend developer building scalable systems, automation pipelines, and AI-driven solutions."
-    />
-    <meta property="og:type" content="website" />
-
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Addison Reyes | Back-end Developer" />
-    <meta
-      name="twitter:description"
-      content="Backend developer building scalable systems, automation pipelines, and AI-driven solutions."
-    />
     <link rel="icon" href="/favicon.ico" />
-
-    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
-    <link rel="preconnect" href="https://unpkg.com" crossorigin />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
 
     <!-- Tailwind (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -39,7 +15,7 @@
   <body class="min-h-screen flex flex-col bg-[#121212]">
     <!-- Navbar -->
     <nav
-      class="fixed top-0 left-0 w-full bg-[#1a1a1a] text-white z-50"
+      class="fixed top-0 left-0 w-full bg-[#1a1a1a] text-white z-50 font-nav"
     >
       <!-- Desktop nav -->
       <div class="hidden md:flex items-center justify-center gap-16 px-8 py-5">
@@ -70,7 +46,7 @@
         <a
           href="#projects"
           data-nav
-          data-target="projects"
+          data-target="skills"
           class="opacity-60 hover:opacity-100 transition-opacity tracking-widest text-sm font-bold"
         >
           PROJECTS
@@ -94,7 +70,6 @@
             id="mobileMenuButton"
             class="flex flex-col justify-center items-center w-8 h-8 gap-1.5 opacity-80 hover:opacity-100 transition-opacity"
             aria-label="Toggle menu"
-            aria-controls="mobileMenu"
             aria-expanded="false"
             type="button"
           >
@@ -116,7 +91,6 @@
         <div
           id="mobileMenu"
           class="overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0"
-          aria-hidden="true"
         >
           <div
             class="flex flex-col items-center gap-6 py-6 border-t border-white/10"
@@ -148,7 +122,7 @@
             <a
               href="#projects"
               data-nav
-              data-target="projects"
+              data-target="skills"
               class="opacity-60 hover:opacity-100 transition-opacity tracking-widest text-sm font-bold"
             >
               PROJECTS
@@ -174,17 +148,17 @@
       >
         <div class="max-w-4xl mx-auto text-center">
           <h1
-            class="reveal is-visible text-fuchsia-500 mb-2 md:text-5xl text-3xl font-bold"
+            class="reveal is-visible font-libre text-fuchsia-500 mb-2 md:text-5xl text-3xl font-bold"
           >
             Addison Amin Reyes Cedano
           </h1>
           <h2
-            class="reveal is-visible delay-100 text-fuchsia-400 mb-8 md:text-3xl text-xl"
+            class="reveal is-visible delay-100 font-libre text-fuchsia-400 mb-8 md:text-3xl text-xl"
           >
             Backend Developer
           </h2>
           <p
-            class="reveal is-visible delay-200 text-white/80 max-w-3xl mx-auto mb-10 text-lg leading-relaxed italic"
+            class="reveal is-visible delay-200 text-white/80 max-w-3xl mx-auto mb-10 text-lg leading-relaxed font-libre italic"
           >
             I design and build scalable backend systems, automation pipelines,
             and AI-driven solutions. My work focuses on delivering clean,
@@ -192,12 +166,14 @@
             challenges.
           </p>
 
-          <div class="reveal is-visible delay-300 flex justify-center gap-4">
+          <div
+            class="reveal is-visible delay-300 grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:justify-center"
+          >
             <a
               href="https://github.com/AddisonReyes"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 px-8 py-2 border border-white/40 rounded-full text-white hover:bg-white/10 transition-all"
+              class="col-span-1 flex w-full sm:w-auto justify-center items-center gap-2 px-6 sm:px-8 py-2 border border-white/40 rounded-full text-white hover:bg-white/10 transition-all font-libre"
             >
               <i data-lucide="github" class="w-[18px] h-[18px]"></i>
               Github
@@ -206,7 +182,7 @@
               href="https://www.linkedin.com/in/addison-reyes-9aa017208/"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 px-8 py-2 border border-white/40 rounded-full text-white hover:bg-white/10 transition-all"
+              class="col-span-1 flex w-full sm:w-auto justify-center items-center gap-2 px-6 sm:px-8 py-2 border border-white/40 rounded-full text-white hover:bg-white/10 transition-all font-libre"
             >
               <i data-lucide="linkedin" class="w-[18px] h-[18px]"></i>
               LinkedIn
@@ -215,7 +191,7 @@
               href="./addison_reyes_cv.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 px-8 py-2 rounded-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white transition-colors"
+              class="col-span-2 flex w-full sm:w-auto justify-center items-center gap-2 px-6 sm:px-8 py-2 rounded-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white transition-colors font-libre"
             >
               <i data-lucide="file-text" class="w-[18px] h-[18px]"></i>
               CV
@@ -231,13 +207,13 @@
       >
         <div class="max-w-4xl mx-auto">
           <h3
-            class="reveal text-fuchsia-500 text-3xl mb-10 text-center md:text-left"
+            class="reveal font-libre text-fuchsia-500 text-3xl mb-10 text-center md:text-left"
           >
             About me
           </h3>
 
           <div
-            class="reveal space-y-6 text-white/90 text-lg leading-relaxed"
+            class="reveal space-y-6 text-white/90 text-lg font-libre leading-relaxed"
           >
             <p>
               I'm a software engineer specialized in backend development. I've
@@ -281,7 +257,7 @@
       >
         <div class="max-w-4xl mx-auto">
           <h3
-            class="reveal text-fuchsia-500 text-3xl mb-12 text-center md:text-left"
+            class="reveal font-libre text-fuchsia-500 text-3xl mb-12 text-center md:text-left"
           >
             Skills
           </h3>
@@ -291,7 +267,7 @@
               class="reveal bg-white/5 border border-white/10 rounded-lg p-6"
             >
               <div
-                class="text-sm uppercase tracking-widest text-white/40 font-bold mb-4"
+                class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold mb-4"
               >
                 Programming Languages
               </div>
@@ -315,7 +291,7 @@
               class="reveal bg-white/5 border border-white/10 rounded-lg p-6"
             >
               <div
-                class="text-sm uppercase tracking-widest text-white/40 font-bold mb-4"
+                class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold mb-4"
               >
                 Frontend
               </div>
@@ -339,7 +315,7 @@
               class="reveal bg-white/5 border border-white/10 rounded-lg p-6"
             >
               <div
-                class="text-sm uppercase tracking-widest text-white/40 font-bold mb-4"
+                class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold mb-4"
               >
                 Backend (TypeScript)
               </div>
@@ -387,7 +363,7 @@
               class="reveal bg-white/5 border border-white/10 rounded-lg p-6"
             >
               <div
-                class="text-sm uppercase tracking-widest text-white/40 font-bold mb-4"
+                class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold mb-4"
               >
                 Tools
               </div>
@@ -425,7 +401,7 @@
       >
         <div class="max-w-4xl mx-auto">
           <h3
-            class="reveal text-fuchsia-500 text-3xl mb-16 text-center"
+            class="reveal font-libre text-fuchsia-500 text-3xl mb-16 text-center"
           >
             Featured projects
           </h3>
@@ -440,20 +416,16 @@
                     alt="MiniFT"
                     class="w-full h-64 object-cover transform transition-transform group-hover:scale-105"
                     data-fallback
-                    loading="lazy"
-                    decoding="async"
-                    width="800"
-                    height="512"
                   />
                   <div
                     class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"
                   ></div>
                 </div>
                 <div class="space-y-4">
-                  <h4 class="text-fuchsia-400 text-2xl font-bold">
+                  <h4 class="font-libre text-fuchsia-400 text-2xl font-bold">
                     MiniFT
                   </h4>
-                  <p class="text-white/80 leading-relaxed italic">
+                  <p class="text-white/80 font-libre leading-relaxed italic">
                     Minimalist finance tracker app focused on helping you with
                     your personal finances.
                   </p>
@@ -482,7 +454,7 @@
                   <div class="flex gap-4 pt-4">
                     <a
                       href="https://github.com/AddisonReyes/MiniFT"
-                      class="text-white hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-bold"
+                      class="text-white hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-libre font-bold"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -491,7 +463,7 @@
                     </a>
                     <a
                       href="https://minift.up.railway.app/"
-                      class="text-white hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-bold"
+                      class="text-white hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-libre font-bold"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -512,20 +484,16 @@
                     alt="Library API"
                     class="w-full h-64 object-cover transform transition-transform group-hover:scale-105"
                     data-fallback
-                    loading="lazy"
-                    decoding="async"
-                    width="800"
-                    height="512"
                   />
                   <div
                     class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"
                   ></div>
                 </div>
                 <div class="space-y-4">
-                  <h4 class="text-fuchsia-400 text-2xl font-bold">
+                  <h4 class="font-libre text-fuchsia-400 text-2xl font-bold">
                     Library API
                   </h4>
-                  <p class="text-white/80 leading-relaxed italic">
+                  <p class="text-white/80 font-libre leading-relaxed italic">
                     A RESTful API built with TypeScript, Express, and MongoDB
                     for managing a library system with books, authors, and loan
                     operations.
@@ -555,7 +523,7 @@
                   <div class="flex gap-4 pt-4">
                     <a
                       href="https://github.com/AddisonReyes/library-api"
-                      class="text-white hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-bold"
+                      class="text-white hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-libre font-bold"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -576,16 +544,16 @@
         class="bg-[#121212] py-20 px-6 border-t border-white/5 pb-32"
       >
         <div class="max-w-4xl mx-auto text-center">
-          <h3 class="reveal text-fuchsia-500 text-3xl mb-12">
+          <h3 class="reveal font-libre text-fuchsia-500 text-3xl mb-12">
             Get in touch
           </h3>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div class="reveal text-left space-y-6">
-              <h4 class="text-white text-xl mb-4 italic">
+              <h4 class="font-libre text-white text-xl mb-4 italic">
                 Let's build something amazing together
               </h4>
-              <p class="text-white/60 leading-relaxed">
+              <p class="text-white/60 font-libre leading-relaxed">
                 Open for collaborations, interesting projects, or just a
                 friendly chat about web development and technology.
               </p>
@@ -600,7 +568,7 @@
                   >
                     <i data-lucide="mail" class="w-[18px] h-[18px]"></i>
                   </div>
-                  <span> addison.amin@gmail.com </span>
+                  <span class="font-libre"> addison.amin@gmail.com </span>
                 </a>
                 <a
                   href="https://github.com/AddisonReyes"
@@ -613,7 +581,7 @@
                   >
                     <i data-lucide="github" class="w-[18px] h-[18px]"></i>
                   </div>
-                  <span>Github</span>
+                  <span class="font-libre">Github</span>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/addison-reyes-9aa017208/"
@@ -626,7 +594,7 @@
                   >
                     <i data-lucide="linkedin" class="w-[18px] h-[18px]"></i>
                   </div>
-                  <span>LinkedIn</span>
+                  <span class="font-libre">LinkedIn</span>
                 </a>
               </div>
             </div>
@@ -639,7 +607,7 @@
               <div class="space-y-2">
                 <label
                   for="name"
-                  class="text-sm uppercase tracking-widest text-white/40 font-bold"
+                  class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold"
                 >
                   Name
                 </label>
@@ -656,7 +624,7 @@
               <div class="space-y-2">
                 <label
                   for="email"
-                  class="text-sm uppercase tracking-widest text-white/40 font-bold"
+                  class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold"
                 >
                   Email
                 </label>
@@ -673,7 +641,7 @@
               <div class="space-y-2">
                 <label
                   for="message"
-                  class="text-sm uppercase tracking-widest text-white/40 font-bold"
+                  class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold"
                 >
                   Message
                 </label>
@@ -690,7 +658,7 @@
               <button
                 id="contactSubmit"
                 type="submit"
-                class="w-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-colors uppercase tracking-widest disabled:opacity-70 disabled:cursor-not-allowed"
+                class="w-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-libre font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-colors uppercase tracking-widest disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 <span id="contactSubmitContent" class="flex items-center gap-2">
                   <i data-lucide="send" class="w-[18px] h-[18px]"></i>
@@ -734,7 +702,7 @@
       class="bg-black text-white/40 py-10 px-6 border-t border-white/10 mt-auto"
     >
       <div
-        class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm uppercase tracking-widest"
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-libre uppercase tracking-widest"
       >
         <p>
           &copy; <span id="currentYear"></span> Addison Amin Reyes Cedano. All
@@ -767,7 +735,6 @@
       class="fixed right-6 bottom-6 z-[60] hidden"
       aria-live="polite"
       aria-atomic="true"
-      role="status"
     >
       <div
         id="toastInner"
@@ -781,11 +748,11 @@
           <div class="flex-1">
             <div
               id="toastTitle"
-              class="text-white uppercase tracking-widest text-xs"
+              class="text-white font-libre uppercase tracking-widest text-xs"
             >
               Notice
             </div>
-            <div id="toastMessage" class="text-white/80"></div>
+            <div id="toastMessage" class="text-white/80 font-libre"></div>
           </div>
           <button
             id="toastClose"
