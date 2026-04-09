@@ -22,10 +22,14 @@
 
     if (type === "success") {
       titleEl.textContent = "Success";
+      toastEl.setAttribute("role", "status");
+      toastEl.setAttribute("aria-live", "polite");
       dotEl.classList.remove("bg-red-400");
       dotEl.classList.add("bg-fuchsia-400");
     } else {
       titleEl.textContent = "Error";
+      toastEl.setAttribute("role", "alert");
+      toastEl.setAttribute("aria-live", "assertive");
       dotEl.classList.remove("bg-fuchsia-400");
       dotEl.classList.add("bg-red-400");
     }
@@ -117,6 +121,7 @@
         menu.classList.toggle("opacity-100", open);
         menu.classList.toggle("max-h-0", !open);
         menu.classList.toggle("opacity-0", !open);
+        menu.setAttribute("aria-hidden", String(!open));
       }
       if (l1) l1.classList.toggle("rotate-45", open);
       if (l1) l1.classList.toggle("translate-y-2", open);
@@ -124,6 +129,9 @@
       if (l2) l2.classList.toggle("scale-x-0", open);
       if (l3) l3.classList.toggle("-rotate-45", open);
       if (l3) l3.classList.toggle("-translate-y-2", open);
+
+      // Prevent background scroll while the mobile menu is open.
+      document.body.classList.toggle("overflow-hidden", open);
     }
     if (btn) {
       btn.addEventListener("click", () => setOpen(!open));
@@ -132,32 +140,29 @@
       a.addEventListener("click", () => setOpen(false));
     });
 
+     // Close menu on Escape.
+    document.addEventListener("keydown", (e) => {
+      if (!open) return;
+      if (e.key === "Escape") setOpen(false);
+    });
+
+    // Close menu when clicking outside the nav.
+    const navEl = btn ? btn.closest("nav") : document.querySelector("nav");
+    document.addEventListener("click", (e) => {
+      if (!open) return;
+      if (!navEl) return;
+      if (e.target && navEl.contains(e.target)) return;
+      setOpen(false);
+    });
+
     // Toast close
     const toastClose = document.getElementById("toastClose");
     const toastEl = document.getElementById("toast");
     if (toastClose && toastEl) {
-      toastClose.addEventListener("click", () => toastEl.classList.add("hidden"));
-    }
-
-    // Scroll spy
-    const sections = ["home", "about", "skills", "contact"]
-      .map((id) => document.getElementById(id))
-      .filter(Boolean);
-    if (sections.length) {
-      const obs = new IntersectionObserver(
-        (entries) => {
-          const visible = entries
-            .filter((e) => e.isIntersecting)
-            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-          if (visible && visible.target && visible.target.id) {
-            setActiveNav(visible.target.id);
-          }
-        },
-        { threshold: [0.2, 0.35, 0.5, 0.65] },
+      toastClose.addEventListener("click", () =>
+        toastEl.classList.add("hidden"),
       );
-      sections.forEach((s) => obs.observe(s));
     }
-    setActiveNav("home");
 
     // Reveal on scroll
     if (
@@ -182,6 +187,54 @@
       document
         .querySelectorAll(".reveal")
         .forEach((el) => revealObs.observe(el));
+    }
+
+    // Scroll spy for navbar anchors
+    const sections = Array.from(document.querySelectorAll("main section[id]"));
+    if (sections.length) {
+      let activeId = null;
+      const setActive = (id) => {
+        if (!id || id === activeId) return;
+        activeId = id;
+        setActiveNav(id);
+      };
+
+      // Set initial state from hash (if present), otherwise default to first.
+      const initialFromHash =
+        window.location.hash && window.location.hash.slice(1);
+      if (initialFromHash && document.getElementById(initialFromHash)) {
+        setActive(initialFromHash);
+      } else {
+        setActive(sections[0].id);
+      }
+
+      // Update active item when the section is in the middle-ish of the viewport.
+      const spyObs = new IntersectionObserver(
+        (entries) => {
+          const inView = entries
+            .filter((e) => e.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+          if (inView[0] && inView[0].target && inView[0].target.id) {
+            setActive(inView[0].target.id);
+          }
+        },
+        {
+          rootMargin: "-35% 0px -55% 0px",
+          threshold: [0.05, 0.1, 0.2, 0.3, 0.4, 0.5],
+        },
+      );
+      sections.forEach((s) => spyObs.observe(s));
+
+      // Keep state in sync on click (also closes mobile menu if open).
+      document
+        .querySelectorAll("a[data-nav][href^='#']")
+        .forEach((a) => {
+          a.addEventListener("click", () => {
+            const id = a.getAttribute("data-target");
+            if (id) setActive(id);
+            setOpen(false);
+          });
+        });
     }
 
     // EmailJS
