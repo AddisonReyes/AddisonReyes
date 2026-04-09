@@ -49,8 +49,18 @@
     const loading = document.getElementById("contactLoadingContent");
     if (!form || !normal || !loading) return;
 
-    const fields = form.querySelectorAll("input, textarea, button");
-    fields.forEach((el) => (el.disabled = isLoading));
+    // Do not disable inputs/textarea here.
+    // Disabled fields are excluded from FormData, and EmailJS `sendForm` uses
+    // FormData under the hood. Disabling them would send an empty payload.
+    const submit = document.getElementById("contactSubmit");
+    if (submit) submit.disabled = isLoading;
+
+    // Prevent edits while sending without breaking FormData serialization.
+    form
+      .querySelectorAll("input, textarea")
+      .forEach((el) => (el.readOnly = isLoading));
+
+    form.setAttribute("aria-busy", String(isLoading));
     normal.classList.toggle("hidden", isLoading);
     loading.classList.toggle("hidden", !isLoading);
     loading.classList.toggle("flex", isLoading);
@@ -140,7 +150,7 @@
       a.addEventListener("click", () => setOpen(false));
     });
 
-     // Close menu on Escape.
+    // Close menu on Escape.
     document.addEventListener("keydown", (e) => {
       if (!open) return;
       if (e.key === "Escape") setOpen(false);
@@ -226,15 +236,13 @@
       sections.forEach((s) => spyObs.observe(s));
 
       // Keep state in sync on click (also closes mobile menu if open).
-      document
-        .querySelectorAll("a[data-nav][href^='#']")
-        .forEach((a) => {
-          a.addEventListener("click", () => {
-            const id = a.getAttribute("data-target");
-            if (id) setActive(id);
-            setOpen(false);
-          });
+      document.querySelectorAll("a[data-nav][href^='#']").forEach((a) => {
+        a.addEventListener("click", () => {
+          const id = a.getAttribute("data-target");
+          if (id) setActive(id);
+          setOpen(false);
         });
+      });
     }
 
     // EmailJS
