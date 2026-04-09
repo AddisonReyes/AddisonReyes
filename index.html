@@ -3,16 +3,728 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Addison Reyes | Full Stack Developer</title>
-    <meta
-      name="description"
-      content="Addison Amin Reyes is a passionate full stack developer with experience in JavaScript, TypeScript, React, Node.js, and more."
-    />
+    <title>Addison Reyes | Back-end Developer</title>
     <link rel="icon" href="/favicon.ico" />
+
+    <!-- Tailwind (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body class="min-h-screen flex flex-col bg-[#121212]">
+    <!-- Navbar -->
+    <nav
+      class="fixed top-0 left-0 w-full bg-[#1a1a1a] text-white z-50 font-nav"
+    >
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center justify-center gap-16 px-8 py-5">
+        <a
+          href="#home"
+          data-nav
+          data-target="home"
+          class="opacity-60 hover:opacity-100 transition-opacity tracking-widest text-sm font-bold"
+        >
+          HOME
+        </a>
+        <a
+          href="#about"
+          data-nav
+          data-target="about"
+          class="opacity-60 hover:opacity-100 transition-opacity tracking-widest text-sm font-bold"
+        >
+          ABOUT
+        </a>
+        <a
+          href="#skills"
+          data-nav
+          data-target="skills"
+          class="opacity-60 hover:opacity-100 transition-opacity tracking-widest text-sm font-bold"
+        >
+          SKILLS
+        </a>
+        <a
+          href="#contact"
+          data-nav
+          data-target="contact"
+          class="opacity-60 hover:opacity-100 transition-opacity tracking-widest text-sm font-bold"
+        >
+          CONTACT
+        </a>
+      </div>
+
+      <!-- Mobile nav -->
+      <div class="md:hidden">
+        <div class="flex items-center justify-between px-6 py-4">
+          <span class="tracking-widest text-sm font-bold opacity-80">MENU</span>
+
+          <button
+            id="mobileMenuButton"
+            class="flex flex-col justify-center items-center w-8 h-8 gap-1.5 opacity-80 hover:opacity-100 transition-opacity"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            type="button"
+          >
+            <span
+              id="mobileLine1"
+              class="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"
+            ></span>
+            <span
+              id="mobileLine2"
+              class="block w-6 h-0.5 bg-white transition-all duration-300"
+            ></span>
+            <span
+              id="mobileLine3"
+              class="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"
+            ></span>
+          </button>
+        </div>
+
+        <div
+          id="mobileMenu"
+          class="overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0"
+        >
+          <div
+            class="flex flex-col items-center gap-6 py-6 border-t border-white/10"
+          >
+            <a
+              href="#home"
+              data-nav
+              data-target="home"
+              class="opacity-60 hover:opacity-100 transition-opacity tracking-widest text-sm font-bold"
+            >
+              HOME
+            </a>
+            <a
+              href="#about"
+              data-nav
+              data-target="about"
+              class="opacity-60 hover:opacity-100 transition-opacity tracking-widest text-sm font-bold"
+            >
+              ABOUT
+            </a>
+            <a
+              href="#skills"
+              data-nav
+              data-target="skills"
+              class="opacity-60 hover:opacity-100 transition-opacity tracking-widest text-sm font-bold"
+            >
+              SKILLS
+            </a>
+            <a
+              href="#contact"
+              data-nav
+              data-target="contact"
+              class="opacity-60 hover:opacity-100 transition-opacity tracking-widest text-sm font-bold"
+            >
+              CONTACT
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="bg-[#121212] flex-grow">
+      <!-- Hero -->
+      <section
+        id="home"
+        class="bg-[#121212] pt-32 pb-20 px-6 min-h-[60vh] flex flex-col items-center justify-center"
+      >
+        <div class="max-w-4xl mx-auto text-center">
+          <h1
+            class="reveal is-visible font-libre text-fuchsia-500 mb-2 md:text-5xl text-3xl font-bold"
+          >
+            Addison Amin Reyes Cedano
+          </h1>
+          <h2
+            class="reveal is-visible delay-100 font-libre text-fuchsia-400 mb-8 md:text-3xl text-xl"
+          >
+            Backend Developer
+          </h2>
+          <p
+            class="reveal is-visible delay-200 text-white/80 max-w-3xl mx-auto mb-10 text-lg leading-relaxed font-libre italic"
+          >
+            I design and build scalable backend systems, automation pipelines,
+            and AI-driven solutions. My work focuses on delivering clean,
+            efficient, and reliable systems that solve complex engineering
+            challenges.
+          </p>
+
+          <div class="reveal is-visible delay-300 flex justify-center gap-4">
+            <a
+              href="https://github.com/AddisonReyes"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-2 px-8 py-2 border border-white/40 rounded-full text-white hover:bg-white/10 transition-all font-libre"
+            >
+              <i data-lucide="github" class="w-[18px] h-[18px]"></i>
+              Github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/addison-reyes-9aa017208/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-2 px-8 py-2 border border-white/40 rounded-full text-white hover:bg-white/10 transition-all font-libre"
+            >
+              <i data-lucide="linkedin" class="w-[18px] h-[18px]"></i>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section
+        id="about"
+        class="bg-[#121212] py-20 px-6 border-t border-white/5"
+      >
+        <div class="max-w-4xl mx-auto">
+          <h3
+            class="reveal font-libre text-fuchsia-500 text-3xl mb-10 text-center md:text-left"
+          >
+            About me
+          </h3>
+
+          <div
+            class="reveal space-y-6 text-white/90 text-lg font-libre leading-relaxed"
+          >
+            <p>
+              I am a software engineer specialized in backend development. I
+              have been writing code since 2021, my primary programming
+              languages are TypeScript, Rust and Python, but I also have
+              experience with C / C++, C#, Go, Java and Dart. I am passionate
+              about building robust and efficient systems, consistently applying
+              best practices and continuously learning new technologies.
+            </p>
+            <p>
+              I have experience working with a wide range of technologies and
+              frameworks. Although I am capable of full-stack development, I
+              primarily focus on backend engineering. You can see examples of my
+              frontend work on this website. I am always eager to take on new
+              challenges and collaborate with other developers to create
+              innovative solutions.
+            </p>
+            <p>
+              I began my software development journey in 2021, learning through
+              books and online courses. My first programming language was C++,
+              guided by Deitel &amp; Deitel's "C++ How to Program" and YouTube
+              channels like "Programacion ATS". After building a strong
+              foundation, I transitioned to Python for data science and machine
+              learning when I enrolled at ITLA to study Artificial Intelligence.
+              However, I soon realized that my true passion lies in game
+              development and backend engineering.
+            </p>
+            <p>
+              Currently, I am pursuing a Software Engineering degree at
+              UNICARIBE (Universidad del Caribe, Dominican Republic). I am
+              passionate about backend development and focus on writing clean,
+              efficient, and maintainable code, while continuously learning new
+              technologies and best practices. I also have a strong interest in
+              <a
+                href="https://dakotitah.itch.io/"
+                class="text-fuchsia-400"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                game development
+              </a>
+              and plan to contribute to open-source projects in the future.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section
+        id="skills"
+        class="bg-[#121212] py-20 px-6 border-t border-white/5"
+      >
+        <div class="max-w-4xl mx-auto">
+          <h3
+            class="reveal font-libre text-fuchsia-500 text-3xl mb-12 text-center md:text-left"
+          >
+            Skills
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+              class="reveal bg-white/5 border border-white/10 rounded-lg p-6"
+            >
+              <div
+                class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold mb-4"
+              >
+                Programming Languages
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">TypeScript</span>
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">Rust</span>
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">Python</span>
+              </div>
+            </div>
+
+            <div
+              class="reveal bg-white/5 border border-white/10 rounded-lg p-6"
+            >
+              <div
+                class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold mb-4"
+              >
+                Frontend (Minimal)
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">HTML</span>
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">CSS</span>
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">React.js</span>
+              </div>
+            </div>
+
+            <div
+              class="reveal bg-white/5 border border-white/10 rounded-lg p-6"
+            >
+              <div
+                class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold mb-4"
+              >
+                Backend (TypeScript)
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">Node.js</span>
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">Express</span>
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">REST APIs</span>
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">JWT / Auth</span>
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">Prisma (ORM)</span>
+              </div>
+            </div>
+
+            <div
+              class="reveal bg-white/5 border border-white/10 rounded-lg p-6"
+            >
+              <div
+                class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold mb-4"
+              >
+                Databases
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">PostgreSQL</span>
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">MongoDB</span>
+              </div>
+            </div>
+
+            <div
+              class="reveal bg-white/5 border border-white/10 rounded-lg p-6"
+            >
+              <div
+                class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold mb-4"
+              >
+                Tools
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">Git</span>
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">Docker</span>
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">GitHub Actions</span>
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">Linux basics</span>
+              </div>
+            </div>
+
+            <div
+              class="reveal bg-white/5 border border-white/10 rounded-lg p-6"
+            >
+              <div
+                class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold mb-4"
+              >
+                Testing
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20">Jest</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured projects -->
+      <section
+        id="projects"
+        class="bg-[#121212] py-20 px-6 border-t border-white/5"
+      >
+        <div class="max-w-4xl mx-auto">
+          <h3
+            class="reveal font-libre text-fuchsia-500 text-3xl mb-16 text-center"
+          >
+            Featured projects
+          </h3>
+
+          <div class="space-y-24">
+            <!-- Project 1 -->
+            <div class="reveal group">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="relative overflow-hidden rounded-lg">
+                  <img
+                    src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=800&q=80"
+                    alt="MiniFT"
+                    class="w-full h-64 object-cover transform transition-transform group-hover:scale-105"
+                    data-fallback
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"
+                  ></div>
+                </div>
+                <div class="space-y-4">
+                  <h4 class="font-libre text-fuchsia-400 text-2xl font-bold">
+                    MiniFT
+                  </h4>
+                  <p class="text-white/80 font-libre leading-relaxed italic">
+                    Minimalist finance tracker app focused on helping you with
+                    your personal finances.
+                  </p>
+                  <div class="flex flex-wrap gap-2 pt-2">
+                    <span
+                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                      >Python</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                      >Django</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                      >TailwindCSS</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                      >PostgreSQL</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                      >Docker</span
+                    >
+                  </div>
+                  <div class="flex gap-4 pt-4">
+                    <a
+                      href="https://github.com/AddisonReyes/MiniFT"
+                      class="text-white hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-libre font-bold"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i data-lucide="github" class="w-4 h-4"></i>
+                      Code
+                    </a>
+                    <a
+                      href="https://minift.up.railway.app/"
+                      class="text-white hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-libre font-bold"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i data-lucide="external-link" class="w-4 h-4"></i>
+                      Live
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="reveal group">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="relative overflow-hidden rounded-lg">
+                  <img
+                    src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800"
+                    alt="Library API"
+                    class="w-full h-64 object-cover transform transition-transform group-hover:scale-105"
+                    data-fallback
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"
+                  ></div>
+                </div>
+                <div class="space-y-4">
+                  <h4 class="font-libre text-fuchsia-400 text-2xl font-bold">
+                    Library API
+                  </h4>
+                  <p class="text-white/80 font-libre leading-relaxed italic">
+                    A RESTful API built with TypeScript, Express, and MongoDB
+                    for managing a library system with books, authors, and loan
+                    operations.
+                  </p>
+                  <div class="flex flex-wrap gap-2 pt-2">
+                    <span
+                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                      >TypeScript</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                      >Node.js</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                      >Express</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                      >MongoDB</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                      >Docker</span
+                    >
+                  </div>
+                  <div class="flex gap-4 pt-4">
+                    <a
+                      href="https://github.com/AddisonReyes/library-api"
+                      class="text-white hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-libre font-bold"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i data-lucide="github" class="w-4 h-4"></i>
+                      Code
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section
+        id="contact"
+        class="bg-[#121212] py-20 px-6 border-t border-white/5 pb-32"
+      >
+        <div class="max-w-4xl mx-auto text-center">
+          <h3 class="reveal font-libre text-fuchsia-500 text-3xl mb-12">
+            Get in touch
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div class="reveal text-left space-y-6">
+              <h4 class="font-libre text-white text-xl mb-4 italic">
+                Let's build something amazing together
+              </h4>
+              <p class="text-white/60 font-libre leading-relaxed">
+                Open for collaborations, interesting projects, or just a
+                friendly chat about web development and technology.
+              </p>
+
+              <div class="space-y-4 pt-4">
+                <a
+                  href="mailto:addison.amin@gmail.com"
+                  class="flex items-center gap-4 text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
+                >
+                  <div
+                    class="w-10 h-10 rounded-full border border-fuchsia-500/20 flex items-center justify-center"
+                  >
+                    <i data-lucide="mail" class="w-[18px] h-[18px]"></i>
+                  </div>
+                  <span class="font-libre"> addison.amin@gmail.com </span>
+                </a>
+                <a
+                  href="https://github.com/AddisonReyes"
+                  class="flex items-center gap-4 text-white hover:text-fuchsia-400 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center"
+                  >
+                    <i data-lucide="github" class="w-[18px] h-[18px]"></i>
+                  </div>
+                  <span class="font-libre">Github</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/addison-reyes-9aa017208/"
+                  class="flex items-center gap-4 text-white hover:text-fuchsia-400 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center"
+                  >
+                    <i data-lucide="linkedin" class="w-[18px] h-[18px]"></i>
+                  </div>
+                  <span class="font-libre">LinkedIn</span>
+                </a>
+              </div>
+            </div>
+
+            <form
+              id="contactForm"
+              class="reveal space-y-4 text-left"
+              novalidate
+            >
+              <div class="space-y-2">
+                <label
+                  for="name"
+                  class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="user_name"
+                  required
+                  class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-fuchsia-500/50 transition-colors disabled:opacity-50"
+                  placeholder="Your Name"
+                />
+              </div>
+
+              <div class="space-y-2">
+                <label
+                  for="email"
+                  class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="user_email"
+                  required
+                  class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-fuchsia-500/50 transition-colors disabled:opacity-50"
+                  placeholder="Your Email"
+                />
+              </div>
+
+              <div class="space-y-2">
+                <label
+                  for="message"
+                  class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows="4"
+                  class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-fuchsia-500/50 transition-colors resize-none disabled:opacity-50"
+                  placeholder="How can I help you?"
+                ></textarea>
+              </div>
+
+              <button
+                id="contactSubmit"
+                type="submit"
+                class="w-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-libre font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-colors uppercase tracking-widest disabled:opacity-70 disabled:cursor-not-allowed"
+              >
+                <span id="contactSubmitContent" class="flex items-center gap-2">
+                  <i data-lucide="send" class="w-[18px] h-[18px]"></i>
+                  Send Message
+                </span>
+
+                <span
+                  id="contactLoadingContent"
+                  class="hidden items-center gap-2"
+                >
+                  <svg
+                    class="animate-spin h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <circle
+                      class="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      stroke-width="4"
+                    />
+                    <path
+                      class="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                    />
+                  </svg>
+                  Sending...
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-black text-white/40 py-10 px-6 border-t border-white/10 mt-auto"
+    >
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-libre uppercase tracking-widest"
+      >
+        <p>
+          &copy; <span id="currentYear"></span> Addison Amin Reyes Cedano. All
+          rights reserved.
+        </p>
+        <div class="flex gap-8">
+          <a
+            href="https://x.com/dakotitah"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-fuchsia-400 transition-colors"
+          >
+            Twitter
+          </a>
+          <a
+            href="https://www.instagram.com/dakotitah/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-fuchsia-400 transition-colors"
+          >
+            Instagram
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast -->
+    <div
+      id="toast"
+      class="fixed right-6 bottom-6 z-[60] hidden"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      <div
+        id="toastInner"
+        class="max-w-sm rounded-lg border border-white/10 bg-black/70 backdrop-blur px-4 py-3 text-left"
+      >
+        <div class="flex items-start gap-3">
+          <div
+            id="toastDot"
+            class="mt-2 h-2 w-2 rounded-full bg-fuchsia-400"
+          ></div>
+          <div class="flex-1">
+            <div
+              id="toastTitle"
+              class="text-white font-libre uppercase tracking-widest text-xs"
+            >
+              Notice
+            </div>
+            <div id="toastMessage" class="text-white/80 font-libre"></div>
+          </div>
+          <button
+            id="toastClose"
+            class="text-white/50 hover:text-white transition-colors"
+            type="button"
+            aria-label="Close notification"
+          >
+            &times;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lucide icons -->
+    <script
+      src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"
+      defer
+    ></script>
+
+    <!-- EmailJS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+      defer
+    ></script>
+
+    <!-- Site JS -->
+    <script src="./script.js" defer></script>
   </body>
 </html>
