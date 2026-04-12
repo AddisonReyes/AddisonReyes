@@ -46,7 +46,7 @@
         <a
           href="#projects"
           data-nav
-          data-target="skills"
+          data-target="projects"
           class="opacity-60 hover:opacity-100 transition-opacity tracking-widest text-sm font-bold"
         >
           PROJECTS
@@ -122,7 +122,7 @@
             <a
               href="#projects"
               data-nav
-              data-target="skills"
+              data-target="projects"
               class="opacity-60 hover:opacity-100 transition-opacity tracking-widest text-sm font-bold"
             >
               PROJECTS
@@ -140,7 +140,7 @@
       </div>
     </nav>
 
-    <main class="bg-[#121212] flex-grow">
+    <main class="bg-[#121212] flex-grow flex flex-col gap-8">
       <!-- Hero -->
       <section
         id="home"
@@ -257,139 +257,251 @@
           <h3
             class="reveal font-libre text-fuchsia-500 text-3xl mb-12 text-center md:text-left"
           >
-            Skills
+            Core skills
           </h3>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div
-              class="reveal bg-white/5 border border-white/10 rounded-lg p-6"
+              class="reveal group relative bg-white/5 bg-gradient-to-br from-fuchsia-900/10 via-white/5 to-transparent border border-white/10 rounded-xl p-6 pl-5 border-l-4 border-l-fuchsia-500/40 transition-all hover:bg-white/10 hover:border-white/20 hover:border-l-fuchsia-400/70 hover:-translate-y-0.5"
             >
               <div
-                class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold mb-4"
+                class="flex items-center gap-2 text-sm uppercase tracking-widest text-white/50 font-libre font-bold mb-4"
               >
+                <i
+                  data-lucide="code"
+                  class="w-4 h-4 text-fuchsia-300"
+                  aria-hidden="true"
+                ></i>
                 Frontend
               </div>
               <div class="flex flex-wrap gap-2">
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-fuchsia-500/30"
                   >Next.js</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-fuchsia-500/30"
                   >React.js</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-fuchsia-500/30"
                   >Tailwind CSS</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-fuchsia-500/30"
                   >HTML</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-fuchsia-500/30"
                   >CSS</span
                 >
               </div>
             </div>
 
             <div
-              class="reveal bg-white/5 border border-white/10 rounded-lg p-6"
+              class="reveal group relative bg-white/5 bg-gradient-to-br from-cyan-900/10 via-white/5 to-transparent border border-white/10 rounded-xl p-6 pl-5 border-l-4 border-l-cyan-500/40 transition-all hover:bg-white/10 hover:border-white/20 hover:border-l-cyan-300/70 hover:-translate-y-0.5"
             >
               <div
-                class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold mb-4"
+                class="flex items-center gap-2 text-sm uppercase tracking-widest text-white/50 font-libre font-bold mb-4"
               >
+                <i
+                  data-lucide="server"
+                  class="w-4 h-4 text-cyan-300"
+                  aria-hidden="true"
+                ></i>
                 Backend
               </div>
               <div class="flex flex-wrap gap-2">
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >Node.js</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >Express</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >NestJS</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >Prisma (ORM)</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >Jest</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >PostgreSQL</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >MongoDB</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >Rust</span
                 >
               </div>
             </div>
 
             <div
-              class="reveal bg-white/5 border border-white/10 rounded-lg p-6"
+              class="reveal group relative bg-white/5 bg-gradient-to-br from-emerald-900/10 via-white/5 to-transparent border border-white/10 rounded-xl p-6 pl-5 border-l-4 border-l-emerald-500/40 transition-all hover:bg-white/10 hover:border-white/20 hover:border-l-emerald-300/70 hover:-translate-y-0.5"
             >
               <div
-                class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold mb-4"
+                class="flex items-center gap-2 text-sm uppercase tracking-widest text-white/50 font-libre font-bold mb-4"
               >
+                <i
+                  data-lucide="gamepad-2"
+                  class="w-4 h-4 text-emerald-300"
+                  aria-hidden="true"
+                ></i>
                 Game Dev
               </div>
               <div class="flex flex-wrap gap-2">
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >Godot Engine</span
-                ><span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                >
+                <span
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >Bevy</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >Aseprite</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >Blender</span
                 >
               </div>
             </div>
 
             <div
-              class="reveal bg-white/5 border border-white/10 rounded-lg p-6"
+              class="reveal group relative bg-white/5 bg-gradient-to-br from-amber-900/10 via-white/5 to-transparent border border-white/10 rounded-xl p-6 pl-5 border-l-4 border-l-amber-500/40 transition-all hover:bg-white/10 hover:border-white/20 hover:border-l-amber-300/70 hover:-translate-y-0.5"
             >
               <div
-                class="text-sm uppercase tracking-widest text-white/40 font-libre font-bold mb-4"
+                class="flex items-center gap-2 text-sm uppercase tracking-widest text-white/50 font-libre font-bold mb-4"
               >
+                <i
+                  data-lucide="wrench"
+                  class="w-4 h-4 text-amber-300"
+                  aria-hidden="true"
+                ></i>
                 Tools
               </div>
               <div class="flex flex-wrap gap-2">
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >Git</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >Docker</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >GitHub Actions</span
                 >
                 <span
-                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
+                  class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20 transition-colors group-hover:border-white/25"
                   >Linux</span
                 >
               </div>
+            </div>
+          </div>
+
+          <div class="reveal mt-10 pt-10 border-t border-white/10">
+            <div class="flex items-center gap-2">
+              <i
+                data-lucide="archive"
+                class="w-4 h-4 text-white/60"
+                aria-hidden="true"
+              ></i>
+              <h4 class="font-libre text-white/80 text-lg">
+                Additional skills
+              </h4>
+            </div>
+            <p class="font-libre text-white/60 italic mt-2">
+              Comfortable with these, but not my main focus (not used recently).
+            </p>
+
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >C</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >C++</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >C#</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >.NET</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >Java</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >Microsoft SQL Server</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >Oracle Database</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >MySQL</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >Dart</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >Flutter</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >Flutter</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >Numpy</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >Pandas</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >Scikit-learn</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >Tensorflow</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >Matplotlib</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >Seaborn</span
+              >
+              <span
+                class="px-3 py-1 bg-white/5 text-white/70 text-xs rounded-full border border-white/10"
+                >Plotly</span
+              >
             </div>
           </div>
         </div>
@@ -563,7 +675,7 @@
                 </div>
 
                 <div
-                  class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white transition-colors font-libre w-full sm:w-auto"
+                  class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-fuchsia-700 hover:bg-fuchsia-800 text-white transition-colors font-libre w-full sm:w-auto"
                 >
                   <i data-lucide="external-link" class="w-4 h-4"></i>
                   <span>Try some of my games!</span>
