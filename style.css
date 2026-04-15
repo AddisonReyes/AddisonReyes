@@ -9,6 +9,20 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/*
+ * This site uses Tailwind via CDN (no build step). `font-nav`/`font-libre`
+ * are used in the HTML but are not provided by Tailwind by default.
+ * Define them here to avoid relying on implicit fonts.
+ */
+.font-nav {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+.font-libre {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
