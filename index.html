@@ -245,135 +245,8 @@
             Featured projects
           </h3>
 
-          <div class="space-y-24">
-            <!-- Project 1 -->
-            <div class="reveal group">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                <div class="relative overflow-hidden rounded-lg">
-                  <img
-                    src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=800&q=80"
-                    alt="MiniFT"
-                    class="w-full h-64 object-cover transform transition-transform group-hover:scale-105"
-                    data-fallback
-                  />
-                  <div
-                    class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"
-                  ></div>
-                </div>
-                <div class="space-y-4">
-                  <h4 class="font-libre text-fuchsia-400 text-2xl font-bold">
-                    MiniFT
-                  </h4>
-                  <p class="text-white/80 font-libre leading-relaxed italic">
-                    Minimalist finance tracker app focused on helping you with
-                    your personal finances.
-                  </p>
-                  <div class="flex flex-wrap gap-2 pt-2">
-                    <span
-                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
-                      >Python</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
-                      >Django</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
-                      >TailwindCSS</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
-                      >PostgreSQL</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
-                      >Docker</span
-                    >
-                  </div>
-                  <div class="flex gap-4 pt-4">
-                    <a
-                      href="https://github.com/AddisonReyes/MiniFT"
-                      class="text-white hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-libre font-bold"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i data-lucide="github" class="w-4 h-4"></i>
-                      Code
-                    </a>
-                    <a
-                      href="https://minift.up.railway.app/"
-                      class="text-white hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-libre font-bold"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i data-lucide="external-link" class="w-4 h-4"></i>
-                      Live
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="reveal group">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                <div class="relative overflow-hidden rounded-lg">
-                  <img
-                    src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800"
-                    alt="Library API"
-                    class="w-full h-64 object-cover transform transition-transform group-hover:scale-105"
-                    data-fallback
-                  />
-                  <div
-                    class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"
-                  ></div>
-                </div>
-                <div class="space-y-4">
-                  <h4 class="font-libre text-fuchsia-400 text-2xl font-bold">
-                    Library API
-                  </h4>
-                  <p class="text-white/80 font-libre leading-relaxed italic">
-                    A RESTful API built with TypeScript, Express, and MongoDB
-                    for managing a library system with books, authors, and loan
-                    operations.
-                  </p>
-                  <div class="flex flex-wrap gap-2 pt-2">
-                    <span
-                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
-                      >TypeScript</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
-                      >Node.js</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
-                      >Express</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
-                      >MongoDB</span
-                    >
-                    <span
-                      class="px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20"
-                      >Docker</span
-                    >
-                  </div>
-                  <div class="flex gap-4 pt-4">
-                    <a
-                      href="https://github.com/AddisonReyes/library-api"
-                      class="text-white hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-libre font-bold"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i data-lucide="github" class="w-4 h-4"></i>
-                      Code
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- Projects injected from ./projects.json -->
+          <div id="projectsList" class="space-y-24"></div>
 
           <!-- Itch.io (separate card) -->
           <div class="reveal mt-14">
@@ -600,7 +473,7 @@
             Instagram
           </a>
           <a
-            href="https://certificates-ecru.vercel.app/"
+            href="https://certificates-4fx.pages.dev/"
             target="_blank"
             rel="noopener noreferrer"
             class="hover:text-fuchsia-400 transition-colors"

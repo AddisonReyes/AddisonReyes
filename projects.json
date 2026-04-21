@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "slug": "easy-to-do",
+      "name": "EasyToDo",
+      "description": "A minimalism local web to-do list and habit tracker.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=800&q=80",
+        "alt": "EasyToDo"
+      },
+      "tags": ["Next.js", "React", "TailwindCSS", "TypeScript"],
+      "codeUrl": "https://github.com/AddisonReyes/easy-to-do",
+      "liveUrl": "https://easy-to-do.pages.dev/"
+    },
+    {
+      "slug": "minift",
+      "name": "MiniFT",
+      "description": "Minimalist finance tracker app focused on helping you with your personal finances.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=800&q=80",
+        "alt": "MiniFT"
+      },
+      "tags": ["Python", "Django", "TailwindCSS", "PostgreSQL", "Docker"],
+      "codeUrl": "https://github.com/AddisonReyes/MiniFT",
+      "liveUrl": "https://minift.up.railway.app/"
+    },
+    {
+      "slug": "library-api",
+      "name": "Library API",
+      "description": "A RESTful API built with TypeScript, Express, and MongoDB for managing a library system with books, authors, and loan operations.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+        "alt": "Library API"
+      },
+      "tags": ["TypeScript", "Node.js", "Express", "MongoDB", "Docker"],
+      "codeUrl": "https://github.com/AddisonReyes/library-api"
+    }
+  ]
+}
