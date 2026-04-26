@@ -29,8 +29,7 @@ body {
  * Define them here to avoid relying on implicit fonts.
  */
 .font-nav {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .font-libre {

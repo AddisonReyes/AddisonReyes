@@ -233,11 +233,24 @@
 
       const imgWrap = document.createElement("div");
       imgWrap.className =
-        "relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] shadow-[0_24px_80px_rgba(0,0,0,0.32)]";
+        "relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] shadow-[0_12px_28px_rgba(0,0,0,0.1)]";
+
+      const imgSrc =
+        project && project.image && project.image.src
+          ? project.image.src
+          : "";
+
+      const blurBg = document.createElement("img");
+      blurBg.className =
+        "absolute inset-0 h-full w-full scale-110 object-cover object-center opacity-35 blur-3xl saturate-125";
+      blurBg.setAttribute("data-fallback", "");
+      blurBg.setAttribute("aria-hidden", "true");
+      blurBg.alt = "";
+      blurBg.src = imgSrc;
 
       const img = document.createElement("img");
       img.className =
-        "w-full aspect-[16/9] object-cover object-top transform transition-transform duration-500 group-hover:scale-[1.02]";
+        "relative z-[1] w-full aspect-[16/9] object-cover object-top transform transition-transform duration-500 group-hover:scale-[1.01]";
       img.setAttribute("data-fallback", "");
       img.alt =
         project && project.image && typeof project.image.alt === "string"
@@ -245,15 +258,13 @@
           : project && typeof project.name === "string"
             ? project.name
             : "";
-      img.src =
-        project && project.image && project.image.src
-          ? project.image.src
-          : "";
+      img.src = imgSrc;
 
       const overlay = document.createElement("div");
       overlay.className =
-        "absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none";
+        "absolute inset-0 z-[2] bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none";
 
+      imgWrap.appendChild(blurBg);
       imgWrap.appendChild(img);
       imgWrap.appendChild(overlay);
 
@@ -299,7 +310,7 @@
         const a = document.createElement("a");
         a.href = href;
         a.className =
-          label === "Live site"
+          label === "Website"
             ? "inline-flex items-center justify-center gap-2 rounded-full bg-fuchsia-600 px-5 py-3 text-sm font-nav font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-fuchsia-700"
             : "inline-flex items-center justify-center gap-2 rounded-full border border-white/12 bg-white/[0.03] px-5 py-3 text-sm font-nav font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:border-fuchsia-500/25 hover:text-fuchsia-300";
         a.target = "_blank";
@@ -325,7 +336,7 @@
       addLink(
         project && project.liveUrl ? String(project.liveUrl) : "",
         "external-link",
-        "Live site",
+        "Website",
       );
 
       content.appendChild(h4);
