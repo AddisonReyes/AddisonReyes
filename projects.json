@@ -3,15 +3,26 @@
     {
       "slug": "minift",
       "name": "MiniFT",
-      "description": "Minimalist finance tracker app focused on helping you with your personal finances.",
+      "kicker": "Live product",
+      "status": "Production",
+      "year": "2026",
+      "headline": "Personal finance tracking designed as a polished full-stack product.",
+      "summary": "A minimalist finance tracker focused on helping users manage transactions, budgets, and financial habits through a clean interface and a production-minded architecture.",
+      "role": "Full-stack development, backend architecture, database design, and product UI implementation.",
       "image": {
-        "src": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=800&q=80",
-        "alt": "MiniFT"
+        "src": "./img/minift.webp",
+        "alt": "MiniFT dashboard interface"
       },
+      "highlights": [
+        "Responsive Next.js interface",
+        "Rust backend with Rocket",
+        "PostgreSQL data modeling",
+        "Dockerized deployment workflow"
+      ],
       "tags": [
         "Next.js",
         "React",
-        "TailwindCSS",
+        "Tailwind CSS",
         "TypeScript",
         "Rust",
         "Rocket",
@@ -23,26 +34,25 @@
     {
       "slug": "easy-to-do",
       "name": "EasyToDo",
-      "description": "A minimalism local web to-do list and habit tracker.",
+      "kicker": "Personal project",
+      "status": "Live",
+      "year": "2026",
+      "headline": "A lightweight habit tracker and to-do app built around clarity and focus.",
+      "summary": "A local-first productivity app for managing tasks and habits with a minimal interface, fast interactions, and an intentionally distraction-free experience.",
+      "role": "Frontend architecture, interaction design, and implementation.",
       "image": {
-        "src": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=800&q=80",
-        "alt": "EasyToDo"
+        "src": "./img/easy-to-do.webp",
+        "alt": "EasyToDo task and habit tracker interface"
       },
-      "tags": ["Next.js", "React", "TailwindCSS", "TypeScript"],
+      "highlights": [
+        "Minimal, mobile-friendly UI",
+        "Task and habit tracking flows",
+        "Fast local experience",
+        "Simple and maintainable front-end structure"
+      ],
+      "tags": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
       "codeUrl": "https://github.com/AddisonReyes/easy-to-do",
       "liveUrl": "https://easy-to-do.pages.dev/"
-    },
-
-    {
-      "slug": "library-api",
-      "name": "Library API",
-      "description": "A RESTful API built with TypeScript, Express, and MongoDB for managing a library system with books, authors, and loan operations.",
-      "image": {
-        "src": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
-        "alt": "Library API"
-      },
-      "tags": ["TypeScript", "Node.js", "Express", "MongoDB", "Docker"],
-      "codeUrl": "https://github.com/AddisonReyes/library-api"
     }
   ]
 }

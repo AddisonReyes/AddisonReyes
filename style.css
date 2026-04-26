@@ -4,9 +4,23 @@ html {
 
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(217, 70, 239, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(148, 163, 184, 0.06),
+      transparent 30%
+    ),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent 22%),
+    #121212;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  position: relative;
 }
 
 /*
@@ -32,6 +46,41 @@ body {
 /* Prevent fixed nav from covering anchored headings */
 section {
   scroll-margin-top: 96px;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  background-position: 0 0, 0 0;
+  mask-image: radial-gradient(circle at center, black, transparent 90%);
+  opacity: 0.18;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(217, 70, 239, 0.1), transparent 24%),
+    radial-gradient(circle at 82% 78%, rgba(255, 255, 255, 0.035), transparent 20%);
+  opacity: 0.45;
+  z-index: 0;
+}
+
+nav,
+main,
+footer {
+  position: relative;
+  z-index: 1;
 }
 
 /* Consistent, visible keyboard focus without changing layout */
@@ -44,7 +93,19 @@ section {
   background: rgba(217, 70, 239, 0.35);
 }
 
+::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+img {
+  display: block;
+}
+
 @media (prefers-reduced-motion: no-preference) {
+  body::before {
+    animation: drift-grid 90s linear infinite;
+  }
+
   .reveal {
     opacity: 0;
     transform: translateY(16px);
@@ -54,5 +115,15 @@ section {
   .reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes drift-grid {
+  from {
+    background-position: 0 0, 0 0;
+  }
+
+  to {
+    background-position: 72px 36px, 72px 36px;
   }
 }

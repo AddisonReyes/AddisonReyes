@@ -6,29 +6,6 @@
 
   const PROJECTS_JSON_PATH = "./projects.json";
 
-  // Curated pool of coding/computer themed images. Project cards will pick a
-  // random image from this list on each page load.
-  const PROJECT_IMAGE_POOL = [
-    "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
-  ];
-
-  function shuffled(list) {
-    const copy = Array.isArray(list) ? list.slice() : [];
-    for (let i = copy.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [copy[i], copy[j]] = [copy[j], copy[i]];
-    }
-    return copy;
-  }
-
   const brandIcons = {
     Github: [
       [
@@ -246,19 +223,21 @@
 
     wireReveals(document);
 
-    function createProjectCard(project, imageSrc) {
+    function createProjectCard(project, index) {
       const wrap = document.createElement("div");
       wrap.className = "reveal group";
 
       const grid = document.createElement("div");
-      grid.className = "grid grid-cols-1 md:grid-cols-2 gap-10 items-center";
+      grid.className =
+        "grid grid-cols-1 lg:grid-cols-[minmax(0,1.45fr)_minmax(320px,0.85fr)] gap-8 lg:gap-10 xl:gap-12 items-center";
 
       const imgWrap = document.createElement("div");
-      imgWrap.className = "relative overflow-hidden rounded-lg";
+      imgWrap.className =
+        "relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] shadow-[0_24px_80px_rgba(0,0,0,0.32)]";
 
       const img = document.createElement("img");
       img.className =
-        "w-full h-64 object-cover transform transition-transform group-hover:scale-105";
+        "w-full aspect-[16/9] object-cover object-top transform transition-transform duration-500 group-hover:scale-[1.02]";
       img.setAttribute("data-fallback", "");
       img.alt =
         project && project.image && typeof project.image.alt === "string"
@@ -267,51 +246,62 @@
             ? project.name
             : "";
       img.src =
-        imageSrc ||
-        (project && project.image && project.image.src
+        project && project.image && project.image.src
           ? project.image.src
-          : "");
+          : "";
 
       const overlay = document.createElement("div");
       overlay.className =
-        "absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all";
+        "absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none";
 
       imgWrap.appendChild(img);
       imgWrap.appendChild(overlay);
 
       const content = document.createElement("div");
-      content.className = "space-y-4";
+      content.className = "space-y-5";
+
+      if (index % 2 === 1) {
+        imgWrap.classList.add("lg:order-2");
+        content.classList.add("lg:order-1");
+      }
 
       const h4 = document.createElement("h4");
-      h4.className = "font-libre text-fuchsia-400 text-2xl font-bold";
+      h4.className = "font-libre text-white text-3xl xl:text-[3rem] font-bold leading-none";
       h4.textContent = project && project.name ? String(project.name) : "";
 
-      const p = document.createElement("p");
-      p.className = "text-white/80 font-libre leading-relaxed italic";
-      p.textContent =
-        project && project.description ? String(project.description) : "";
+      const description = document.createElement("p");
+      description.className =
+        "text-white/72 font-libre text-lg leading-relaxed max-w-xl";
+      description.textContent =
+        project && project.description
+          ? String(project.description)
+          : project && project.summary
+            ? String(project.summary)
+            : "";
 
       const tags = document.createElement("div");
-      tags.className = "flex flex-wrap gap-2 pt-2";
+      tags.className = "flex flex-wrap gap-2 pt-1";
       (Array.isArray(project && project.tags) ? project.tags : []).forEach(
         (t) => {
           const span = document.createElement("span");
           span.className =
-            "px-3 py-1 bg-fuchsia-900/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/20";
+            "px-3 py-1 rounded-full border border-white/10 bg-white/[0.04] text-white/68 text-xs font-nav tracking-wide";
           span.textContent = String(t);
           tags.appendChild(span);
         },
       );
 
       const links = document.createElement("div");
-      links.className = "flex gap-4 pt-4";
+      links.className = "flex flex-wrap gap-4 pt-1";
 
       function addLink(href, icon, label) {
         if (!href) return;
         const a = document.createElement("a");
         a.href = href;
         a.className =
-          "text-white hover:text-fuchsia-400 transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-libre font-bold";
+          label === "Live site"
+            ? "inline-flex items-center justify-center gap-2 rounded-full bg-fuchsia-600 px-5 py-3 text-sm font-nav font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-fuchsia-700"
+            : "inline-flex items-center justify-center gap-2 rounded-full border border-white/12 bg-white/[0.03] px-5 py-3 text-sm font-nav font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:border-fuchsia-500/25 hover:text-fuchsia-300";
         a.target = "_blank";
         a.rel = "noopener noreferrer";
 
@@ -330,16 +320,16 @@
       addLink(
         project && project.codeUrl ? String(project.codeUrl) : "",
         "github",
-        "Code",
+        "Source",
       );
       addLink(
         project && project.liveUrl ? String(project.liveUrl) : "",
         "external-link",
-        "Live",
+        "Live site",
       );
 
       content.appendChild(h4);
-      content.appendChild(p);
+      if (description.textContent) content.appendChild(description);
       if (tags.childNodes.length) content.appendChild(tags);
       if (links.childNodes.length) content.appendChild(links);
 
@@ -361,14 +351,10 @@
         const projects = Array.isArray(data && data.projects)
           ? data.projects
           : [];
-        const shuffledPool = shuffled(PROJECT_IMAGE_POOL);
 
         container.textContent = "";
         projects.forEach((proj, idx) => {
-          const imgSrc = shuffledPool.length
-            ? shuffledPool[idx % shuffledPool.length]
-            : "";
-          container.appendChild(createProjectCard(proj, imgSrc));
+          container.appendChild(createProjectCard(proj, idx));
         });
 
         // The DOM was injected after init; wire up the same runtime hooks.

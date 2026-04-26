@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Addison Reyes | Software Engineer</title>
+    <title>Addison Reyes | Full-Stack Software Engineer</title>
     <link rel="icon" href="/favicon.ico" />
 
     <!-- Tailwind (CDN) -->
@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body class="min-h-screen flex flex-col bg-[#121212]">
+  <body class="min-h-screen flex flex-col text-white">
     <!-- Navbar -->
     <nav
-      class="fixed top-0 left-0 w-full bg-[#1a1a1a] text-white z-50 font-nav"
+      class="fixed top-0 left-0 w-full bg-[#171717]/90 backdrop-blur border-b border-white/5 text-white z-50 font-nav"
     >
       <!-- Desktop nav -->
       <div class="hidden md:flex items-center justify-center gap-16 px-8 py-5">
@@ -124,30 +124,30 @@
       </div>
     </nav>
 
-    <main class="bg-[#121212] flex-grow flex flex-col gap-8">
+    <main class="flex-grow flex flex-col gap-8">
       <!-- Hero -->
       <section
         id="home"
-        class="bg-[#121212] pt-32 pb-20 px-6 min-h-[60vh] flex flex-col items-center justify-center"
+        class="pt-32 pb-20 px-6 min-h-[60vh] flex flex-col items-center justify-center"
       >
         <div class="max-w-4xl mx-auto text-center">
           <h1
-            class="reveal is-visible font-libre text-fuchsia-500 mb-2 md:text-5xl text-3xl font-bold"
+            class="reveal is-visible font-libre text-white mb-3 md:text-5xl text-3xl font-bold"
           >
             Addison Amin Reyes Cedano
           </h1>
           <h2
-            class="reveal is-visible delay-100 font-libre text-fuchsia-400 mb-8 md:text-3xl text-xl"
+            class="reveal is-visible delay-100 font-libre text-fuchsia-400 mb-6 md:text-2xl text-xl tracking-wide"
           >
-            Software Engineer
+            Full-Stack Software Engineer
           </h2>
           <p
-            class="reveal is-visible delay-200 text-white/80 max-w-3xl mx-auto mb-10 text-lg leading-relaxed font-libre italic"
+            class="reveal is-visible delay-200 text-white/80 max-w-3xl mx-auto mb-10 text-lg leading-relaxed font-libre"
           >
-            I build end-to-end web applications, from responsive UIs to scalable
-            APIs, databases, and automation. Beyond web development, I have a
-            strong interest in game development, graphics programming, engine
-            development, and art.
+            I build clean, production-ready web applications with TypeScript,
+            Rust, and Python, working across frontend, backend, databases, and
+            automation with a strong focus on maintainability and thoughtful
+            execution.
           </p>
 
           <div
@@ -178,7 +178,7 @@
               class="col-span-2 flex w-full sm:w-auto justify-center items-center gap-2 px-6 sm:px-8 py-2 rounded-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white transition-colors font-libre"
             >
               <i data-lucide="file-text" class="w-[18px] h-[18px]"></i>
-              CV
+              Resume
             </a>
           </div>
         </div>
@@ -187,12 +187,15 @@
       <!-- About -->
       <section
         id="about"
-        class="bg-[#121212] py-20 px-6 border-t border-white/5"
+        class="py-20 px-6 border-t border-white/5"
       >
         <div class="max-w-4xl mx-auto">
-          <h3
-            class="reveal font-libre text-fuchsia-500 text-3xl mb-10 text-center md:text-left"
+          <div
+            class="reveal text-xs uppercase tracking-[0.35em] text-fuchsia-400/80 font-nav font-semibold mb-4 text-center md:text-left"
           >
+            Background
+          </div>
+          <h3 class="reveal font-libre text-white text-3xl mb-10 text-center md:text-left">
             About me
           </h3>
 
@@ -200,34 +203,32 @@
             class="reveal space-y-6 text-white/90 text-lg font-libre leading-relaxed"
           >
             <p>
-              I'm a full-stack software engineer. I've been coding since 2021.
-              My primary programming languages are TypeScript, Rust and Python,
-              and I've also worked with C / C++, C#, Java, and Dart.
+              I'm a full-stack engineer focused on building complete digital
+              products with clear architecture, polished interfaces, and
+              dependable backend systems.
             </p>
             <p>
-              I enjoy building complete products with clean, maintainable code,
-              working across frontend and backend: UI implementation, API
-              design, auth, and databases.
+              My strongest tools are TypeScript, Rust, and Python, and I enjoy
+              working across the full stack: responsive UI implementation, API
+              design, authentication, database modeling, and automation.
             </p>
             <p>
-              I started with C++ through books like Deitel &amp; Deitel's
-              &quot;C++ How to Program&quot; and online resources. Later I moved
-              into Python for data science/ML during my AI studies at ITLA, but
-              I realized my long-term focus is full-stack engineering and
+              I care about writing maintainable software that is practical,
+              scalable, and pleasant to use. Alongside web development, I keep
+              a strong long-term interest in systems-oriented work,
               <a
                 href="https://dakotitah.itch.io/"
                 class="text-fuchsia-400"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                game development </a
-              >.
+                game development</a
+              >, and graphics programming.
             </p>
             <p>
               I'm currently pursuing a Software Engineering degree at UNICARIBE
-              (Universidad del Caribe, Dominican Republic). I'm open to
-              interesting projects and collaborations, and I'm especially
-              interested in game development and contributing to open source.
+              in the Dominican Republic, and I'm open to engineering
+              opportunities, collaborations, and meaningful product work.
             </p>
           </div>
         </div>
@@ -236,14 +237,23 @@
       <!-- Featured projects -->
       <section
         id="projects"
-        class="bg-[#121212] py-20 px-6 border-t border-white/5"
+        class="py-20 px-6 border-t border-white/5"
       >
-        <div class="max-w-4xl mx-auto">
-          <h3
-            class="reveal font-libre text-fuchsia-500 text-3xl mb-16 text-center"
+        <div class="max-w-5xl mx-auto">
+          <div
+            class="reveal text-xs uppercase tracking-[0.35em] text-fuchsia-400/80 font-nav font-semibold mb-4 text-center"
           >
+            Selected work
+          </div>
+          <h3 class="reveal font-libre text-white text-3xl mb-5 text-center">
             Featured projects
           </h3>
+          <p
+            class="reveal text-white/65 font-libre text-center max-w-2xl mx-auto mb-16 leading-relaxed"
+          >
+            A small selection of projects that reflect how I approach product
+            design, full-stack implementation, and production-minded execution.
+          </p>
 
           <!-- Projects injected from ./projects.json -->
           <div id="projectsList" class="space-y-24"></div>
@@ -254,22 +264,23 @@
               href="https://dakotitah.itch.io/"
               target="_blank"
               rel="noopener noreferrer"
-              class="block rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-fuchsia-900/10 p-8 md:p-10 hover:border-fuchsia-500/30 hover:bg-white/10 transition-colors"
+              class="block rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-fuchsia-950/10 p-8 md:p-10 hover:border-fuchsia-500/25 hover:bg-white/[0.07] transition-colors"
             >
               <div
                 class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6"
               >
                 <div>
                   <div
-                    class="text-xs uppercase tracking-widest text-white/50 font-libre font-bold"
+                    class="text-xs uppercase tracking-[0.3em] text-fuchsia-400/80 font-nav font-semibold"
                   >
                     itch.io
                   </div>
-                  <div class="font-libre text-white text-2xl md:text-3xl mt-2">
-                    Want to try my games?
+                  <div class="font-libre text-white text-2xl md:text-3xl mt-3">
+                    Game development experiments
                   </div>
-                  <div class="font-libre text-white/70 mt-2 italic">
-                    Play them directly on my itch.io page.
+                  <div class="font-libre text-white/65 mt-2 leading-relaxed">
+                    A separate space for prototypes and smaller interactive
+                    projects exploring gameplay, graphics, and systems.
                   </div>
                 </div>
 
@@ -277,7 +288,7 @@
                   class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-fuchsia-700 hover:bg-fuchsia-800 text-white transition-colors font-libre w-full sm:w-auto"
                 >
                   <i data-lucide="external-link" class="w-4 h-4"></i>
-                  <span>Try some of my games!</span>
+                  <span>Visit itch.io</span>
                 </div>
               </div>
             </a>
@@ -288,21 +299,33 @@
       <!-- Contact -->
       <section
         id="contact"
-        class="bg-[#121212] py-20 px-6 border-t border-white/5 pb-32"
+        class="py-20 px-6 border-t border-white/5 pb-32"
       >
         <div class="max-w-4xl mx-auto text-center">
-          <h3 class="reveal font-libre text-fuchsia-500 text-3xl mb-12">
+          <div
+            class="reveal text-xs uppercase tracking-[0.35em] text-fuchsia-400/80 font-nav font-semibold mb-4"
+          >
+            Contact
+          </div>
+          <h3 class="reveal font-libre text-white text-3xl mb-5">
             Get in touch
           </h3>
+          <p
+            class="reveal text-white/65 font-libre max-w-2xl mx-auto mb-12 leading-relaxed"
+          >
+            Available for selected freelance work, collaborations, and software
+            engineering opportunities.
+          </p>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div class="reveal text-left space-y-6">
-              <h4 class="font-libre text-white text-xl mb-4 italic">
-                Let's build something amazing together
+              <h4 class="font-libre text-white text-xl mb-4">
+                The fastest way to reach me is by email
               </h4>
               <p class="text-white/60 font-libre leading-relaxed">
-                Open for collaborations, interesting projects, or just a
-                friendly chat about web development and technology.
+                If you have a product, collaboration, or engineering role in
+                mind, feel free to reach out with a bit of context and I'll get
+                back to you.
               </p>
 
               <div class="space-y-4 pt-4">
@@ -364,7 +387,7 @@
                   name="user_name"
                   required
                   class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-fuchsia-500/50 transition-colors disabled:opacity-50"
-                  placeholder="Your Name"
+                  placeholder="Your name"
                 />
               </div>
 
@@ -381,7 +404,7 @@
                   name="user_email"
                   required
                   class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-fuchsia-500/50 transition-colors disabled:opacity-50"
-                  placeholder="Your Email"
+                  placeholder="Your email"
                 />
               </div>
 
@@ -398,7 +421,7 @@
                   required
                   rows="4"
                   class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-fuchsia-500/50 transition-colors resize-none disabled:opacity-50"
-                  placeholder="How can I help you?"
+                  placeholder="Tell me a bit about your project or opportunity"
                 ></textarea>
               </div>
 
@@ -449,36 +472,36 @@
       class="bg-black text-white/40 py-10 px-6 border-t border-white/10 mt-auto"
     >
       <div
-        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-libre uppercase tracking-widest"
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-libre"
       >
         <p>
-          &copy; <span id="currentYear"></span> Addison Amin Reyes Cedano. All
-          rights reserved.
+          &copy; <span id="currentYear"></span> Addison Amin Reyes Cedano. Built
+          with a minimal stack and a product-first mindset.
         </p>
-        <div class="flex gap-8">
+        <div class="flex gap-8 uppercase tracking-widest text-xs">
           <a
-            href="https://x.com/dakotitah"
+            href="https://github.com/AddisonReyes"
             target="_blank"
             rel="noopener noreferrer"
             class="hover:text-fuchsia-400 transition-colors"
           >
-            Twitter
+            GitHub
           </a>
           <a
-            href="https://www.instagram.com/dakotitah/"
+            href="https://www.linkedin.com/in/addison-reyes-9aa017208/"
             target="_blank"
             rel="noopener noreferrer"
             class="hover:text-fuchsia-400 transition-colors"
           >
-            Instagram
+            LinkedIn
           </a>
           <a
-            href="https://certificates-4fx.pages.dev/"
+            href="./addison_reyes_cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
             class="hover:text-fuchsia-400 transition-colors"
           >
-            Certs
+            Resume
           </a>
         </div>
       </div>
