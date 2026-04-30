@@ -54,5 +54,18 @@
       "codeUrl": "https://github.com/AddisonReyes/easy-to-do",
       "liveUrl": "https://easy-to-do.pages.dev/"
     }
+  ],
+  "externalProjects": [
+    {
+      "slug": "team-logistics",
+      "name": "Team Logistics",
+      "description": "Global logistics operator based in the Dominican Republic, specialized in freight forwarding for importers and distributors.",
+      "image": {
+        "src": "./img/team-logistics.webp",
+        "alt": "Team Logistics website interface"
+      },
+      "tags": ["TypeScript", "Astro", "TailwindCSS"],
+      "liveUrl": "https://teamlogistics.pages.dev/"
+    }
   ]
 }

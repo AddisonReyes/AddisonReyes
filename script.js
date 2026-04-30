@@ -240,32 +240,59 @@
           ? project.image.src
           : "";
 
-      const blurBg = document.createElement("img");
-      blurBg.className =
-        "absolute inset-0 h-full w-full scale-110 object-cover object-center opacity-35 blur-3xl saturate-125";
-      blurBg.setAttribute("data-fallback", "");
-      blurBg.setAttribute("aria-hidden", "true");
-      blurBg.alt = "";
-      blurBg.src = imgSrc;
+      if (imgSrc) {
+        const blurBg = document.createElement("img");
+        blurBg.className =
+          "absolute inset-0 h-full w-full scale-110 object-cover object-center opacity-35 blur-3xl saturate-125";
+        blurBg.setAttribute("data-fallback", "");
+        blurBg.setAttribute("aria-hidden", "true");
+        blurBg.alt = "";
+        blurBg.src = imgSrc;
 
-      const img = document.createElement("img");
-      img.className =
-        "relative z-[1] w-full aspect-[16/9] object-cover object-top transform transition-transform duration-500 group-hover:scale-[1.01]";
-      img.setAttribute("data-fallback", "");
-      img.alt =
-        project && project.image && typeof project.image.alt === "string"
-          ? project.image.alt
-          : project && typeof project.name === "string"
-            ? project.name
-            : "";
-      img.src = imgSrc;
+        const img = document.createElement("img");
+        img.className =
+          "relative z-[1] w-full aspect-[16/9] object-cover object-top transform transition-transform duration-500 group-hover:scale-[1.01]";
+        img.setAttribute("data-fallback", "");
+        img.alt =
+          project && project.image && typeof project.image.alt === "string"
+            ? project.image.alt
+            : project && typeof project.name === "string"
+              ? project.name
+              : "";
+        img.src = imgSrc;
+
+        imgWrap.appendChild(blurBg);
+        imgWrap.appendChild(img);
+      } else {
+        const placeholder = document.createElement("div");
+        placeholder.className =
+          "relative z-[1] flex aspect-[16/9] w-full flex-col justify-between bg-gradient-to-br from-white/[0.05] via-fuchsia-950/20 to-white/[0.02] p-8 md:p-10";
+
+        const placeholderKicker = document.createElement("div");
+        placeholderKicker.className =
+          "text-xs uppercase tracking-[0.3em] text-fuchsia-300/80 font-nav font-semibold";
+        placeholderKicker.textContent = "Client Project";
+
+        const placeholderName = document.createElement("div");
+        placeholderName.className =
+          "max-w-[16rem] font-libre text-3xl md:text-4xl leading-tight text-white";
+        placeholderName.textContent =
+          project && project.name ? String(project.name) : "Project";
+
+        const placeholderFoot = document.createElement("div");
+        placeholderFoot.className =
+          "h-px w-20 bg-gradient-to-r from-fuchsia-400/60 to-transparent";
+
+        placeholder.appendChild(placeholderKicker);
+        placeholder.appendChild(placeholderName);
+        placeholder.appendChild(placeholderFoot);
+        imgWrap.appendChild(placeholder);
+      }
 
       const overlay = document.createElement("div");
       overlay.className =
         "absolute inset-0 z-[2] bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none";
 
-      imgWrap.appendChild(blurBg);
-      imgWrap.appendChild(img);
       imgWrap.appendChild(overlay);
 
       const content = document.createElement("div");
@@ -350,9 +377,23 @@
       return wrap;
     }
 
-    async function loadAndRenderProjects() {
-      const container = document.getElementById("projectsList");
+    function renderProjectsInto(container, projects) {
       if (!container) return;
+
+      container.textContent = "";
+      projects.forEach((proj, idx) => {
+        container.appendChild(createProjectCard(proj, idx));
+      });
+
+      hydrateIcons();
+      wireImageFallbacks(container);
+      wireReveals(container);
+    }
+
+    async function loadAndRenderProjects() {
+      const featuredContainer = document.getElementById("projectsList");
+      const externalContainer = document.getElementById("clientWorkList");
+      if (!featuredContainer && !externalContainer) return;
 
       try {
         const res = await fetch(PROJECTS_JSON_PATH, { cache: "no-store" });
@@ -362,16 +403,16 @@
         const projects = Array.isArray(data && data.projects)
           ? data.projects
           : [];
+        const externalProjects = Array.isArray(data && data.externalProjects)
+          ? data.externalProjects
+          : [];
 
-        container.textContent = "";
-        projects.forEach((proj, idx) => {
-          container.appendChild(createProjectCard(proj, idx));
-        });
-
-        // The DOM was injected after init; wire up the same runtime hooks.
-        hydrateIcons();
-        wireImageFallbacks(container);
-        wireReveals(container);
+        if (featuredContainer) {
+          renderProjectsInto(featuredContainer, projects);
+        }
+        if (externalContainer) {
+          renderProjectsInto(externalContainer, externalProjects);
+        }
       } catch (err) {
         console.error(err);
         toast("error", "Failed to load projects.");
