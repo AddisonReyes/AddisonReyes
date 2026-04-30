@@ -66,6 +66,17 @@
       },
       "tags": ["TypeScript", "Astro", "TailwindCSS"],
       "liveUrl": "https://teamlogistics.pages.dev/"
+    },
+    {
+      "slug": "oxsis",
+      "name": "Oxsis",
+      "description": "Logistics and customs brokerage company based in Santo Domingo, Dominican Republic, operating from Las Américas International Airport (AILA).",
+      "image": {
+        "src": "./img/oxsis.webp",
+        "alt": "Oxsis website interface"
+      },
+      "tags": ["TypeScript", "Astro", "TailwindCSS"],
+      "liveUrl": "https://oxsis.pages.dev/"
     }
   ]
 }
