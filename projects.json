@@ -33,6 +33,37 @@
       "codeUrl": "https://github.com/AddisonReyes/MiniFT"
     },
     {
+      "slug": "anime-system-recomendations",
+      "name": "AnimeSR",
+      "kicker": "Full-stack project",
+      "status": "Live",
+      "year": "2026",
+      "headline": "A full-stack anime discovery app built around fast search and content-based recommendations.",
+      "summary": "A web app that combines a FastAPI backend and a Next.js frontend to help users search anime, explore genres, browse highlights, open detailed views, and get related recommendations from a filtered public-safe catalog.",
+      "role": "Frontend architecture, UI implementation, backend API design, recommendation engine integration, Docker setup, and CI automation.",
+      "image": {
+        "src": "./img/anime-sr.webp",
+        "alt": "AnimeSR anime recommendation interface"
+      },
+      "highlights": [
+        "Content-based anime recommendation engine",
+        "Incremental search with autocomplete suggestions",
+        "Genre browsing, highlights, and detailed anime modal views",
+        "Public FastAPI API with Swagger, ReDoc, Docker, and CI validation"
+      ],
+      "tags": [
+        "TypeScript",
+        "Next.js",
+        "React",
+        "Python",
+        "FastAPI",
+        "Scikit-learn",
+        "Docker"
+      ],
+      "codeUrl": "https://github.com/AddisonReyes/Anime-System-Recomendations",
+      "liveUrl": "https://animesr.pages.dev/"
+    },
+    {
       "slug": "easy-to-do",
       "name": "EasyToDo",
       "kicker": "Personal project",
