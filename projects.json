@@ -29,7 +29,8 @@
         "PostgreSQL",
         "Docker"
       ],
-      "liveUrl": "https://minift.net/"
+      "liveUrl": "https://minift.net/",
+      "codeUrl": "https://github.com/AddisonReyes/MiniFT"
     },
     {
       "slug": "easy-to-do",
