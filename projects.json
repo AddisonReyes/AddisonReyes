@@ -33,7 +33,7 @@
       "codeUrl": "https://github.com/AddisonReyes/MiniFT"
     },
     {
-      "slug": "anime-system-recomendations",
+      "slug": "AnimeSR",
       "name": "AnimeSR",
       "kicker": "Full-stack project",
       "status": "Live",
@@ -60,7 +60,7 @@
         "Scikit-learn",
         "Docker"
       ],
-      "codeUrl": "https://github.com/AddisonReyes/Anime-System-Recomendations",
+      "codeUrl": "https://github.com/AddisonReyes/AnimeSR",
       "liveUrl": "https://animesr.pages.dev/"
     },
     {
