@@ -29,8 +29,7 @@
         "PostgreSQL",
         "Docker"
       ],
-      "liveUrl": "https://minift.net/",
-      "codeUrl": "https://github.com/AddisonReyes/MiniFT"
+      "liveUrl": "https://minift.net/"
     },
     {
       "slug": "AnimeSR",
