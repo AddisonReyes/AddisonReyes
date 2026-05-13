@@ -1,24 +1,12 @@
 {
   "projects": [
     {
-      "slug": "minift",
       "name": "MiniFT",
-      "kicker": "Live product",
-      "status": "Production",
-      "year": "2026",
-      "headline": "Personal finance tracking designed as a polished full-stack product.",
       "summary": "A minimalist finance tracker focused on helping users manage transactions, budgets, and financial habits through a clean interface and a production-minded architecture.",
-      "role": "Full-stack development, backend architecture, database design, and product UI implementation.",
       "image": {
         "src": "./img/minift.webp",
         "alt": "MiniFT dashboard interface"
       },
-      "highlights": [
-        "Responsive Next.js interface",
-        "Rust backend with Rocket",
-        "PostgreSQL data modeling",
-        "Dockerized deployment workflow"
-      ],
       "tags": [
         "Next.js",
         "React",
@@ -32,24 +20,12 @@
       "liveUrl": "https://minift.net/"
     },
     {
-      "slug": "AnimeSR",
       "name": "AnimeSR",
-      "kicker": "Full-stack project",
-      "status": "Live",
-      "year": "2026",
-      "headline": "A full-stack anime discovery app built around fast search and content-based recommendations.",
       "summary": "A web app that combines a FastAPI backend and a Next.js frontend to help users search anime, explore genres, browse highlights, open detailed views, and get related recommendations from a filtered public-safe catalog.",
-      "role": "Frontend architecture, UI implementation, backend API design, recommendation engine integration, Docker setup, and CI automation.",
       "image": {
         "src": "./img/anime-sr.webp",
         "alt": "AnimeSR anime recommendation interface"
       },
-      "highlights": [
-        "Content-based anime recommendation engine",
-        "Incremental search with autocomplete suggestions",
-        "Genre browsing, highlights, and detailed anime modal views",
-        "Public FastAPI API with Swagger, ReDoc, Docker, and CI validation"
-      ],
       "tags": [
         "TypeScript",
         "Next.js",
@@ -63,24 +39,32 @@
       "liveUrl": "https://animesr.pages.dev/"
     },
     {
-      "slug": "easy-to-do",
+      "name": "Library API",
+      "summary": "Library API is a fullstack library management app built with Next.js, Tailwind CSS, and MongoDB. It includes a public landing page, a protected workspace, internal API routes, bilingual UI, persistent theme preferences, and Swagger-based API documentation.",
+      "image": {
+        "src": "./img/library-api.webp",
+        "alt": "EasyToDo task and habit tracker interface"
+      },
+      "tags": [
+        "TypeScript",
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Express",
+        "MongoDB",
+        "Swagger UI",
+        "Docker"
+      ],
+      "codeUrl": "https://github.com/AddisonReyes/library-api",
+      "liveUrl": "https://next-library-api.up.railway.app/"
+    },
+    {
       "name": "EasyToDo",
-      "kicker": "Personal project",
-      "status": "Live",
-      "year": "2026",
-      "headline": "A lightweight habit tracker and to-do app built around clarity and focus.",
       "summary": "A local-first productivity app for managing tasks and habits with a minimal interface, fast interactions, and an intentionally distraction-free experience.",
-      "role": "Frontend architecture, interaction design, and implementation.",
       "image": {
         "src": "./img/easy-to-do.webp",
         "alt": "EasyToDo task and habit tracker interface"
       },
-      "highlights": [
-        "Minimal, mobile-friendly UI",
-        "Task and habit tracking flows",
-        "Fast local experience",
-        "Simple and maintainable front-end structure"
-      ],
       "tags": ["Next.js", "React", "Tailwind CSS", "TypeScript"],
       "codeUrl": "https://github.com/AddisonReyes/easy-to-do",
       "liveUrl": "https://easy-to-do.pages.dev/"
