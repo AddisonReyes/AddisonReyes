@@ -40,7 +40,7 @@
     },
     {
       "name": "Library API",
-      "summary": "Library API is a fullstack library management application. It includes a public landing page, a protected workspace, internal API routes, bilingual UI, persistent theme preferences, and Swagger-based API documentation.",
+      "summary": "A fullstack library management application. It includes a protected workspace, internal API routes, bilingual UI, persistent theme preferences, and Swagger-based API documentation.",
       "image": {
         "src": "./img/library-api.webp",
         "alt": "EasyToDo task and habit tracker interface"
