@@ -39,26 +39,6 @@
       "liveUrl": "https://animesr.pages.dev/"
     },
     {
-      "name": "Library API",
-      "summary": "A fullstack library management application. It includes a protected workspace, internal API routes, bilingual UI, persistent theme preferences, and Swagger-based API documentation.",
-      "image": {
-        "src": "./img/library-api.webp",
-        "alt": "EasyToDo task and habit tracker interface"
-      },
-      "tags": [
-        "TypeScript",
-        "Next.js",
-        "React",
-        "Tailwind CSS",
-        "Express",
-        "MongoDB",
-        "Swagger UI",
-        "Docker"
-      ],
-      "codeUrl": "https://github.com/AddisonReyes/library-api",
-      "liveUrl": "https://next-library-api.up.railway.app/"
-    },
-    {
       "name": "EasyToDo",
       "summary": "A local-first productivity app for managing tasks and habits with a minimal interface, fast interactions, and an intentionally distraction-free experience.",
       "image": {
