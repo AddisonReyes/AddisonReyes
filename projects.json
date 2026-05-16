@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "MiniFT",
-      "summary": "A minimalist finance tracker focused on helping users manage transactions, budgets, and financial habits through a clean interface and a production-minded architecture.",
+      "summary": "A finance tracker built around a Rust backend, PostgreSQL data modeling, authentication, containerized deployment, and a TypeScript interface for managing transactions, budgets, and financial habits.",
       "image": {
         "src": "./img/minift.webp",
         "alt": "MiniFT dashboard interface"
@@ -21,7 +21,7 @@
     },
     {
       "name": "AnimeSR",
-      "summary": "A web app that combines a FastAPI backend and a Next.js frontend to help users search anime, explore genres, browse highlights, open detailed views, and get related recommendations from a filtered public-safe catalog.",
+      "summary": "A recommendation-oriented catalog that pairs backend filtering and search logic with a TypeScript interface, helping users explore anime, browse genres, open detailed views, and discover related titles.",
       "image": {
         "src": "./img/anime-sr.webp",
         "alt": "AnimeSR anime recommendation interface"
@@ -30,7 +30,6 @@
         "TypeScript",
         "Next.js",
         "React",
-        "Python",
         "FastAPI",
         "Scikit-learn",
         "Docker"
@@ -40,7 +39,7 @@
     },
     {
       "name": "EasyToDo",
-      "summary": "A local-first productivity app for managing tasks and habits with a minimal interface, fast interactions, and an intentionally distraction-free experience.",
+      "summary": "A local-first TypeScript app focused on fast state handling, clean product logic, and a deliberately minimal workflow for managing tasks and habits.",
       "image": {
         "src": "./img/easy-to-do.webp",
         "alt": "EasyToDo task and habit tracker interface"
