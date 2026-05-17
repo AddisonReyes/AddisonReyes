@@ -2,7 +2,7 @@
 
 ## About me
 
-I build backend systems and interactive software with **Rust** and **TypeScript**. My work focuses on APIs, data modeling, authentication, server-side architecture, tooling, game systems, graphics programming, engine development, and art.
+I build backend systems and interactive software with **Python**, **TypeScript** and **Rust**. My work focuses on APIs, data modeling, authentication, server-side architecture, tooling, game systems, graphics programming, engine development, and art.
 
 ## Connect with Me
 
