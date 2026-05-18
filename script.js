@@ -344,7 +344,10 @@
         form.reset();
       } catch (err) {
         console.error(err);
-        toast("error", "Something went wrong. Please try again.");
+        toast(
+          "error",
+          "Something went wrong. You can also email me directly at addison.amin@gmail.com.",
+        );
       } finally {
         setContactLoading(false);
       }
@@ -457,7 +460,7 @@
       return tags;
     }
 
-    function createProjectLink(href, icon, label, isPrimary) {
+    function createProjectLink(href, icon, label, isPrimary, projectName) {
       if (!href) return null;
 
       const link = createElement(
@@ -469,6 +472,7 @@
       link.href = href;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
+      if (projectName) link.setAttribute("aria-label", `${label} for ${projectName}`);
 
       const linkIcon = createElement("i", "w-4 h-4");
       linkIcon.setAttribute("data-lucide", icon);
@@ -485,12 +489,14 @@
         "github",
         "Source",
         false,
+        getString(project && project.name),
       );
       const websiteLink = createProjectLink(
         getString(project && project.liveUrl),
         "external-link",
         "Website",
         true,
+        getString(project && project.name),
       );
 
       appendIf(links, sourceLink, sourceLink);
