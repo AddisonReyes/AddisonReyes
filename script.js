@@ -50,10 +50,6 @@
       svg.setAttribute("aria-hidden", "true");
       svg.setAttribute("data-lucide", name);
       svg.setAttribute("class", el.className);
-      if (el.classList.contains("w-4")) svg.setAttribute("width", "16");
-      if (el.classList.contains("h-4")) svg.setAttribute("height", "16");
-      if (el.classList.contains("w-[18px]")) svg.setAttribute("width", "18");
-      if (el.classList.contains("h-[18px]")) svg.setAttribute("height", "18");
       svg.innerHTML = paths.join("");
       el.replaceWith(svg);
     });
@@ -63,15 +59,6 @@
     if (window.emailjs) return Promise.resolve(window.emailjs);
 
     return new Promise((resolve, reject) => {
-      const existing = document.querySelector("script[data-emailjs]");
-      if (existing) {
-        existing.addEventListener("load", () => resolve(window.emailjs), {
-          once: true,
-        });
-        existing.addEventListener("error", reject, { once: true });
-        return;
-      }
-
       const script = document.createElement("script");
       script.src =
         "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
@@ -94,7 +81,6 @@
       img.addEventListener(
         "error",
         () => {
-          img.setAttribute("data-original-url", img.src);
           img.src = ERROR_IMG_SRC;
         },
         { once: true },
@@ -345,7 +331,7 @@
       imgWrap.appendChild(overlay);
 
       const content = document.createElement("div");
-      content.className = "space-y-5";
+      content.className = "space-y-4";
 
       if (index % 2 === 1) {
         imgWrap.classList.add("lg:order-2");
