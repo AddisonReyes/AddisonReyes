@@ -108,8 +108,9 @@ The design language is built around a near-black canvas, serif typography throug
 - Keep layout centered with generous horizontal breathing room and strong vertical rhythm.
 - Prefer content widths around `max-w-4xl`, `max-w-5xl`, or `max-w-6xl` depending on section density.
 - Major sections should feel separated by long spacing and faint top borders rather than heavy boxed segmentation.
-- Preserve the anchored single-page flow: hero, about, selected work, contact.
+- Preserve the anchored single-page flow: hero, about, featured projects, client work, contact, footer.
 - Mobile layouts should collapse cleanly to one column without losing the sense of polish or breathing room.
+- The footer should remain full-width and sit at the bottom of the viewport when content is short.
 
 ## Background And Atmosphere
 
@@ -142,11 +143,19 @@ The design language is built around a near-black canvas, serif typography throug
 - Featured project previews should feel airy, polished, and product-centric.
 - Images live inside rounded containers with faint borders, very soft shadow, and subtle hover scale.
 - Supporting metadata can use muted text and small uppercase accents, but the main headline should remain the focal point.
+- Keep project title and description visually close; avoid reintroducing default heading/paragraph margins that create accidental gaps.
 
 ### Contact Links
 
 - Contact rows use circular icon containers with faint borders.
+- Icon containers should keep enough internal padding for the icon to breathe; avoid tight pill-like capsules.
 - Email may use the accent color directly; secondary social links should stay white until hover.
+
+### Footer
+
+- Footer is a full-width black band with centered constrained content.
+- Footer links are uppercase, small, and widely tracked; keep labels concise so the row remains calm on smaller screens.
+- Current footer destinations are Certifications, LeetCode, Twitter, Instagram, and Resume.
 
 ### Form Controls
 
@@ -181,24 +190,9 @@ The design language is built around a near-black canvas, serif typography throug
 
 ## Repo-Specific Guidance
 
-d-motion`; when reduced motion is requested, remove non-essential movement and keep state changes immediate.
-
-## Do's And Don'ts
-
-- DO preserve the dark editorial-serif identity of the current site.
-- DO use fuchsia as a deliberate accent, not as a blanket color for every interactive element.
-- DO keep borders, shadows, and fills subtle.
-- DO favor calm polish over novelty.
-- DO maintain strong readability and WCAG-conscious contrast on dark surfaces.
-- DON'T switch the interface to a generic sans-heavy SaaS aesthetic.
-- DON'T introduce bright rainbow gradients, glassmorphism overload, or neon cyberpunk treatments.
-- DON'T use pure flat black with no texture; the atmosphere matters.
-- DON'T mix too many corner radii in the same viewport.
-- DON'T make cards, forms, or nav bars visually heavier than the content itself.
-
-## Repo-Specific Guidance
-
 - This repo is a static GitHub Pages site served from the root with no build step.
-- The current implementation uses Tailwind via CDN plus handwritten CSS, so design decisions should translate cleanly to utility classes and plain CSS.
+- The current implementation uses local Tailwind-like utility classes in `style.css`; there is no Tailwind build or CDN dependency.
+- `script.js` also emits utility class names for project cards, so any new runtime class must have a matching local CSS rule.
+- Icons are hydrated by local inline SVG path data in `script.js`, not by Lucide CDN.
 - When extending the UI, prefer reusing the existing visual primitives already present in `index.html` and `style.css` instead of inventing a parallel component language.
 - If a future agent adds new pages or sections, they should still look like they belong to this portfolio first and foremost.

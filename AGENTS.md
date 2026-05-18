@@ -5,6 +5,7 @@
 - Static GitHub Pages site served from the repo root (`index.html`, `style.css`, `script.js`).
 - GitHub Pages deploy uploads the repo root as-is (no build step).
 - No package manager / build / test tooling is configured.
+- Styling is intentionally build-free: `style.css` contains the small utility-class subset used by the HTML and runtime-generated project cards.
 
 ## Local Preview
 
@@ -18,9 +19,11 @@
 
 ## Non-Obvious Couplings
 
-- `index.html` pulls Tailwind via CDN (`https://cdn.tailwindcss.com`), plus Lucide UMD (`https://unpkg.com/lucide@latest/...`) and EmailJS browser v4 (`https://cdn.jsdelivr.net/npm/@emailjs/browser@4/...`). Styling, icons, and the contact form depend on those external loads.
-- The projects section is generated at runtime: `script.js` fetches `./projects.json` and expects `{ "projects": [...] }`.
-- Lucide brand icons (github/linkedin) are polyfilled in `script.js` because `lucide@latest` can omit them.
-- The contact form uses EmailJS IDs embedded in `script.js` (`publicKey`, `service_*`, `template_*`); changing EmailJS setup requires updating those strings.
+- `index.html` does not load Tailwind or Lucide from a CDN. Tailwind-like class names are backed by local rules in `style.css`, and icons are hydrated from inline path data in `script.js`.
+- The projects and client work sections are generated at runtime: `script.js` fetches `./projects.json` and expects `{ "projects": [...], "externalProjects": [...] }`.
+- Runtime-generated project cards depend on matching utility classes existing in `style.css`; when adding classes in `script.js`, add their CSS rules too.
+- The contact form loads EmailJS browser v4 on demand from `https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js`.
+- The contact form uses EmailJS constants near the top of `script.js` (`EMAILJS_PUBLIC_KEY`, `EMAILJS_SERVICE_ID`, `EMAILJS_TEMPLATE_ID`); changing EmailJS setup requires updating those strings.
 - `index.html` expects these repo-root assets to exist: `/favicon.ico` and `./addison_reyes_cv.pdf`.
 - `style.css` defines `.font-nav` / `.font-libre` used by the HTML (no Tailwind config/build step).
+- Footer links currently include Certifications, LeetCode, Twitter, Instagram, and Resume. Keep labels short because the footer link row is uppercase with wide tracking.
