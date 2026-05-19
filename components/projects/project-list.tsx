@@ -76,7 +76,7 @@ function ProjectMedia({
 }) {
   return (
     <div
-      className={`project-media relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] shadow-[0_12px_28px_rgba(0,0,0,0.1)] ${
+      className={`project-media relative aspect-[2/1] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] shadow-[0_12px_28px_rgba(0,0,0,0.1)] ${
         flipped ? "project-media-last" : ""
       }`}
     >
@@ -93,10 +93,9 @@ function ProjectMedia({
           <Image
             src={project.image.src}
             alt={project.image.alt}
-            width={1280}
-            height={720}
+            fill
             sizes="(min-width: 1024px) 58vw, 100vw"
-            className="relative z-[1] w-full object-contain object-center transform transition-transform duration-500 group-hover:scale-[1.01]"
+            className="relative z-[1] object-cover object-center transform transition-transform duration-500 group-hover:scale-[1.01]"
           />
         </>
       ) : (

@@ -38,5 +38,4 @@
 - Put complete page sections in `components/sections/`.
 - Put layout chrome in `components/layout/`.
 - Put small reusable primitives in `components/ui/`.
-- Keep only public assets that are referenced by the site or required by deployment.
 - Do not commit generated folders such as `.next/`, `out/`, `node_modules/`, or `tsconfig.tsbuildinfo`.

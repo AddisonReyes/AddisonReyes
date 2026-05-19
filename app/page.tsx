@@ -46,7 +46,6 @@ export default function Home() {
           copy="External web projects built for other teams and businesses, showing that I can work from requirements to launch-ready implementation."
           projects={externalProjects}
         />
-
         <ContactSection />
       </main>
 

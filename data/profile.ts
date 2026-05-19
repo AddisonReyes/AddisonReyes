@@ -66,6 +66,11 @@ export const capabilities: Capability[] = [
     description:
       "Dockerized applications, production-oriented configuration, Git/Linux workflows, CI/CD basics, static exports, and cloud deployments.",
   },
+  {
+    title: "Self-directed learning",
+    description:
+      "Autodidact by nature, always learning new tools, patterns, and technologies, with an open mindset for adapting to the stack a project or team needs.",
+  },
 ];
 
 export const experience: TimelineItem[] = [
