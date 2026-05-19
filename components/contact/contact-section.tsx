@@ -52,7 +52,7 @@ export function ContactSection() {
         <SectionHeader
           kicker="Contact"
           title="Get in touch"
-          copy="Available for fullstack and backend roles, backend-heavy product work, remote opportunities, AI-enabled automation, game development collaborations, and freelance work."
+          copy="Available for fullstack and backend roles, Python-heavy product work, remote opportunities, AI-enabled automation, Data/AI projects, game development collaborations, and freelance work."
           compact
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">

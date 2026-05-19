@@ -2,7 +2,7 @@
 
 ## About me
 
-I build backend systems and interactive software with Rust, TypeScript and Python. My work focuses on APIs, data modeling, authentication, server-side architecture, tooling, game development, graphics programming, engine development, and art.
+I build production-ready web applications with TypeScript frontends and Python backends. My work focuses on APIs, data modeling, authentication, automation, Data/AI workflows, reporting tools, Dockerized delivery, and Rust backend services when performance matters.
 
 ## Connect with Me
 

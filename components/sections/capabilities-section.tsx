@@ -9,7 +9,7 @@ export function CapabilitiesSection() {
         <SectionHeader
           kicker="What I can do"
           title="Practical engineering from idea to deployment"
-          copy="I fit best on teams that need someone who can understand the product, build the interface, design the backend, automate the repetitive parts, and ship a maintainable system."
+          copy="I fit best on teams that need someone who can understand the product, build the interface, design the Python backend, automate repetitive work, and ship a maintainable system."
           compact
         />
 

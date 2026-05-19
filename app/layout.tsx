@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const description =
-  "Fullstack software engineer building production-ready web applications with TypeScript frontends, Python/Django/FastAPI backends, Rust for performance-critical systems, APIs, PostgreSQL, automation, BI tools, AI workflows, and Docker deployment.";
+  "Fullstack software engineer building production-ready web applications with TypeScript frontends, Python/Django/FastAPI backends, automation, Data/AI workflows, PostgreSQL, Docker deployment, and Rust for performance-critical services.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://addisonreyes.com"),

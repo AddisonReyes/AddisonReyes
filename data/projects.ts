@@ -16,7 +16,7 @@ export const projects: Project[] = [
   {
     name: "MiniFT",
     summary:
-      "A production-style personal finance tracker with a Rust backend, PostgreSQL schema design, authentication, Dockerized deployment, and a TypeScript dashboard for transactions, budgets, and financial habits.",
+      "A production-style personal finance tracker with a performance-oriented Rust backend, PostgreSQL schema design, authentication, Dockerized deployment, and a TypeScript dashboard for transactions, budgets, and financial habits.",
     image: {
       src: "/img/minift.webp",
       alt: "MiniFT dashboard interface"
@@ -36,7 +36,7 @@ export const projects: Project[] = [
   {
     name: "AnimeSR",
     summary:
-      "A recommendation-oriented anime catalog that combines backend filtering, search, and machine-learning-assisted discovery with a responsive TypeScript interface.",
+      "A recommendation-oriented catalog that combines FastAPI backend filtering, search, and machine-learning-assisted discovery with a responsive TypeScript interface.",
     image: {
       src: "/img/anime-sr.webp",
       alt: "AnimeSR anime recommendation interface"
@@ -69,7 +69,7 @@ export const externalProjects: Project[] = [
       src: "/img/team-logistics.webp",
       alt: "Team Logistics website interface"
     },
-    tags: ["TypeScript", "Astro", "TailwindCSS"],
+    tags: ["TypeScript", "Astro", "Tailwind CSS"],
     liveUrl: "https://teamlogistics.pages.dev/"
   },
   {
@@ -80,7 +80,7 @@ export const externalProjects: Project[] = [
       src: "/img/oxsis.webp",
       alt: "Oxsis website interface"
     },
-    tags: ["TypeScript", "Astro", "TailwindCSS"],
+    tags: ["TypeScript", "Astro", "Tailwind CSS"],
     liveUrl: "https://oxsis.pages.dev/"
   }
 ];
