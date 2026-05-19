@@ -4,21 +4,34 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-black text-white/40 py-10 px-6 border-t border-white/10 mt-auto">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-libre">
-        <p>&copy; {year} Addison Reyes. All rights reserved.</p>
-        <div className="flex flex-wrap justify-center gap-8 uppercase tracking-widest text-xs">
-          {footerLinks.map(({ label, href }) => (
-            <a
-              key={label}
-              href={href}
-              target={href.startsWith("http") || href.endsWith(".pdf") ? "_blank" : undefined}
-              rel={href.startsWith("http") || href.endsWith(".pdf") ? "noopener noreferrer" : undefined}
-              className="hover:text-fuchsia-400 transition-colors"
-            >
-              {label}
-            </a>
-          ))}
+    <footer className="site-footer text-white mt-auto">
+      <div className="max-w-6xl mx-auto px-6 py-10">
+        <div className="footer-simple">
+          <div className="footer-simple-links">
+            {footerLinks.map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                target={
+                  href.startsWith("http") || href.endsWith(".pdf")
+                    ? "_blank"
+                    : undefined
+                }
+                rel={
+                  href.startsWith("http") || href.endsWith(".pdf")
+                    ? "noopener noreferrer"
+                    : undefined
+                }
+                className="footer-link"
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+
+          <p className="footer-copy">
+            &copy; {year} Addison Reyes. Santo Domingo, DR.
+          </p>
         </div>
       </div>
     </footer>

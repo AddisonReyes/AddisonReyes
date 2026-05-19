@@ -21,7 +21,9 @@ export const hero = {
 export const navItems = [
   { label: "HOME", target: "home" },
   { label: "ABOUT", target: "about" },
+  { label: "CAPABILITIES", target: "capabilities" },
   { label: "EXPERIENCE", target: "experience" },
+  { label: "EDUCATION", target: "education" },
   { label: "PROJECTS", target: "projects" },
   { label: "CLIENT WORK", target: "client-work" },
   { label: "CONTACT", target: "contact" },
@@ -112,7 +114,27 @@ export const education: TimelineItem[] = [
 export const footerLinks = [
   { label: "Certifications", href: "https://certificates-4fx.pages.dev/" },
   { label: "LeetCode", href: "https://leetcode.com/u/AddisonReyes/" },
+  { label: "GitHub", href: GITHUB_URL },
   { label: "Email", href: `mailto:${EMAIL}` },
   { label: "LinkedIn", href: LINKEDIN_URL },
   { label: "Resume", href: RESUME_URL },
+] as const;
+
+export const footerLinkGroups = [
+  {
+    title: "Work",
+    links: [
+      { label: "Resume", href: RESUME_URL },
+      { label: "Certifications", href: "https://certificates-4fx.pages.dev/" },
+      { label: "LeetCode", href: "https://leetcode.com/u/AddisonReyes/" },
+    ],
+  },
+  {
+    title: "Connect",
+    links: [
+      { label: "Email", href: `mailto:${EMAIL}` },
+      { label: "LinkedIn", href: LINKEDIN_URL },
+      { label: "GitHub", href: GITHUB_URL },
+    ],
+  },
 ] as const;
