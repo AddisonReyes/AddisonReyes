@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "MiniFT",
-      "summary": "A finance tracker built around a Rust backend, PostgreSQL data modeling, authentication, containerized deployment, and a TypeScript interface for managing transactions, budgets, and financial habits.",
+      "summary": "A production-style personal finance tracker with a Rust backend, PostgreSQL schema design, authentication, Dockerized deployment, and a TypeScript dashboard for transactions, budgets, and financial habits.",
       "image": {
         "src": "./img/minift.webp",
         "alt": "MiniFT dashboard interface"
@@ -21,7 +21,7 @@
     },
     {
       "name": "AnimeSR",
-      "summary": "A recommendation-oriented catalog that pairs backend filtering and search logic with a TypeScript interface, helping users explore anime, browse genres, open detailed views, and discover related titles.",
+      "summary": "A recommendation-oriented anime catalog that combines backend filtering, search, and machine-learning-assisted discovery with a responsive TypeScript interface.",
       "image": {
         "src": "./img/anime-sr.webp",
         "alt": "AnimeSR anime recommendation interface"
@@ -35,11 +35,12 @@
         "Docker"
       ],
       "codeUrl": "https://github.com/AddisonReyes/AnimeSR",
+      "docsUrl": "https://animesr.up.railway.app/docs",
       "liveUrl": "https://animesr.pages.dev/"
     },
     {
       "name": "EasyToDo",
-      "summary": "A local-first TypeScript app focused on fast state handling, clean product logic, and a deliberately minimal workflow for managing tasks and habits.",
+      "summary": "A local-first TypeScript productivity app focused on fast state handling, clean product logic, responsive UI, and a minimal workflow for managing tasks and habits.",
       "image": {
         "src": "./img/easy-to-do.webp",
         "alt": "EasyToDo task and habit tracker interface"
@@ -53,7 +54,7 @@
     {
       "slug": "team-logistics",
       "name": "Team Logistics",
-      "description": "Global logistics operator based in the Dominican Republic, specialized in freight forwarding for importers and distributors.",
+      "description": "Built and shipped a responsive business website for a Dominican logistics operator, focused on clear service presentation, mobile performance, and launch-ready implementation.",
       "image": {
         "src": "./img/team-logistics.webp",
         "alt": "Team Logistics website interface"
@@ -64,7 +65,7 @@
     {
       "slug": "oxsis",
       "name": "Oxsis",
-      "description": "Logistics and customs brokerage company based in Santo Domingo, Dominican Republic, operating from Las Américas International Airport (AILA).",
+      "description": "Built and shipped a responsive web presence for a Santo Domingo logistics and customs brokerage company operating from Las Americas International Airport.",
       "image": {
         "src": "./img/oxsis.webp",
         "alt": "Oxsis website interface"

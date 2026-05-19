@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Software engineer and fullstack developer building TypeScript interfaces, Python and Rust backends, APIs, data models, and interactive software."
+      content="Fullstack software engineer building production-ready web applications with TypeScript frontends, Python/Django/FastAPI backends, Rust for performance-critical systems, APIs, PostgreSQL, automation, BI tools, AI workflows, and Docker deployment."
     />
     <meta name="author" content="Addison Reyes" />
     <meta name="theme-color" content="#121212" />
@@ -16,7 +16,7 @@
     <meta property="og:title" content="Addison Reyes | Software Engineer" />
     <meta
       property="og:description"
-      content="Software engineer and fullstack developer building TypeScript interfaces, Python and Rust backends, APIs, data models, and interactive software."
+      content="Fullstack software engineer building production-ready web applications with TypeScript frontends, Python/Django/FastAPI backends, Rust for performance-critical systems, APIs, PostgreSQL, automation, BI tools, AI workflows, and Docker deployment."
     />
     <meta property="og:image" content="https://addisonreyes.com/img/minift.webp" />
     <meta property="og:type" content="website" />
@@ -25,7 +25,7 @@
     <meta name="twitter:title" content="Addison Reyes | Software Engineer" />
     <meta
       name="twitter:description"
-      content="Software engineer and fullstack developer building TypeScript interfaces, Python and Rust backends, APIs, data models, and interactive software."
+      content="Fullstack software engineer building production-ready web applications with TypeScript frontends, Python/Django/FastAPI backends, Rust for performance-critical systems, APIs, PostgreSQL, automation, BI tools, AI workflows, and Docker deployment."
     />
     <meta name="twitter:image" content="https://addisonreyes.com/img/minift.webp" />
 
@@ -54,6 +54,14 @@
           class="opacity-60 hover:opacity-100 transition-opacity tracking-widest text-sm font-bold"
         >
           ABOUT
+        </a>
+        <a
+          href="#experience"
+          data-nav
+          data-target="experience"
+          class="opacity-60 hover:opacity-100 transition-opacity tracking-widest text-sm font-bold"
+        >
+          EXPERIENCE
         </a>
         <a
           href="#projects"
@@ -133,6 +141,14 @@
               ABOUT
             </a>
             <a
+              href="#experience"
+              data-nav
+              data-target="experience"
+              class="opacity-60 hover:opacity-100 transition-opacity tracking-widest text-sm font-bold"
+            >
+              EXPERIENCE
+            </a>
+            <a
               href="#projects"
               data-nav
               data-target="projects"
@@ -176,28 +192,39 @@
           <h2
             class="reveal is-visible delay-100 font-libre text-fuchsia-400 mb-6 md:text-2xl text-xl tracking-wide"
           >
-            Software Engineer / Fullstack Developer
+            Fullstack Software Engineer
           </h2>
           <p
             class="reveal is-visible delay-200 text-white/80 max-w-3xl mx-auto mb-10 text-lg leading-relaxed font-libre"
           >
-            I build dependable web applications, API-driven systems, data
-            models, and interactive experiences with TypeScript on the frontend
-            and Python or Rust on the backend.
+            I build production-ready web applications with TypeScript on the
+            frontend and primarily Python on the backend, using Rust for
+            performance-critical parts when speed and reliability matter, from
+            responsive product interfaces to clean APIs, data models,
+            automation, AI-assisted workflows, BI/reporting tools, and
+            Docker-based deployment.
           </p>
 
           <div
             class="reveal is-visible delay-300 grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:justify-center"
           >
             <a
-              href="https://github.com/AddisonReyes"
+              href="mailto:addison.amin@gmail.com"
+              aria-label="Email Addison Reyes"
+              class="col-span-2 flex w-full sm:w-auto justify-center items-center gap-2 px-6 sm:px-8 py-2 rounded-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white transition-colors font-libre"
+            >
+              <i data-lucide="mail" class="w-[18px] h-[18px]"></i>
+              Contact Me
+            </a>
+            <a
+              href="./addison_reyes_cv.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Open Addison Reyes on GitHub"
+              aria-label="Open Addison Reyes resume PDF"
               class="col-span-1 flex w-full sm:w-auto justify-center items-center gap-2 px-6 sm:px-8 py-2 border border-white/40 rounded-full text-white hover:bg-white/10 transition-all font-libre"
             >
-              <i data-lucide="github" class="w-[18px] h-[18px]"></i>
-              GitHub
+              <i data-lucide="file-text" class="w-[18px] h-[18px]"></i>
+              Resume
             </a>
             <a
               href="https://www.linkedin.com/in/addison-reyes-9aa017208/"
@@ -210,14 +237,14 @@
               LinkedIn
             </a>
             <a
-              href="./addison_reyes_cv.pdf"
+              href="https://github.com/AddisonReyes"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Open Addison Reyes resume PDF"
-              class="col-span-2 flex w-full sm:w-auto justify-center items-center gap-2 px-6 sm:px-8 py-2 rounded-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white transition-colors font-libre"
+              aria-label="Open Addison Reyes on GitHub"
+              class="col-span-1 flex w-full sm:w-auto justify-center items-center gap-2 px-6 sm:px-8 py-2 border border-white/40 rounded-full text-white hover:bg-white/10 transition-all font-libre"
             >
-              <i data-lucide="file-text" class="w-[18px] h-[18px]"></i>
-              Resume
+              <i data-lucide="github" class="w-[18px] h-[18px]"></i>
+              GitHub
             </a>
           </div>
         </div>
@@ -242,20 +269,23 @@
           >
             <p>
               I'm a software engineer and fullstack developer focused on
-              building reliable web applications, backend services, clear
-              domain logic, and interactive systems that feel deliberate from
-              the architecture down to the user or player experience.
+              building reliable products end to end: responsive frontend
+              interfaces, backend services, clear domain logic, automation, and
+              deploy-ready systems that can move beyond a local machine.
             </p>
             <p>
-              I use TypeScript for frontend product interfaces and Python or
-              Rust for backend systems, APIs, data modeling, authentication,
-              server-side architecture, tooling, gameplay programming, and
-              performance-minded implementation.
+              I use TypeScript for frontend product interfaces and Python as my
+              main backend language, with Django and FastAPI for services,
+              REST APIs, automation, reporting tools, data models,
+              authentication, and server-side architecture. I use Rust for
+              performance-critical systems where efficiency and reliability are
+              worth the extra control.
             </p>
             <p>
               I care about writing maintainable software that is practical,
-              scalable, and pleasant to use. Alongside backend engineering, I
-              keep a strong long-term interest in systems-oriented work,
+              scalable, and pleasant to use. Alongside product and backend
+              engineering, I keep a strong long-term interest in
+              systems-oriented work,
               <a
                 href="https://dakotitah.itch.io/"
                 class="text-fuchsia-400"
@@ -267,9 +297,182 @@
             </p>
             <p>
               I'm currently pursuing a Software Engineering degree at UNICARIBE
-              in the Dominican Republic, and I'm open to engineering
-              opportunities, collaborations, and freelance work.
+              in the Dominican Republic after completing an Associate's Degree
+              in Artificial Intelligence at ITLA, and I'm open to fullstack
+              roles, backend roles, remote opportunities, collaborations, and
+              freelance product work.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Capabilities -->
+      <section id="capabilities" class="py-20 px-6 border-t border-white/5">
+        <div class="max-w-5xl mx-auto">
+          <div
+            class="reveal text-xs uppercase tracking-[0.35em] text-fuchsia-400/80 font-nav font-semibold mb-4 text-center"
+          >
+            What I can do
+          </div>
+          <h3 class="reveal font-libre text-white text-3xl mb-5 text-center">
+            Practical engineering from idea to deployment
+          </h3>
+          <p
+            class="reveal text-white/65 font-libre text-center max-w-2xl mx-auto mb-12 leading-relaxed"
+          >
+            I fit best on teams that need someone who can understand the
+            product, build the interface, design the backend, automate the
+            repetitive parts, and ship a maintainable system.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="reveal rounded-2xl border border-white/10 bg-white/[0.03] p-8">
+              <h4 class="font-libre text-white text-xl mb-3">
+                Fullstack product development
+              </h4>
+              <p class="font-libre text-white/65 leading-relaxed">
+                Responsive TypeScript interfaces with React and Next.js,
+                connected to backend APIs, authentication, database-backed
+                features, and polished user workflows.
+              </p>
+            </div>
+            <div class="reveal rounded-2xl border border-white/10 bg-white/[0.03] p-8">
+              <h4 class="font-libre text-white text-xl mb-3">
+                Backend systems and APIs
+              </h4>
+              <p class="font-libre text-white/65 leading-relaxed">
+                Clean Python services with Django and FastAPI, readable
+                architecture, PostgreSQL and MongoDB data modeling, validation,
+                auth flows, OpenAPI/Swagger docs, maintainable REST APIs, and
+                Rust where performance-critical paths need tighter control.
+              </p>
+            </div>
+            <div class="reveal rounded-2xl border border-white/10 bg-white/[0.03] p-8">
+              <h4 class="font-libre text-white text-xl mb-3">
+                AI, automation, and tooling
+              </h4>
+              <p class="font-libre text-white/65 leading-relaxed">
+                AI-assisted development, process automation, recommendation
+                logic, reporting dashboards, model-training experiments, and
+                internal tools that reduce manual work without hiding the
+                underlying engineering.
+              </p>
+            </div>
+            <div class="reveal rounded-2xl border border-white/10 bg-white/[0.03] p-8">
+              <h4 class="font-libre text-white text-xl mb-3">
+                Deployment-ready delivery
+              </h4>
+              <p class="font-libre text-white/65 leading-relaxed">
+                Dockerized applications, production-oriented configuration,
+                Git/Linux workflows, CI/CD basics, AWS familiarity, static and
+                cloud deployments, and projects prepared to run outside my
+                local development environment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="py-20 px-6 border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+          <div
+            class="reveal text-xs uppercase tracking-[0.35em] text-fuchsia-400/80 font-nav font-semibold mb-4 text-center md:text-left"
+          >
+            Experience
+          </div>
+          <h3
+            class="reveal font-libre text-white text-3xl mb-10 text-center md:text-left"
+          >
+            Professional experience
+          </h3>
+
+          <div class="reveal space-y-6">
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-8">
+              <div class="text-xs uppercase tracking-[0.3em] text-fuchsia-400/80 font-nav font-semibold mb-3">
+                May 2024 - Present
+              </div>
+              <h4 class="font-libre text-white text-xl mb-3">
+                Software Developer, SEMS SRL
+              </h4>
+              <p class="font-libre text-white/65 leading-relaxed">
+                Full-time hybrid role building backend services, business
+                logic, RESTful APIs, Django systems, automated reporting, data
+                exchange workflows, and internal business intelligence tools
+                for production company operations.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-8">
+              <div class="text-xs uppercase tracking-[0.3em] text-fuchsia-400/80 font-nav font-semibold mb-3">
+                Feb 2024 - May 2024
+              </div>
+              <h4 class="font-libre text-white text-xl mb-3">
+                Data Analyst Intern, SEMS SRL
+              </h4>
+              <p class="font-libre text-white/65 leading-relaxed">
+                Developed data analysis workflows, visualization dashboards, and
+                automated reporting processes to improve operational visibility
+                and reduce manual data handling.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-8">
+              <div class="text-xs uppercase tracking-[0.3em] text-fuchsia-400/80 font-nav font-semibold mb-3">
+                Sep 2020 - Aug 2025
+              </div>
+              <h4 class="font-libre text-white text-xl mb-3">
+                IT Support Specialist, OXSIS SRL
+              </h4>
+              <p class="font-libre text-white/65 leading-relaxed">
+                Supported systems in a logistics and customs environment,
+                including troubleshooting, maintenance, data management,
+                process automation initiatives, and operational reliability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="py-20 px-6 border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+          <div
+            class="reveal text-xs uppercase tracking-[0.35em] text-fuchsia-400/80 font-nav font-semibold mb-4 text-center md:text-left"
+          >
+            Education
+          </div>
+          <h3
+            class="reveal font-libre text-white text-3xl mb-10 text-center md:text-left"
+          >
+            Academic background
+          </h3>
+
+          <div class="reveal grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-8">
+              <div class="text-xs uppercase tracking-[0.3em] text-fuchsia-400/80 font-nav font-semibold mb-3">
+                Apr 2025 - Present
+              </div>
+              <h4 class="font-libre text-white text-xl mb-3">
+                Software Engineering, UNICARIBE
+              </h4>
+              <p class="font-libre text-white/65 leading-relaxed">
+                Pursuing an engineering degree while continuing to build
+                production-style web, backend, database, automation, and
+                interactive software projects.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-8">
+              <div class="text-xs uppercase tracking-[0.3em] text-fuchsia-400/80 font-nav font-semibold mb-3">
+                Aug 2021 - Dec 2023
+              </div>
+              <h4 class="font-libre text-white text-xl mb-3">
+                Artificial Intelligence, ITLA
+              </h4>
+              <p class="font-libre text-white/65 leading-relaxed">
+                Completed an Associate's Degree focused on artificial
+                intelligence, with project work that supports my interest in
+                recommendation logic, automation, and model-driven tools.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -348,8 +551,8 @@
           <p
             class="reveal text-white/65 font-libre text-center max-w-2xl mx-auto mb-16 leading-relaxed"
           >
-            External web projects built for other teams and businesses, from
-            implementation details to launch-ready interfaces.
+            External web projects built for other teams and businesses, showing
+            that I can work from requirements to launch-ready implementation.
           </p>
 
           <div id="clientWorkList" class="space-y-24"></div>
@@ -370,9 +573,9 @@
           <p
             class="reveal text-white/65 font-libre max-w-2xl mx-auto mb-12 leading-relaxed"
           >
-            Available for software engineering and fullstack roles,
-            backend-heavy product work, game development collaborations, and
-            freelance work.
+            Available for fullstack and backend roles, backend-heavy product
+            work, remote opportunities, AI-enabled automation, game development
+            collaborations, and freelance work.
           </p>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -381,9 +584,9 @@
                 The fastest way to reach me is by email
               </h4>
               <p class="text-white/60 font-libre leading-relaxed">
-                If you have a fullstack role, backend-heavy product, game
-                project, collaboration, or focused engineering problem in mind,
-                send me a bit of context and I'll get back to you.
+                If you have a fullstack or backend role, a product that needs
+                reliable implementation, or a focused engineering problem in
+                mind, email me with a bit of context and I'll get back to you.
               </p>
 
               <div class="space-y-4 pt-4">
@@ -557,20 +760,18 @@
             LeetCode
           </a>
           <a
-            href="https://x.com/dakotitah"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:addison.amin@gmail.com"
             class="hover:text-fuchsia-400 transition-colors"
           >
-            Twitter
+            Email
           </a>
           <a
-            href="https://www.instagram.com/dakotitah/"
+            href="https://www.linkedin.com/in/addison-reyes-9aa017208/"
             target="_blank"
             rel="noopener noreferrer"
             class="hover:text-fuchsia-400 transition-colors"
           >
-            Instagram
+            LinkedIn
           </a>
           <a
             href="./addison_reyes_cv.pdf"

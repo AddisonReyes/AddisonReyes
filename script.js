@@ -194,7 +194,7 @@
       open = next;
       if (btn) btn.setAttribute("aria-expanded", String(open));
       if (menu) {
-        menu.classList.toggle("max-h-64", open);
+        menu.classList.toggle("max-h-96", open);
         menu.classList.toggle("opacity-100", open);
         menu.classList.toggle("max-h-0", !open);
         menu.classList.toggle("opacity-0", !open);
@@ -491,6 +491,13 @@
         false,
         getString(project && project.name),
       );
+      const docsLink = createProjectLink(
+        getString(project && project.docsUrl),
+        "external-link",
+        "API Docs",
+        false,
+        getString(project && project.name),
+      );
       const websiteLink = createProjectLink(
         getString(project && project.liveUrl),
         "external-link",
@@ -500,6 +507,7 @@
       );
 
       appendIf(links, sourceLink, sourceLink);
+      appendIf(links, docsLink, docsLink);
       appendIf(links, websiteLink, websiteLink);
       return links;
     }
