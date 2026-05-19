@@ -1,12 +1,4 @@
-import { EMAIL, LINKEDIN_URL, RESUME_URL } from "@/lib/constants";
-
-const footerLinks = [
-  ["Certifications", "https://certificates-4fx.pages.dev/"],
-  ["LeetCode", "https://leetcode.com/u/AddisonReyes/"],
-  ["Email", `mailto:${EMAIL}`],
-  ["LinkedIn", LINKEDIN_URL],
-  ["Resume", RESUME_URL]
-] as const;
+import { footerLinks } from "@/data/profile";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -16,7 +8,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-libre">
         <p>&copy; {year} Addison Reyes. All rights reserved.</p>
         <div className="flex flex-wrap justify-center gap-8 uppercase tracking-widest text-xs">
-          {footerLinks.map(([label, href]) => (
+          {footerLinks.map(({ label, href }) => (
             <a
               key={label}
               href={href}

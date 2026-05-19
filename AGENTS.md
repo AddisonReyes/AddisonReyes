@@ -6,6 +6,8 @@
 - Static GitHub Pages deploy is produced by `next build` with `output: "export"` in `next.config.mjs`.
 - GitHub Pages uploads the generated `out/` directory.
 - Styling is intentionally lightweight: `app/globals.css` contains the local utility-class subset plus site-specific component classes.
+- Page composition lives in `app/page.tsx`; full sections live in `components/sections/`.
+- Shared editable portfolio content lives in `data/`.
 
 ## Local Preview
 
@@ -23,8 +25,18 @@
 
 - This project does not use Tailwind. Tailwind-like class names used in JSX are backed by local rules in `app/globals.css`.
 - Project and client-work data lives in `data/projects.ts` and is rendered at build time.
+- General profile content, navigation, timeline, and footer links live in `data/profile.ts`.
 - Static assets referenced from components should live in `public/`.
 - The contact form uses `@emailjs/browser` and constants in `lib/constants.ts`; changing EmailJS setup requires updating those strings.
 - `app/layout.tsx` owns metadata, Open Graph, Twitter card, viewport, canonical URL, and favicon wiring.
 - `app/globals.css` defines `.font-nav` / `.font-libre` used by the components.
 - Footer links currently include Certifications, LeetCode, Email, LinkedIn, and Resume. Keep labels short because the footer link row is uppercase with wide tracking.
+
+## Organization Guidelines
+
+- Keep `app/page.tsx` as a readable composition layer, not a dumping ground for section markup.
+- Put complete page sections in `components/sections/`.
+- Put layout chrome in `components/layout/`.
+- Put small reusable primitives in `components/ui/`.
+- Keep only public assets that are referenced by the site or required by deployment.
+- Do not commit generated folders such as `.next/`, `out/`, `node_modules/`, or `tsconfig.tsbuildinfo`.

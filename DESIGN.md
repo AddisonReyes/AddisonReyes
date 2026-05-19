@@ -193,6 +193,7 @@ The design language is built around a near-black canvas, serif typography throug
 - This repo is a Next.js + TypeScript portfolio statically exported for GitHub Pages.
 - The current implementation uses local Tailwind-like utility classes in `app/globals.css`; there is no Tailwind build or CDN dependency.
 - Project cards are React components backed by typed data in `data/projects.ts`.
+- General profile content, timelines, navigation, and footer links live in `data/profile.ts`.
 - Icons use `lucide-react`.
-- When extending the UI, prefer reusing the existing visual primitives already present in `app/page.tsx`, `components/`, and `app/globals.css` instead of inventing a parallel component language.
+- When extending the UI, prefer reusing the existing visual primitives already present in `components/ui/`, `components/sections/`, and `app/globals.css` instead of inventing a parallel component language.
 - If a future agent adds new pages or sections, they should still look like they belong to this portfolio first and foremost.

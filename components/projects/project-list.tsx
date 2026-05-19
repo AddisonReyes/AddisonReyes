@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
 import { Project } from "@/data/projects";
-import { Reveal } from "./reveal";
+import { Reveal } from "@/components/ui/reveal";
 
 export function ProjectList({ projects }: { projects: Project[] }) {
   return (

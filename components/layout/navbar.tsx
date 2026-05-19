@@ -1,15 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-const navItems = [
-  ["HOME", "home"],
-  ["ABOUT", "about"],
-  ["EXPERIENCE", "experience"],
-  ["PROJECTS", "projects"],
-  ["CLIENT WORK", "client-work"],
-  ["CONTACT", "contact"]
-] as const;
+import { navItems } from "@/data/profile";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -58,7 +50,7 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full bg-[#171717]/90 backdrop-blur border-b border-white/5 text-white z-50 font-nav">
       <div className="hidden md:flex items-center justify-center gap-16 px-8 py-5">
-        {navItems.map(([label, target]) => (
+        {navItems.map(({ label, target }) => (
           <NavLink
             key={target}
             label={label}
@@ -105,7 +97,7 @@ export function Navbar() {
           aria-hidden={!open}
         >
           <div className="flex flex-col items-center gap-6 py-6 border-t border-white/10">
-            {navItems.map(([label, target]) => (
+            {navItems.map(({ label, target }) => (
               <NavLink
                 key={target}
                 label={label}
