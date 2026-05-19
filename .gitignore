@@ -1,29 +1,5 @@
-# misc
-.DS_Store
-
-# dependencies (not used in this static build, but common locally)
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# build artifacts
-/build
-/dist
-
-# local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# logs
+.next/
+out/
+node_modules/
+tsconfig.tsbuildinfo
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# obsidian
-.obsidian
-/vault

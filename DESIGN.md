@@ -155,7 +155,7 @@ The design language is built around a near-black canvas, serif typography throug
 
 - Footer is a full-width black band with centered constrained content.
 - Footer links are uppercase, small, and widely tracked; keep labels concise so the row remains calm on smaller screens.
-- Current footer destinations are Certifications, LeetCode, Twitter, Instagram, and Resume.
+- Current footer destinations are Certifications, LeetCode, Email, LinkedIn, and Resume.
 
 ### Form Controls
 
@@ -190,9 +190,9 @@ The design language is built around a near-black canvas, serif typography throug
 
 ## Repo-Specific Guidance
 
-- This repo is a static GitHub Pages site served from the root with no build step.
-- The current implementation uses local Tailwind-like utility classes in `style.css`; there is no Tailwind build or CDN dependency.
-- `script.js` also emits utility class names for project cards, so any new runtime class must have a matching local CSS rule.
-- Icons are hydrated by local inline SVG path data in `script.js`, not by Lucide CDN.
-- When extending the UI, prefer reusing the existing visual primitives already present in `index.html` and `style.css` instead of inventing a parallel component language.
+- This repo is a Next.js + TypeScript portfolio statically exported for GitHub Pages.
+- The current implementation uses local Tailwind-like utility classes in `app/globals.css`; there is no Tailwind build or CDN dependency.
+- Project cards are React components backed by typed data in `data/projects.ts`.
+- Icons use `lucide-react`.
+- When extending the UI, prefer reusing the existing visual primitives already present in `app/page.tsx`, `components/`, and `app/globals.css` instead of inventing a parallel component language.
 - If a future agent adds new pages or sections, they should still look like they belong to this portfolio first and foremost.

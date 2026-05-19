@@ -26,6 +26,10 @@ body {
   position: relative;
 }
 
+.site-shell {
+  min-height: 100vh;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -265,6 +269,12 @@ button:disabled {
 .pointer-events-none { pointer-events: none; }
 .aspect-\[16\/9\] { aspect-ratio: 16 / 9; }
 .animate-spin { animation: spin 1s linear infinite; }
+.spinner {
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 9999px;
+  animation: spin 1s linear infinite;
+}
 
 .hover\:opacity-100:hover { opacity: 1; }
 .hover\:bg-white\/10:hover { background-color: rgba(255, 255, 255, 0.1); }
@@ -333,6 +343,18 @@ button:disabled {
 }
 
 @media (min-width: 1024px) {
+  .project-grid {
+    grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.85fr);
+  }
+
+  .project-media-last {
+    order: 2;
+  }
+
+  .project-copy-first {
+    order: 1;
+  }
+
   .lg\:grid-cols-\[minmax\(0\,1\.45fr\)_minmax\(320px\,0\.85fr\)\] {
     grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.85fr);
   }
