@@ -1,12 +1,20 @@
 "use client";
 
-import { FileText } from "lucide-react";
-import { useEffect, useState } from "react";
+import { FileText, Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { hero, navItems, primaryLinks } from "@/data/profile";
+
+const activeSectionMap: Record<string, string> = {
+  capabilities: "about",
+  education: "experience",
+  "client-work": "projects",
+};
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("home");
+  const [hiddenOnMobile, setHiddenOnMobile] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const sections = Array.from(
@@ -16,7 +24,7 @@ export function Navbar() {
 
     const fromHash = window.location.hash.slice(1);
     if (fromHash && sections.some((section) => section.id === fromHash)) {
-      setActive(fromHash);
+      setActive(activeSectionMap[fromHash] ?? fromHash);
     }
 
     const observer = new IntersectionObserver(
@@ -25,7 +33,7 @@ export function Navbar() {
           .filter((entry) => entry.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
         const id = inView[0]?.target.id;
-        if (id) setActive(id);
+        if (id) setActive(activeSectionMap[id] ?? id);
       },
       {
         rootMargin: "-35% 0px -55% 0px",
@@ -50,8 +58,53 @@ export function Navbar() {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+
+    const closeOnOutsidePointer = (event: PointerEvent) => {
+      if (!navRef.current?.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("pointerdown", closeOnOutsidePointer);
+    return () => {
+      document.removeEventListener("pointerdown", closeOnOutsidePointer);
+    };
+  }, [open]);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    const updateNavbarVisibility = () => {
+      const currentScrollY = window.scrollY;
+      const scrollingDown = currentScrollY > lastScrollY;
+      const shouldHide = scrollingDown && currentScrollY > 96 && !open;
+
+      setHiddenOnMobile(shouldHide);
+      lastScrollY = currentScrollY;
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateNavbarVisibility);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [open]);
+
   return (
-    <nav className="site-nav fixed top-0 left-0 w-full text-white z-50 font-nav">
+    <nav
+      ref={navRef}
+      className={`site-nav fixed top-0 left-0 w-full text-white z-50 font-nav ${
+        hiddenOnMobile ? "site-nav-mobile-hidden" : ""
+      }`}
+    >
       <div className="hidden md:flex nav-inner mx-auto items-center justify-between gap-8 px-8 py-4">
         <a
           href="#home"
@@ -63,7 +116,7 @@ export function Navbar() {
           <span className="nav-brand-role">{hero.role}</span>
         </a>
 
-        <div className="flex items-center justify-center gap-6">
+        <div className="flex items-center justify-center gap-8">
           {navItems.map(({ label, target }) => (
             <NavLink
               key={target}
@@ -103,26 +156,12 @@ export function Navbar() {
 
           <button
             className="nav-menu-button flex flex-col justify-center items-center w-10 h-10 gap-1.5"
-            aria-label="Toggle menu"
+            aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             type="button"
             onClick={() => setOpen((value) => !value)}
           >
-            <span
-              className={`block w-6 h-0.5 bg-white transition-all duration-300 origin-center ${
-                open ? "translate-y-2 rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
-                open ? "opacity-0 scale-x-0" : ""
-              }`}
-            />
-            <span
-              className={`block w-6 h-0.5 bg-white transition-all duration-300 origin-center ${
-                open ? "-translate-y-2 -rotate-45" : ""
-              }`}
-            />
+            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
 
@@ -133,7 +172,6 @@ export function Navbar() {
           aria-hidden={!open}
         >
           <div className="mobile-nav-panel mx-4 mb-4">
-            <div className="mobile-nav-kicker">Navigation</div>
             <div className="mobile-nav-links">
               {navItems.map(({ label, target }) => (
                 <MobileNavLink

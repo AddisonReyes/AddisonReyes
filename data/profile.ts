@@ -21,11 +21,8 @@ export const hero = {
 export const navItems = [
   { label: "HOME", target: "home" },
   { label: "ABOUT", target: "about" },
-  { label: "CAPABILITIES", target: "capabilities" },
   { label: "EXPERIENCE", target: "experience" },
-  { label: "EDUCATION", target: "education" },
   { label: "PROJECTS", target: "projects" },
-  { label: "CLIENT WORK", target: "client-work" },
   { label: "CONTACT", target: "contact" },
 ] as const;
 
