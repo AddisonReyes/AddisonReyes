@@ -13,9 +13,9 @@ export type Capability = {
 
 export const hero = {
   name: "Addison Amin Reyes Cedano",
-  role: "Fullstack Software Engineer",
+  role: "Software Engineer",
   summary:
-    "I build production-ready web applications with TypeScript frontends, Python backends, clean APIs, automation, data workflows, and AI-assisted tools. When performance matters, I use Rust for backend services that need extra speed, reliability, and control.",
+    "I build backend systems, APIs, and games. I work comfortably across frontend, systems, and ML/AI roles, but backend engineering and game development are where I'm strongest. My deepest interests are game engine development, graphics programming, pixel art and 3D.",
 };
 
 export const navItems = [
@@ -34,36 +34,37 @@ export const primaryLinks = {
 };
 
 export const aboutParagraphs = [
-  "I'm a fullstack software engineer focused on building reliable products end to end: responsive interfaces, backend services, domain logic, automation, data workflows, and deploy-ready systems.",
-  "I use TypeScript for frontend product interfaces and Python as my main backend language, especially with Django and FastAPI for REST APIs, authentication, reporting tools, data models, and server-side architecture. I use Rust as a second backend language for performance-critical work where efficiency and reliability justify the extra control.",
-  "I'm currently pursuing a Software Engineering degree at UNICARIBE in the Dominican Republic after completing an Associate's Degree in Artificial Intelligence at ITLA. I'm open to fullstack roles, backend roles, remote opportunities, automation work, Data/AI projects, and freelance product development.",
+  "I'm a software engineer who moves across roles depending on what the project needs. I'm comfortable working as a frontend, backend, fullstack, game developer, systems engineer, or ML/AI engineer. My strongest areas are backend engineering and game development, where I have the most hands-on experience and confidence.",
+  "I use TypeScript for frontend interfaces and Python as my main backend language, especially with Django and FastAPI for REST APIs, authentication, reporting tools, data models, and server-side architecture. I use Rust as a systems and performance language for work where speed, control, and reliability matter most.",
+  "I'm currently pursuing a Software Engineering degree at UNICARIBE in the Dominican Republic after completing an Associate's Degree in Artificial Intelligence at ITLA. I'm open to backend, frontend, fullstack, game development, systems, ML/AI, remote, and freelance opportunities.",
+  "Outside of professional work, my deepest interests are engine programming, graphics programming, game development, pixel art, and 3D art. These are the areas I invest personal time in and care about most.",
 ];
 
 export const capabilities: Capability[] = [
   {
-    title: "Fullstack product development",
+    title: "Backend systems & APIs",
     description:
-      "Responsive TypeScript interfaces with React and Next.js, connected to backend APIs, authentication, database-backed features, and clear user workflows.",
+      "Python services with Django and FastAPI, PostgreSQL and MongoDB data modeling, validation, auth flows, OpenAPI/Swagger docs, business logic, and maintainable REST APIs built for production.",
   },
   {
-    title: "Python backend systems",
+    title: "Game & engine development",
     description:
-      "Python services with Django and FastAPI, readable architecture, PostgreSQL and MongoDB data modeling, validation, auth flows, OpenAPI/Swagger docs, and maintainable REST APIs.",
+      "Game logic, entity systems, simulation loops, tooling, and engine-level work. Comfortable building from scratch or integrating into existing engines, with a strong interest in how games work at a low level.",
+  },
+  {
+    title: "Graphics & systems programming",
+    description:
+      "Rust and low-level systems work for performance-sensitive paths, graphics programming concepts, rendering pipelines, and domains where speed, control, and reliability justify the extra complexity.",
+  },
+  {
+    title: "Frontend & product interfaces",
+    description:
+      "Responsive TypeScript interfaces with React and Next.js, connected to backend APIs, authentication, database-backed features, and clear user workflows.",
   },
   {
     title: "Automation, Data, and AI",
     description:
       "Process automation, data analysis workflows, BI/reporting dashboards, recommendation logic, AI-assisted development, and internal tools that reduce manual work.",
-  },
-  {
-    title: "Rust for performance",
-    description:
-      "Rust backend services for performance-sensitive paths, strongly typed domain logic, efficient data handling, and systems where speed and reliability matter.",
-  },
-  {
-    title: "Deployment-ready delivery",
-    description:
-      "Dockerized applications, production-oriented configuration, Git/Linux workflows, CI/CD basics, static exports, and cloud deployments.",
   },
   {
     title: "Self-directed learning",
@@ -77,7 +78,7 @@ export const experience: TimelineItem[] = [
     date: "May 2024 - Present",
     title: "Software Developer, SEMS SRL",
     description:
-      "Full-time hybrid role building Python/Django backend services, business logic, RESTful APIs, automated reporting, data exchange workflows, and internal business intelligence tools for production operations.",
+      "Full-time hybrid role building Odoo 16 addons, FastAPI/Django backend services, flutter mobile apps, TypeScript/React frontends, business logic, RESTful APIs, automated reporting, data exchange workflows, and internal business intelligence tools for production operations.",
   },
   {
     date: "Feb 2024 - May 2024",
@@ -98,13 +99,13 @@ export const education: TimelineItem[] = [
     date: "Apr 2025 - Present",
     title: "Software Engineering, UNICARIBE",
     description:
-      "Pursuing an engineering degree while continuing to build production-style web, backend, database, automation, and interactive software projects.",
+      "Pursuing an engineering degree while continuing to build production-style web, backend, database, automation, and games projects.",
   },
   {
     date: "Aug 2021 - Dec 2023",
     title: "Artificial Intelligence, ITLA",
     description:
-      "Completed an Associate's Degree focused on artificial intelligence, with project work that supports my interest in recommendation logic, automation, and model-driven tools.",
+      "Completed an Associate's Degree focused on artificial intelligence, with project work that supports my interest in algorithmic logic, automation, machine learning, reinforcement learning, and model-driven tools.",
   },
 ];
 

@@ -8,7 +8,7 @@ import {
   EMAILJS_SERVICE_ID,
   EMAILJS_TEMPLATE_ID,
   GITHUB_URL,
-  LINKEDIN_URL
+  LINKEDIN_URL,
 } from "@/lib/constants";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeader } from "@/components/ui/section-header";
@@ -38,7 +38,7 @@ export function ContactSection() {
       console.error(error);
       setToast({
         type: "error",
-        message: `Something went wrong. You can also email me directly at ${EMAIL}.`
+        message: `Something went wrong. You can also email me directly at ${EMAIL}.`,
       });
     } finally {
       setLoading(false);
@@ -52,7 +52,7 @@ export function ContactSection() {
         <SectionHeader
           kicker="Contact"
           title="Get in touch"
-          copy="Available for fullstack and backend roles, Python-heavy product work, remote opportunities, AI-enabled automation, Data/AI projects, game development collaborations, and freelance work."
+          copy="Available for fullstack and backend roles, Python-heavy product work, remote opportunities, automation, Data/AI projects, game development collaborations, and freelance work."
           compact
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -62,9 +62,8 @@ export function ContactSection() {
             </h4>
             <p className="text-white/60 font-libre leading-relaxed">
               If you have a fullstack or backend role, a product that needs
-              reliable implementation, or a focused engineering problem in
-              mind, email me with a bit of context and I&apos;ll get back to
-              you.
+              reliable implementation, or a focused engineering problem in mind,
+              email me with a bit of context and I&apos;ll get back to you.
             </p>
 
             <div className="space-y-4 pt-4">
@@ -163,7 +162,7 @@ export function ContactSection() {
 function Field({
   label,
   id,
-  children
+  children,
 }: {
   label: string;
   id: string;
@@ -187,7 +186,7 @@ function ContactLink({
   label,
   ariaLabel,
   icon,
-  accent = false
+  accent = false,
 }: {
   href: string;
   label: string;
@@ -221,7 +220,7 @@ function ContactLink({
 
 function Toast({
   toast,
-  onClose
+  onClose,
 }: {
   toast: NonNullable<ToastState>;
   onClose: () => void;
