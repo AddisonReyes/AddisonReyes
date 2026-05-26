@@ -2,7 +2,7 @@
 
 ## About me
 
-I build production-ready web applications with TypeScript frontends and Python backends. My work focuses on APIs, data modeling, authentication, automation, Data/AI workflows, reporting tools, Dockerized delivery, and Rust backend services when performance matters.
+I build backend systems, APIs, and games. I work comfortably across frontend, systems, and ML/AI roles, but backend engineering and game development are where I'm strongest. My deepest interests are game engine development, graphics programming, pixel art and 3D.
 
 ## Connect with Me
 
