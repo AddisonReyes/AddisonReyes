@@ -19,7 +19,7 @@ export function ProjectsSection({
   title,
   copy,
   projects,
-  showGameCard = false
+  showGameCard = false,
 }: ProjectsSectionProps) {
   return (
     <section id={id} className="py-20 px-6 border-t border-white/5">
@@ -48,11 +48,13 @@ function GameDevelopmentCard() {
               itch.io
             </div>
             <div className="font-libre text-white text-2xl md:text-3xl mt-3">
-              Game development
+              Games and assets
             </div>
             <div className="font-libre text-white/65 mt-2 leading-relaxed">
-              A separate space for prototypes and smaller interactive projects
-              exploring gameplay, graphics, tools, and systems.
+              My itch.io portfolio includes indie games, prototypes, pixel art,
+              gameplay ideas, graphics experiments, and smaller interactive
+              work. Asset packs are also available for game developers and
+              hobbyists. Check it out!
             </div>
           </div>
 

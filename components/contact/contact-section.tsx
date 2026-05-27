@@ -52,7 +52,7 @@ export function ContactSection() {
         <SectionHeader
           kicker="Contact"
           title="Get in touch"
-          copy="Available for fullstack and backend roles, Python-heavy product work, remote opportunities, automation, Data/AI projects, game development collaborations, and freelance work."
+          copy="If something here connects with what you're building or thinking about, feel free to reach out. Backend systems, tools, games, collaboration, freelance work, or technical chat are all fine."
           compact
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -61,9 +61,9 @@ export function ContactSection() {
               The fastest way to reach me is by email
             </h4>
             <p className="text-white/60 font-libre leading-relaxed">
-              If you have a fullstack or backend role, a product that needs
-              reliable implementation, or a focused engineering problem in mind,
-              email me with a bit of context and I&apos;ll get back to you.
+              Email works best. Send me a bit of context about what you&apos;re
+              building, what problem you&apos;re trying to solve, or what kind of
+              technical conversation you have in mind.
             </p>
 
             <div className="space-y-4 pt-4">
@@ -128,7 +128,7 @@ export function ContactSection() {
                   rows={4}
                   readOnly={loading}
                   className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-fuchsia-500/50 transition-colors resize-none disabled:opacity-50"
-                  placeholder="Tell me a bit about your project or opportunity"
+                  placeholder="Tell me what you're building or thinking through"
                 />
               </Field>
 

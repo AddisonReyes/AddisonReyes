@@ -11,22 +11,9 @@ export function AboutSection() {
         <Reveal className="space-y-6 text-white/90 text-lg font-libre leading-relaxed">
           <p>{aboutParagraphs[0]}</p>
           <p>{aboutParagraphs[1]}</p>
-          <p>
-            I care about writing maintainable software that is practical,
-            scalable, and pleasant to use. Alongside product and backend
-            engineering, I keep a strong interest in automation, Data/AI, and
-            systems-oriented work, including{" "}
-            <a
-              href="https://dakotitah.itch.io/"
-              className="text-fuchsia-400"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              game development
-            </a>
-            .
-          </p>
           <p>{aboutParagraphs[2]}</p>
+          <p>{aboutParagraphs[3]}</p>
+          <p>{aboutParagraphs[4]}</p>
         </Reveal>
       </div>
     </section>

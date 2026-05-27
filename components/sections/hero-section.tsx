@@ -4,30 +4,24 @@ import { Reveal } from "@/components/ui/reveal";
 
 const heroActions = [
   {
-    label: "Contact Me",
-    href: primaryLinks.email,
-    ariaLabel: "Email Addison Reyes",
-    icon: Mail,
-    primary: true
-  },
-  {
     label: "Resume",
     href: primaryLinks.resume,
     ariaLabel: "Open Addison Reyes resume PDF",
-    icon: FileText
+    icon: FileText,
+    primary: true,
   },
   {
     label: "LinkedIn",
     href: primaryLinks.linkedin,
     ariaLabel: "Open Addison Reyes on LinkedIn",
-    icon: Linkedin
+    icon: Linkedin,
   },
   {
     label: "GitHub",
     href: primaryLinks.github,
     ariaLabel: "Open Addison Reyes on GitHub",
-    icon: Github
-  }
+    icon: Github,
+  },
 ];
 
 export function HeroSection() {
@@ -80,13 +74,19 @@ function HeroAction({
   href,
   ariaLabel,
   icon: Icon,
-  primary = false
+  primary = false,
 }: (typeof heroActions)[number]) {
   return (
     <a
       href={href}
-      target={href.startsWith("http") || href.endsWith(".pdf") ? "_blank" : undefined}
-      rel={href.startsWith("http") || href.endsWith(".pdf") ? "noopener noreferrer" : undefined}
+      target={
+        href.startsWith("http") || href.endsWith(".pdf") ? "_blank" : undefined
+      }
+      rel={
+        href.startsWith("http") || href.endsWith(".pdf")
+          ? "noopener noreferrer"
+          : undefined
+      }
       aria-label={ariaLabel}
       className={
         primary

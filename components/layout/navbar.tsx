@@ -5,8 +5,6 @@ import { useEffect, useRef, useState } from "react";
 import { hero, navItems, primaryLinks } from "@/data/profile";
 
 const activeSectionMap: Record<string, string> = {
-  capabilities: "about",
-  education: "experience",
   "client-work": "projects",
 };
 

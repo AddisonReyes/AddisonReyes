@@ -15,13 +15,12 @@ export const hero = {
   name: "Addison Amin Reyes Cedano",
   role: "Software Engineer",
   summary:
-    "I build backend systems, APIs, and games. I work comfortably across frontend, systems, and ML/AI roles, but backend engineering and game development are where I'm strongest. My deepest interests are game engine development, graphics programming, pixel art and 3D.",
+    "I'm a software engineer from the Dominican Republic. I build backend systems, APIs, tooling, and indie games. I care about clean code, performance, and understanding how things work behind the scenes.",
 };
 
 export const navItems = [
   { label: "HOME", target: "home" },
   { label: "ABOUT", target: "about" },
-  { label: "EXPERIENCE", target: "experience" },
   { label: "PROJECTS", target: "projects" },
   { label: "CONTACT", target: "contact" },
 ] as const;
@@ -34,37 +33,38 @@ export const primaryLinks = {
 };
 
 export const aboutParagraphs = [
-  "I'm a software engineer who moves across roles depending on what the project needs. I'm comfortable working as a frontend, backend, fullstack, game developer, systems engineer, or ML/AI engineer. My strongest areas are backend engineering and game development, where I have the most hands-on experience and confidence.",
-  "I use TypeScript for frontend interfaces and Python as my main backend language, especially with Django and FastAPI for REST APIs, authentication, reporting tools, data models, and server-side architecture. I use Rust as a systems and performance language for work where speed, control, and reliability matter most.",
-  "I'm currently pursuing a Software Engineering degree at UNICARIBE in the Dominican Republic after completing an Associate's Degree in Artificial Intelligence at ITLA. I'm open to backend, frontend, fullstack, game development, systems, ML/AI, remote, and freelance opportunities.",
-  "Outside of professional work, my deepest interests are engine programming, graphics programming, game development, pixel art, and 3D art. These are the areas I invest personal time in and care about most.",
+  "I started programming in 2021 with How to Program in C++ by Deitel & Deitel and got hooked on the mix of creativity and problem solving. I liked being able to build something from scratch, run it, and immediately see the result.",
+  "I enjoy solving problems that involve building systems, optimizing performance, and creating tools that make other people's lives easier. I also like creative problem solving in game development, like designing mechanics or improving user experience.",
+  "On the backend side, I enjoy APIs, architecture, reliability, automation, integrations, databases, and deployments. I like building systems that are clear to understand and useful for the people working with them.",
+  "Game Development is a important part of how I think as a developer. I build small creative games, pixel art, tools, mechanics, and the details behind engines, rendering, animation, shaders, ECS, and procedural generation. I enjoy designing mechanics, improving user experience, and learning how things work.",
+  "Currently focused on Rust backend systems, Bevy, Vulkan, and rendering fundamentals. Rust is my favorite language right now because it gives me low-level control while still providing safety and modern features. The ownership system helps prevent bugs and makes it easier to write concurrent code. I also enjoy the vibrant Rust community and ecosystem.",
 ];
 
 export const capabilities: Capability[] = [
   {
     title: "Backend systems & APIs",
     description:
-      "Python services with Django and FastAPI, PostgreSQL and MongoDB data modeling, validation, auth flows, OpenAPI/Swagger docs, business logic, and maintainable REST APIs built for production.",
+      "APIs, data modeling, authentication, business logic, automation, and backend services built to stay clear and reliable as they grow.",
   },
   {
     title: "Game & engine development",
     description:
-      "Game logic, entity systems, simulation loops, tooling, and engine-level work. Comfortable building from scratch or integrating into existing engines, with a strong interest in how games work at a low level.",
+      "Indie games, gameplay systems, engine concepts, tools, pixel art, and the lower-level details that make interactive projects work.",
   },
   {
     title: "Graphics & systems programming",
     description:
-      "Rust and low-level systems work for performance-sensitive paths, graphics programming concepts, rendering pipelines, and domains where speed, control, and reliability justify the extra complexity.",
+      "Rust, Bevy, Vulkan, rendering ideas, and systems work where performance, control, and careful design matter.",
   },
   {
-    title: "Frontend & product interfaces",
+    title: "Useful web interfaces",
     description:
-      "Responsive TypeScript interfaces with React and Next.js, connected to backend APIs, authentication, database-backed features, and clear user workflows.",
+      "Simple TypeScript interfaces connected to backend APIs, with a focus on clear workflows and practical implementation.",
   },
   {
-    title: "Automation, Data, and AI",
+    title: "Automation and tooling",
     description:
-      "Process automation, data analysis workflows, BI/reporting dashboards, recommendation logic, AI-assisted development, and internal tools that reduce manual work.",
+      "Internal tools, scripts, reporting workflows, and small systems that remove repetitive work and make operations easier to understand.",
   },
   {
     title: "Self-directed learning",
