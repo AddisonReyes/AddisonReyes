@@ -32,6 +32,8 @@ export const projects: Project[] = [
       "Docker",
     ],
     liveUrl: "https://minift.net/",
+    codeUrl: "https://github.com/AddisonReyes/MiniFT",
+    docsUrl: "https://minift-backend.up.railway.app/docs",
   },
   {
     name: "AnimeSR",
