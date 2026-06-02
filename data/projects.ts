@@ -36,6 +36,18 @@ export const projects: Project[] = [
     docsUrl: "https://minift-backend.up.railway.app/docs",
   },
   {
+    name: "Done Loop",
+    summary:
+      "Done Loop is a free, open source, local-first productivity app for habits, tasks, calendar context, reminders, and lightweight daily planning.",
+    image: {
+      src: "/img/done-loop.webp",
+      alt: "Done Loop website",
+    },
+    tags: ["TypeScript", "Expo", "React Native", "SQLite"],
+    codeUrl: "https://github.com/AddisonReyes/done-loop",
+    liveUrl: "https://done-loop.pages.dev/",
+  },
+  {
     name: "AnimeSR",
     summary:
       "A recommendation-oriented catalog that combines FastAPI backend filtering, search, and machine-learning-assisted discovery with a responsive TypeScript interface.",
@@ -54,17 +66,5 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/AddisonReyes/AnimeSR",
     docsUrl: "https://animesr.up.railway.app/docs",
     liveUrl: "https://animesr.pages.dev/",
-  },
-  {
-    name: "EasyToDo",
-    summary:
-      "A local-first TypeScript productivity app focused on fast state handling, clean product logic, responsive UI, and a minimal workflow for managing tasks and habits.",
-    image: {
-      src: "/img/easy-to-do.webp",
-      alt: "EasyToDo task and habit tracker interface",
-    },
-    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
-    codeUrl: "https://github.com/AddisonReyes/easy-to-do",
-    liveUrl: "https://easy-to-do.pages.dev/",
   },
 ];
