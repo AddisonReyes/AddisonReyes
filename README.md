@@ -36,6 +36,17 @@ I build practical applications, backend systems, APIs, automation tools, and ind
       <img style="background-color: transparent;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" width="36" height="36" />
     </td>
     <td>
+      <strong>Game dev</strong><br /><br />
+      <img style="background-color: transparent;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" alt="Godot" title="Godot" width="36" height="36" />
+      <img style="background-color: transparent;" src="https://cdn.simpleicons.org/aseprite/FFFFFF" alt="Aseprite" title="Aseprite" width="36" height="36" />
+      <img style="background-color: transparent;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender" title="Blender" width="36" height="36" />
+      <img style="background-color: transparent;" src="https://cdn.simpleicons.org/bevy/FFFFFF" alt="Bevy" title="Bevy" width="36" height="36" />
+      <img style="background-color: transparent;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vulkan/vulkan-original.svg" alt="Vulkan" title="Vulkan" width="36" height="36" />
+    </td>
+
+  </tr>
+  <tr>
+    <td>
       <strong>Backend & data</strong><br /><br />
       <img style="background-color: transparent;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" width="36" height="36" />
       <img style="background-color: transparent;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" title="Django" width="36" height="36" />
@@ -45,16 +56,6 @@ I build practical applications, backend systems, APIs, automation tools, and ind
       <img style="background-color: transparent;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL" width="36" height="36" />
       <img style="background-color: transparent;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" title="SQLite" width="36" height="36" />
       <img style="background-color: transparent;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="MongoDB" width="36" height="36" />
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <strong>Game dev</strong><br /><br />
-      <img style="background-color: transparent;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" alt="Godot" title="Godot" width="36" height="36" />
-      <img style="background-color: transparent;" src="https://cdn.simpleicons.org/aseprite/FFFFFF" alt="Aseprite" title="Aseprite" width="36" height="36" />
-      <img style="background-color: transparent;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender" title="Blender" width="36" height="36" />
-      <img style="background-color: transparent;" src="https://cdn.simpleicons.org/bevy/FFFFFF" alt="Bevy" title="Bevy" width="36" height="36" />
-      <img style="background-color: transparent;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vulkan/vulkan-original.svg" alt="Vulkan" title="Vulkan" width="36" height="36" />
     </td>
     <td>
       <strong>Tools, automation & systems</strong><br /><br />
