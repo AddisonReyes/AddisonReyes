@@ -18,7 +18,7 @@ export default function Home() {
           id="projects"
           kicker="Selected work"
           title="Featured projects"
-          copy="A few projects around backend systems, product logic, deployment, and simple interfaces."
+          copy="A few projects around full-stack applications, backend systems, product logic, deployment, and interactive work."
           projects={projects}
           showGameCard
         />

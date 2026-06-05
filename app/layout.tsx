@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const description =
-  "Software engineer from the Dominican Republic building backend systems, APIs, tooling, and indie games, with a focus on Rust, game engines, graphics programming, and clean software.";
+  "Software engineer from the Dominican Republic building full-stack applications, backend systems, APIs, tooling, and indie games, with a focus on clean code, performance, user experience, and practical software.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://addisonreyes.com"),

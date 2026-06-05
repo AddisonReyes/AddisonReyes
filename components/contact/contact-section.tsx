@@ -52,7 +52,7 @@ export function ContactSection() {
         <SectionHeader
           kicker="Contact"
           title="Get in touch"
-          copy="If something here connects with what you're building or thinking about, feel free to reach out. Backend systems, tools, games, collaboration, freelance work, or technical chat are all fine."
+          copy="If something here connects with what you're building or thinking about, feel free to reach out. Full-stack applications, backend systems, tools, games, collaboration, freelance work, or technical chat are all fine."
           compact
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">

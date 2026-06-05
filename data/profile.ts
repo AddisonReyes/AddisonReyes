@@ -13,9 +13,9 @@ export type Capability = {
 
 export const hero = {
   name: "Addison Amin Reyes Cedano",
-  role: "Software Engineer",
+  role: "Full-Stack Software Engineer & Game Developer",
   summary:
-    "I'm a software engineer from the Dominican Republic. I build backend systems, APIs, tooling, and indie games. I care about clean code, performance, and understanding how things work behind the scenes.",
+    "I'm a software engineer from the Dominican Republic. I build full-stack applications, backend systems, APIs, tooling, and indie games. I care about clean code, performance, user experience, and understanding how things work behind the scenes.",
 };
 
 export const navItems = [
