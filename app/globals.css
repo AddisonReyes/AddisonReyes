@@ -272,6 +272,12 @@ button:disabled {
   animation: spin 1s linear infinite;
 }
 
+.turnstile-widget {
+  min-height: 65px;
+  overflow: hidden;
+  width: 100%;
+}
+
 .hover\:opacity-100:hover { opacity: 1; }
 .hover\:bg-white\/10:hover { background-color: rgba(255, 255, 255, 0.1); }
 .hover\:bg-white\/\[0\.07\]:hover { background-color: rgba(255, 255, 255, 0.07); }

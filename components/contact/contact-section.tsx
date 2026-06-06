@@ -1,15 +1,10 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useCallback, useRef, useState } from "react";
+import { Turnstile } from "@marsidev/react-turnstile";
+import type { TurnstileInstance } from "@marsidev/react-turnstile";
 import { Github, Linkedin, Mail, Send } from "lucide-react";
-import {
-  EMAIL,
-  EMAILJS_PUBLIC_KEY,
-  EMAILJS_SERVICE_ID,
-  EMAILJS_TEMPLATE_ID,
-  GITHUB_URL,
-  LINKEDIN_URL,
-} from "@/lib/constants";
+import { EMAIL, GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeader } from "@/components/ui/section-header";
 
@@ -19,30 +14,89 @@ type ToastState = {
 } | null;
 
 export function ContactSection() {
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "";
+  const turnstileRef = useRef<TurnstileInstance | null>(null);
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState<ToastState>(null);
+  const [turnstileToken, setTurnstileToken] = useState("");
+
+  const showToast = useCallback((nextToast: NonNullable<ToastState>) => {
+    setToast(nextToast);
+    window.setTimeout(() => setToast(null), 3500);
+  }, []);
+
+  const resetTurnstile = useCallback(() => {
+    setTurnstileToken("");
+    turnstileRef.current?.reset();
+  }, []);
+
+  const handleTurnstileFailure = useCallback(() => {
+    setTurnstileToken("");
+    showToast({
+      type: "error",
+      message: "Security verification failed. Please try again.",
+    });
+  }, [showToast]);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (loading) return;
+
     const form = event.currentTarget;
     if (!form.reportValidity()) return;
 
+    if (!turnstileToken) {
+      showToast({
+        type: "error",
+        message: "Security verification failed. Please try again.",
+      });
+      return;
+    }
+
+    const formData = new FormData(form);
+
     setLoading(true);
     try {
-      const emailjs = await import("@emailjs/browser");
-      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
-      setToast({ type: "success", message: "Message sent successfully!" });
+      const response = await fetch("/api/contact/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.get("user_name"),
+          email: formData.get("user_email"),
+          message: formData.get("message"),
+          turnstile_token: turnstileToken,
+        }),
+      });
+
+      if (!response.ok) {
+        resetTurnstile();
+        showToast({
+          type: "error",
+          message:
+            response.status === 403
+              ? "Security verification failed. Please try again."
+              : "Message could not be sent. Please try again.",
+        });
+        return;
+      }
+
+      showToast({ type: "success", message: "Message sent successfully!" });
       form.reset();
+      resetTurnstile();
     } catch (error) {
-      console.error(error);
-      setToast({
+      console.error(
+        "Contact form request failed:",
+        error instanceof Error ? error.message : "Unknown error",
+      );
+      resetTurnstile();
+      showToast({
         type: "error",
-        message: `Something went wrong. You can also email me directly at ${EMAIL}.`,
+        message: "Message could not be sent. Please try again.",
       });
     } finally {
       setLoading(false);
-      window.setTimeout(() => setToast(null), 3500);
     }
   }
 
@@ -125,6 +179,7 @@ export function ContactSection() {
                   id="message"
                   name="message"
                   required
+                  maxLength={5000}
                   rows={4}
                   readOnly={loading}
                   className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:outline-none focus:border-fuchsia-500/50 transition-colors resize-none disabled:opacity-50"
@@ -132,9 +187,25 @@ export function ContactSection() {
                 />
               </Field>
 
+              {turnstileSiteKey ? (
+                <div className="turnstile-widget">
+                  <Turnstile
+                    ref={turnstileRef}
+                    siteKey={turnstileSiteKey}
+                    onSuccess={setTurnstileToken}
+                    onExpire={resetTurnstile}
+                    onError={handleTurnstileFailure}
+                    options={{
+                      theme: "dark",
+                      size: "flexible",
+                    }}
+                  />
+                </div>
+              ) : null}
+
               <button
                 type="submit"
-                disabled={loading}
+                disabled={loading || !turnstileToken}
                 className="w-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-libre font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-colors uppercase tracking-widest disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {loading ? (
