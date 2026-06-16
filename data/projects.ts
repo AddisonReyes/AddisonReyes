@@ -14,9 +14,54 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: "MiniFT",
+    name: "Invoice Scanner",
     summary:
-      "A production-style personal finance tracker with a performance-oriented Rust backend, PostgreSQL schema design, authentication, Dockerized deployment, and a TypeScript dashboard for transactions, budgets, and financial habits.",
+      "Invoice Scanner helps accountants upload invoices, scan them to extract relevant data, organize them by company, review expenses, and keep a shared workspace with clear visibility into the current month.",
+    image: {
+      src: "/img/invoice-scanner.webp",
+      alt: "Invoice Scanner website",
+    },
+    tags: [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "Expo",
+      "React Native",
+      "Tailwind CSS",
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "Docker",
+    ],
+    liveUrl: "https://invoice-scanner.dakotitah.com/",
+  },
+  {
+    name: "Simple Algorithm",
+    summary:
+      "A web app for visualizing and understanding common algorithms. It features interactive visualizations of sorting algorithms, pathfinding algorithms, and more, with a focus on simplicity and clarity.",
+    image: {
+      src: "/img/simple-algorithm.webp",
+      alt: "Simple Algorithm website",
+    },
+    tags: ["TypeScript", "Next.js", "React", "Tailwind CSS"],
+    liveUrl: "https://simple-algorithm.dakotitah.com/",
+  },
+  {
+    name: "Done Loop",
+    summary:
+      "Done Loop is a free, open source, mobile productivity app for habits, tasks, calendar context, reminders, and lightweight daily planning.",
+    image: {
+      src: "/img/done-loop.webp",
+      alt: "Done Loop website",
+    },
+    tags: ["TypeScript", "Expo", "React Native", "SQLite"],
+    codeUrl: "https://github.com/AddisonReyes/done-loop",
+    liveUrl: "https://done-loop.pages.dev/",
+  },
+  {
+    name: "Mini Finance Tracker - MiniFT",
+    summary:
+      "A minimalistic finance app that helps users track their spending and manage their finances. Was built with minimalism in mind, to be simple and easy to use. The backend is built with Rust, PostgreSQL, and Rocket, and the dashboard is built with TypeScript, React, and Tailwind CSS.",
     image: {
       src: "/img/minift.webp",
       alt: "MiniFT dashboard interface",
@@ -36,21 +81,9 @@ export const projects: Project[] = [
     docsUrl: "https://minift-backend.up.railway.app/docs",
   },
   {
-    name: "Done Loop",
+    name: "Anime System Recommendation - AnimeSR",
     summary:
-      "Done Loop is a free, open source, local-first productivity app for habits, tasks, calendar context, reminders, and lightweight daily planning.",
-    image: {
-      src: "/img/done-loop.webp",
-      alt: "Done Loop website",
-    },
-    tags: ["TypeScript", "Expo", "React Native", "SQLite"],
-    codeUrl: "https://github.com/AddisonReyes/done-loop",
-    liveUrl: "https://done-loop.pages.dev/",
-  },
-  {
-    name: "AnimeSR",
-    summary:
-      "A recommendation-oriented catalog that combines FastAPI backend filtering, search, and machine-learning-assisted discovery with a responsive TypeScript interface.",
+      "A simple platform for recommending anime based on user preferences. It features a FastAPI backend with search and ML-assisted discovery, and a TypeScript interface for browsing and managing recommendations.",
     image: {
       src: "/img/anime-sr.webp",
       alt: "AnimeSR anime recommendation interface",
