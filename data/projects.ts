@@ -13,39 +13,39 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  {
-    name: "Invoice Scanner",
-    summary:
-      "Invoice Scanner helps accountants upload invoices, scan them to extract relevant data, organize them by company, review expenses, and keep a shared workspace with clear visibility into the current month.",
-    image: {
-      src: "/img/invoice-scanner.webp",
-      alt: "Invoice Scanner website",
-    },
-    tags: [
-      "TypeScript",
-      "Next.js",
-      "React",
-      "Expo",
-      "React Native",
-      "Tailwind CSS",
-      "Python",
-      "Django",
-      "PostgreSQL",
-      "Docker",
-    ],
-    liveUrl: "https://invoice-scanner.dakotitah.com/",
-  },
-  {
-    name: "Simple Algorithm",
-    summary:
-      "A web app for visualizing and understanding common algorithms. It features interactive visualizations of sorting algorithms, pathfinding algorithms, and more, with a focus on simplicity and clarity.",
-    image: {
-      src: "/img/simple-algorithm.webp",
-      alt: "Simple Algorithm website",
-    },
-    tags: ["TypeScript", "Next.js", "React", "Tailwind CSS"],
-    liveUrl: "https://simple-algorithm.dakotitah.com/",
-  },
+  // {
+  //   name: "Invoice Scanner",
+  //   summary:
+  //     "Invoice Scanner helps accountants upload invoices, scan them to extract relevant data, organize them by company, review expenses, and keep a shared workspace with clear visibility into the current month.",
+  //   image: {
+  //     src: "/img/invoice-scanner.webp",
+  //     alt: "Invoice Scanner website",
+  //   },
+  //   tags: [
+  //     "TypeScript",
+  //     "Next.js",
+  //     "React",
+  //     "Expo",
+  //     "React Native",
+  //     "Tailwind CSS",
+  //     "Python",
+  //     "Django",
+  //     "PostgreSQL",
+  //     "Docker",
+  //   ],
+  //   liveUrl: "https://invoice-scanner.dakotitah.com/",
+  // },
+  // {
+  //   name: "Simple Algorithm",
+  //   summary:
+  //     "A web app for visualizing and understanding common algorithms. It features interactive visualizations of sorting algorithms, pathfinding algorithms, and more, with a focus on simplicity and clarity.",
+  //   image: {
+  //     src: "/img/simple-algorithm.webp",
+  //     alt: "Simple Algorithm website",
+  //   },
+  //   tags: ["TypeScript", "Next.js", "React", "Tailwind CSS"],
+  //   liveUrl: "https://simple-algorithm.dakotitah.com/",
+  // },
   {
     name: "Done Loop",
     summary:

@@ -16,7 +16,7 @@ I build practical applications, backend systems, APIs, automation tools, and ind
 ## Featured work
 
 - **[Simple Algorithm](https://simple-algorithm.dakotitah.com/)** - A web app for visualizing and understanding common algorithms.
-- **[Invoice Scanner](https://invoice-scanner.dakotitah.com/)** - Invoice Scanner helps accountants upload invoices, scan them to extract relevant data, organize them by company, review expenses, and keep a shared workspace with clear visibility into the current month.
+<!-- - **[Invoice Scanner](https://invoice-scanner.dakotitah.com/)** - Invoice Scanner helps accountants upload invoices, scan them to extract relevant data, organize them by company, review expenses, and keep a shared workspace with clear visibility into the current month. -->
 - **[Done Loop](https://done-loop.dakotitah.com/)** - Mobile productivity app for habits, tasks, reminders, calendar context, and daily planning.
 - **[Mini Finance Tracker](https://minift.dakotitah.com/)** - A minimalistic finance app that helps users track their spending and manage their finances.
 - **[Anime System Recommendation](https://animesr.dakotitah.com/)** - Simple platform for recommending anime based on user preferences.
